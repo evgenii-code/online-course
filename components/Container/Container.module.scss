@@ -1,0 +1,7 @@
+@import '~/scss/config.scss';
+
+.container {
+  max-width: $container-width-regular + 2 * $gutter-width-regular;
+  padding: 0 $gutter-width-regular;
+  width: 100%;
+}
