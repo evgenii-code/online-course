@@ -1,0 +1,12 @@
+@import '../config.scss';
+
+:root {
+  --font-family-sans: 'Lato', 'Source Sans Pro', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --font-base: #{$font-base-size};
+
+  --font-weight-black: 900;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+}
