@@ -1,0 +1,31 @@
+@import '~/scss/utils/spacing.scss';
+
+.icon {
+  color: inherit;
+
+  svg,
+  path {
+    fill: currentColor;
+  }
+
+  &.small {
+    svg {
+      width: toRem(16px);
+      height: toRem(16px);
+    }
+  }
+
+  &.medium {
+    svg {
+      width: toRem(24px);
+      height: toRem(24px);
+    }
+  }
+
+  &.big {
+    svg {
+      width: toRem(32px);
+      height: toRem(32px);
+    }
+  }
+}
