@@ -2,6 +2,7 @@
 
 .icon {
   color: inherit;
+  display: inline-flex;
 
   svg,
   path {
@@ -15,14 +16,14 @@
     }
   }
 
-  &.medium {
+  &.regular {
     svg {
       width: toRem(24px);
       height: toRem(24px);
     }
   }
 
-  &.big {
+  &.large {
     svg {
       width: toRem(32px);
       height: toRem(32px);
