@@ -1,5 +1,6 @@
 const PORT = process.env.PORT || '3000';
 const API_URL = process.env.API_URL || '/';
+const BASE_URL = process.env.BASE_URL || '/';
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -73,6 +74,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://i18n.nuxtjs.org
+    '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -85,6 +88,30 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
+    },
+  },
+
+  i18n: {
+    baseUrl: BASE_URL,
+    locales: [{
+      code: 'en',
+      name: 'English',
+      iso: 'en',
+      file: 'en.js',
+    }, ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      alwaysRedirect: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,
+    },
+    strategy: 'prefix_and_default',
+    lazy: true, // loads only default and fallback locale
+    seo: true,
+    langDir: 'lang/',
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
     },
   },
 
