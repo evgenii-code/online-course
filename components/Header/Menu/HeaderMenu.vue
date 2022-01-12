@@ -7,7 +7,7 @@
         :class="$style.item"
       >
         <nuxt-link :class="$style.link" :to="menuLink.link">{{
-          menuLink.title
+          $t(menuLink.title)
         }}</nuxt-link>
       </li>
     </ul>
