@@ -18,4 +18,10 @@
   --color-gray-300: #e5e8ed;
   --color-gray-200: #f4f5f7;
   --color-gray-100: #f9f9f9;
+
+  --gradient-primary: linear-gradient(
+    55.95deg,
+    var(--color-primary) 0%,
+    #f75e05 100%
+  );
 }
