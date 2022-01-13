@@ -1,0 +1,30 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.list {
+  .items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+
+    .item {
+      margin-right: toRem(20px);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      .link {
+        color: inherit;
+
+        @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

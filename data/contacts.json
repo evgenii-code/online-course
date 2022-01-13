@@ -1,0 +1,14 @@
+[{
+    "title": "(405) 555-0128",
+    "link": "tel:(405) 555-0128",
+    "tag": "a",
+    "icon": "iphone"
+  },
+
+  {
+    "title": "hello@createx.com",
+    "link": "mailto:hello@createx.com",
+    "icon": "mail",
+    "tag": "a"
+  }
+]
