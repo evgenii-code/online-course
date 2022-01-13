@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.layout">
     <!-- header -->
-    <header :class="$style.header">header</header>
+    <app-header :class="$style.header" />
 
     <main :class="$style.main">
       <Nuxt />

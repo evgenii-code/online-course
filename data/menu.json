@@ -1,0 +1,21 @@
+[{
+    "title": "header.menu.about",
+    "link": "/about"
+  },
+  {
+    "title": "header.menu.courses",
+    "link": "/courses"
+  },
+  {
+    "title": "header.menu.events",
+    "link": "/events"
+  },
+  {
+    "title": "header.menu.blog",
+    "link": "/blog"
+  },
+  {
+    "title": "header.menu.contacts",
+    "link": "/contacts"
+  }
+]

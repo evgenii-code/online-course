@@ -1,0 +1,52 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.account {
+  display: flex;
+  font-weight: 700;
+
+  .icon {
+    margin-right: toRem(8px);
+
+    svg {
+      width: toRem(20px);
+      height: toRem(20px);
+    }
+  }
+
+  .items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    .item {
+      display: flex;
+      align-items: center;
+
+      .devider {
+        margin: 0 toRem(6px);
+      }
+
+      .button {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        color: inherit;
+        cursor: pointer;
+
+        @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

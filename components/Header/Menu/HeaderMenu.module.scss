@@ -1,0 +1,44 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.menu {
+  font-weight: 700;
+  display: flex;
+
+  .items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    .item {
+      display: flex;
+      margin-right: toRem(40px);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        color: inherit;
+        text-decoration: none;
+
+        @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .items {
+      .item {
+        margin-right: toRem(24px);
+      }
+    }
+  }
+}
