@@ -1,4 +1,7 @@
 export default {
+  appName: 'Createx',
+  logo: 'Logo',
+
   header: {
     menu: {
       about: 'About us',
@@ -6,6 +9,11 @@ export default {
       events: 'Events',
       blog: 'Blog',
       contacts: 'Contacts',
-    }
+    },
+
+    consultation: 'Get consultation',
+
+    logIn: 'Log in',
+    register: 'Register',
   }
 }
