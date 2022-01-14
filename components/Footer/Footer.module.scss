@@ -5,94 +5,115 @@
   background-color: var(--color-gray-900);
   color: var(--color-gray-500);
 
-  .top {
-    padding: toRem(80px) 0 toRem(60px);
+  .half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
-    .grid {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
+    &.top {
+      padding: toRem(80px) 0 toRem(60px);
 
-      .description {
-        max-width: toRem(280px);
+      .grid {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
 
-        .text {
-          margin: toRem(24px) 0 0;
-          font-weight: normal;
-          font-size: toRem(12px);
-          line-height: 150%;
+        .description {
+          max-width: toRem(280px);
+
+          .text {
+            margin: toRem(24px) 0 0;
+            font-weight: normal;
+            font-size: toRem(12px);
+            line-height: 150%;
+          }
+
+          .social {
+            margin-top: toRem(38px);
+          }
         }
 
-        .social {
-          margin-top: toRem(38px);
+        .subscription {
+          max-width: toRem(286px);
+
+          .footnote {
+            margin: toRem(12px) 0 0;
+            font-size: toRem(10px);
+            color: var(--color-light);
+          }
+        }
+
+        .title {
+          margin: 0 0 toRem(12px);
+          color: var(--color-light);
+          font-style: normal;
+          font-weight: bold;
+          font-size: inherit;
+          letter-spacing: 1px;
+          text-transform: uppercase;
         }
       }
-
-      .title {
-        margin: 0 0 toRem(12px);
-        color: var(--color-light);
-        font-style: normal;
-        font-weight: bold;
-        font-size: inherit;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  .bottom {
-    position: relative;
-    padding: toRem(20px) 0;
-
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      content: '';
-      background-color: var(--color-light);
-      opacity: 0.05;
     }
 
-    .container {
+    &.bottom {
       position: relative;
-      display: flex;
-      justify-content: space-between;
+      padding: toRem(20px) 0;
 
-      .copyright {
-        font-size: toRem(12px);
-        font-weight: inherit;
-        font-style: inherit;
-        color: var(--color-light);
-
-        .text {
-          display: inline-flex;
-          align-items: center;
-        }
-
-        .heart {
-          color: var(--color-primary);
-          margin: 0 toRem(4px);
-        }
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        background-color: var(--color-light);
+        opacity: 0.05;
       }
 
-      .top {
-        margin: 0;
-        padding: 0;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        background-color: transparent;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: toRem(14px);
-        color: inherit;
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
 
-        @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+        .copyright {
+          font-size: toRem(12px);
+          font-weight: inherit;
+          font-style: inherit;
+          color: var(--color-light);
 
-        &:hover {
-          opacity: 0.6;
+          .text {
+            display: inline-flex;
+            align-items: center;
+          }
+
+          .heart {
+            color: var(--color-primary);
+            margin: 0 toRem(4px);
+          }
+        }
+
+        .top {
+          margin: 0;
+          padding: 0;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background-color: transparent;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: toRem(14px);
+          color: inherit;
+
+          @include animation-motion(
+            $duration-very-fast,
+            'ease-in-out',
+            'basic'
+          );
+
+          &:hover {
+            opacity: 0.6;
+          }
         }
       }
     }

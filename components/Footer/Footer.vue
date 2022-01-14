@@ -1,7 +1,7 @@
 <template>
   <footer :class="$style.footer">
     <!-- Top half -->
-    <div :class="$style.top">
+    <div :class="[$style.half, $style.top]">
       <app-container :class="$style.grid">
         <!-- Description section -->
         <div :class="$style.description">
@@ -41,12 +41,14 @@
         <!-- Subscription -->
         <div :class="$style.subscription">
           <h2 :class="$style.title">{{ $t('footer.subscription') }}</h2>
+
+          <p :class="$style.footnote">{{ $t('footer.footnote') }}</p>
         </div>
       </app-container>
     </div>
 
     <!-- Bottom half -->
-    <div :class="$style.bottom">
+    <div :class="[$style.half, $style.bottom]">
       <app-container :class="$style.container">
         <small :class="$style.copyright">
           &#169;
