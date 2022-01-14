@@ -1,0 +1,4 @@
+/// Convert a given hex color to rgb
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
