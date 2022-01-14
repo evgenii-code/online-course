@@ -1,0 +1,118 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/utils/_color.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.input {
+  font-family: inherit;
+  position: relative;
+
+  &.disabled {
+    opacity: 0.6;
+  }
+
+  // Input sizes
+  &.small {
+    font-size: toRem(12px);
+
+    .wrapper {
+      .field {
+        padding: toRem(9px) toRem(12px);
+      }
+    }
+  }
+
+  &.regular {
+    font-size: toRem(14px);
+
+    .wrapper {
+      .field {
+        padding: toRem(11px) toRem(16px) toRem(12px);
+      }
+    }
+  }
+
+  &.large {
+    font-size: toRem(16px);
+
+    .label {
+      font-size: toRem(14px);
+    }
+
+    .wrapper {
+      .field {
+        padding: toRem(13px) toRem(16px) toRem(13px);
+      }
+    }
+  }
+
+  // Input themes
+  &.light {
+    .label {
+      color: var(--color-gray-800);
+    }
+
+    .wrapper {
+      border-color: var(--color-gray-400);
+      background-color: var(--color-light);
+
+      .field {
+        &::placeholder {
+          color: var(--color-gray-600);
+        }
+
+        &:-internal-autofill-selected,
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus {
+          color: inherit;
+          border: none;
+          -webkit-text-fill-color: inherit;
+          -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+      }
+    }
+  }
+
+  &.dark {
+  }
+
+  .label {
+    display: flex;
+    margin-bottom: toRem(8px);
+  }
+
+  .wrapper {
+    position: relative;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+    &:focus-within {
+      border-color: #{rgba(var(--color-primary-rgb), 0.4)};
+      box-shadow: var(--focus-shadow-primary);
+    }
+
+    .field {
+      position: relative;
+      font-family: inherit;
+      outline: none;
+      font-size: inherit;
+      color: var(--color-gray-800);
+      width: 100%;
+      border: none;
+      box-sizing: border-box;
+      background-color: transparent;
+
+      @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+    }
+
+    .postfix {
+    }
+  }
+
+  .error-message {
+  }
+}
