@@ -1,27 +1,41 @@
+@import '../utils/color';
+@import '../mixins/generateColors';
+
+$colors-light: (
+  light: #ffffff,
+  primary: #ff3f3a,
+  secondary: #ffcf2d,
+  success: #03cea4,
+  danger: #ff4242,
+  warning: #f89828,
+  info: #5a87fc,
+  body: #e5e5e5,
+  gray-900: #1e212c,
+  gray-800: #424551,
+  gray-700: #787a80,
+  gray-600: #9a9ca5,
+  gray-500: #b3b7bc,
+  gray-400: #d7dadd,
+  gray-300: #e5e8ed,
+  gray-200: #f4f5f7,
+  gray-100: #f9f9f9,
+);
+
 :root {
-  --color-light: #ffffff;
-  --color-primary: #ff3f3a;
-  --color-secondary: #ffcf2d;
-  --color-success: #03cea4;
-  --color-danger: #ff4242;
-  --color-warning: #f89828;
-  --color-info: #5a87fc;
-
-  --color-body: #e5e5e5;
-
-  --color-gray-900: #1e212c;
-  --color-gray-800: #424551;
-  --color-gray-700: #787a80;
-  --color-gray-600: #9a9ca5;
-  --color-gray-500: #b3b7bc;
-  --color-gray-400: #d7dadd;
-  --color-gray-300: #e5e8ed;
-  --color-gray-200: #f4f5f7;
-  --color-gray-100: #f9f9f9;
+  @include generateColors($colors-light);
 
   --gradient-primary: linear-gradient(
     55.95deg,
     var(--color-primary) 0%,
     #f75e05 100%
   );
+
+  --focus-shadow-primary: 0px 80px 80px -20px rgba(var(--color-primary-rgb), 0.08),
+    0px 30px 24px -10px rgba(var(--color-primary-rgb), 0.05),
+    0px 12px 10px -6px rgba(var(--color-primary-rgb), 0.04),
+    0px 4px 4px -4px rgba(var(--color-gray-900-rgb), 0.031);
 }
+
+// [data-theme="dark"] {
+//   @include generateColors($colors-dark);
+// }
