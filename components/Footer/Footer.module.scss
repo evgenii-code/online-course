@@ -20,6 +20,7 @@
         justify-content: space-between;
 
         .description {
+          grid-area: description;
           max-width: toRem(280px);
 
           .text {
@@ -34,7 +35,20 @@
           }
         }
 
+        .map {
+          grid-area: map;
+        }
+
+        .courses {
+          grid-area: courses;
+        }
+
+        .contacts {
+          grid-area: contacts;
+        }
+
         .subscription {
+          grid-area: subscription;
           max-width: toRem(286px);
 
           .footnote {
@@ -82,14 +96,11 @@
           font-style: inherit;
           color: var(--color-light);
 
-          .text {
-            display: inline-flex;
-            align-items: center;
-          }
-
           .heart {
             color: var(--color-primary);
-            margin: 0 toRem(4px);
+            margin: 0 toRem(2px);
+            position: relative;
+            top: toRem(3px);
           }
         }
 
@@ -113,6 +124,57 @@
 
           &:hover {
             opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .half {
+      &.top {
+        .grid {
+          display: grid;
+          grid-gap: toRem(38px);
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-areas:
+            'description empty subscription'
+            'map courses contacts';
+
+          .description,
+          .subscription {
+            max-width: unset;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .half {
+      &.top {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-areas:
+            'description description'
+            'subscription subscription'
+            'map courses'
+            'contacts contacts';
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .half {
+      &.bottom {
+        .container {
+          flex-direction: column;
+          align-items: flex-start;
+
+          .top {
+            margin-top: toRem(36px);
+            margin-left: auto;
           }
         }
       }

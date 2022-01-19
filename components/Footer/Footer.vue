@@ -16,21 +16,21 @@
         </div>
 
         <!-- Site map -->
-        <app-footer-list :list-items="menuLinks">
+        <app-footer-list :class="$style.map" :list-items="menuLinks">
           <template #header>
             <h2 :class="$style.title">{{ $t('footer.map') }}</h2>
           </template>
         </app-footer-list>
 
         <!-- Courses -->
-        <app-footer-list :list-items="[]">
+        <app-footer-list :class="$style.courses" :list-items="[]">
           <template #header>
             <h2 :class="$style.title">{{ $t('footer.courses') }}</h2>
           </template>
         </app-footer-list>
 
         <!-- Contacts -->
-        <app-footer-list :list-items="contactLinks">
+        <app-footer-list :class="$style.contacts" :list-items="contactLinks">
           <template #header>
             <h2 :class="$style.title">
               {{ $t('footer.contacts') }}
@@ -41,6 +41,26 @@
         <!-- Subscription -->
         <div :class="$style.subscription">
           <h2 :class="$style.title">{{ $t('footer.subscription') }}</h2>
+
+          <form :class="$style.form" @submit.prevent>
+            <v-input
+              v-model="fields.email"
+              :class="$style.email"
+              :placeholder="$t('footer.email')"
+              theme="dark"
+              size="small"
+            >
+              <template #postfix>
+                <v-button-clear :class="$style.submit">
+                  <v-icon
+                    name="arrow-right"
+                    :class="$style.icon"
+                    size="small"
+                  />
+                </v-button-clear>
+              </template>
+            </v-input>
+          </form>
 
           <p :class="$style.footnote">{{ $t('footer.footnote') }}</p>
         </div>
@@ -73,6 +93,14 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'AppFooter',
+
+  data() {
+    return {
+      fields: {
+        email: '',
+      },
+    };
+  },
 
   computed: {
     ...mapGetters({

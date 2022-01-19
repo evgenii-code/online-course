@@ -25,6 +25,7 @@ export default {
     subscription: 'Sign up to our newsletter',
     goToTop: 'Go to top',
     copyright: 'All rights reserved. Made with {love} by Createx Studio',
+    email: 'Email address',
     footnote: '*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.',
   }
 }
