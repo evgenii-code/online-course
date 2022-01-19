@@ -8,7 +8,7 @@
     </main>
 
     <!-- footer -->
-    <footer :class="$style.footer">footer</footer>
+    <app-footer :class="$style.footer" />
   </div>
 </template>
 

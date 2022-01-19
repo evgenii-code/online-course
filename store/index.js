@@ -3,7 +3,7 @@ export default {
     async nuxtServerInit({
       dispatch
     }) {
-      await dispatch('core/getMenuLinks');
+      await dispatch('core/getAllLinkItems');
     },
   },
 };

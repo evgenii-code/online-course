@@ -1,0 +1,42 @@
+[{
+    "title": "Facebook",
+    "link": "https://facebook.com",
+    "tag": "a",
+    "icon": "facebook"
+  },
+
+  {
+    "title": "Twitter",
+    "link": "https://twitter.com",
+    "tag": "a",
+    "icon": "twitter"
+  },
+
+  {
+    "title": "Youtube",
+    "link": "https://youtube.com",
+    "tag": "a",
+    "icon": "youtube"
+  },
+
+  {
+    "title": "Telegram",
+    "link": "https://telegram.com",
+    "tag": "a",
+    "icon": "telegram"
+  },
+
+  {
+    "title": "Instagram",
+    "link": "https://instagram.com",
+    "tag": "a",
+    "icon": "instagram"
+  },
+
+  {
+    "title": "Linked In",
+    "link": "https://linkedin.com",
+    "tag": "a",
+    "icon": "linked-in"
+  }
+]

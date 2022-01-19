@@ -1,26 +1,49 @@
 export default {
   state: () => ({
-    menuLinks: [],
+    links: {
+      menu: [],
+      contacts: [],
+      social: []
+    },
   }),
 
   getters: {
-    menuLinks: (state) => state.menuLinks,
+    menuLinks: (state) => state.links.menu,
+    contactLinks: (state) => state.links.contacts,
+    socialLinks: (state) => state.links.social,
   },
 
   mutations: {
-    setMenuLinks(state, payload) {
-      state.menuLinks = payload;
+    setLinks(state, {
+      linksType,
+      links
+    }) {
+      state.links[linksType] = links;
     },
   },
 
   actions: {
-    getMenuLinks: async ({
+    getLinkItems: async ({
       commit
+    }, linksType) => {
+      try {
+
+        const {
+          default: links
+        } = await import(`~/data/${linksType}.json`);
+        commit('setLinks', {
+          linksType,
+          links
+        });
+      } catch (_) {}
+    },
+
+    getAllLinkItems: async ({
+      dispatch
     }) => {
-      const {
-        default: menuLinks
-      } = await import('~/data/menu.json');
-      commit('setMenuLinks', menuLinks);
+      await dispatch('getLinkItems', 'menu');
+      await dispatch('getLinkItems', 'contacts');
+      await dispatch('getLinkItems', 'social');
     },
   },
 };

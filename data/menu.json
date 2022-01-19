@@ -1,21 +1,26 @@
 [{
     "title": "header.menu.about",
-    "link": "/about"
+    "link": "/about",
+    "tag": "nuxt-link"
   },
   {
     "title": "header.menu.courses",
-    "link": "/courses"
+    "link": "/courses",
+    "tag": "nuxt-link"
   },
   {
     "title": "header.menu.events",
-    "link": "/events"
+    "link": "/events",
+    "tag": "nuxt-link"
   },
   {
     "title": "header.menu.blog",
-    "link": "/blog"
+    "link": "/blog",
+    "tag": "nuxt-link"
   },
   {
     "title": "header.menu.contacts",
-    "link": "/contacts"
+    "link": "/contacts",
+    "tag": "nuxt-link"
   }
 ]
