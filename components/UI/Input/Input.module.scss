@@ -16,7 +16,12 @@
 
     .wrapper {
       .field {
+        min-height: toRem(34px);
         padding: toRem(9px) toRem(12px);
+      }
+
+      .postfix {
+        margin-right: toRem(14px);
       }
     }
   }
@@ -26,6 +31,7 @@
 
     .wrapper {
       .field {
+        min-height: toRem(42px);
         padding: toRem(11px) toRem(16px) toRem(12px);
       }
     }
@@ -40,6 +46,7 @@
 
     .wrapper {
       .field {
+        min-height: toRem(50px);
         padding: toRem(13px) toRem(16px) toRem(13px);
       }
     }
@@ -47,9 +54,7 @@
 
   // Input themes
   &.light {
-    .label {
-      color: var(--color-gray-800);
-    }
+    color: var(--color-gray-800);
 
     .wrapper {
       border-color: var(--color-gray-400);
@@ -59,22 +64,36 @@
         &::placeholder {
           color: var(--color-gray-600);
         }
-
-        &:-internal-autofill-selected,
-        &:-webkit-autofill,
-        &:-webkit-autofill:hover,
-        &:-webkit-autofill:focus {
-          color: inherit;
-          border: none;
-          -webkit-text-fill-color: inherit;
-          -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-          transition: background-color 5000s ease-in-out 0s;
-        }
       }
     }
   }
 
   &.dark {
+    color: var(--color-light);
+
+    .wrapper {
+      border-color: rgba(var(--color-light-rgb), 0.2);
+      background-color: rgba(var(--color-light-rgb), 0.12);
+
+      .field {
+        &::placeholder {
+          color: var(--color-light);
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  &.error {
+    color: var(--color-primary);
+
+    .wrapper {
+      border-color: var(--color-primary);
+    }
+  }
+
+  &.success {
+    color: var(--color-success);
   }
 
   .label {
@@ -87,6 +106,9 @@
     border: 1px solid transparent;
     box-sizing: border-box;
     border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
@@ -100,19 +122,35 @@
       font-family: inherit;
       outline: none;
       font-size: inherit;
-      color: var(--color-gray-800);
+      color: inherit;
       width: 100%;
       border: none;
       box-sizing: border-box;
       background-color: transparent;
 
       @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+      // Reset styles for autocomplete
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-internal-autofill-selected {
+        color: inherit;
+        border: none;
+        -webkit-text-fill-color: inherit;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+      }
     }
 
     .postfix {
+      display: flex;
+      margin-right: toRem(16px);
     }
   }
 
-  .error-message {
+  .message {
+    margin: toRem(4px) 0 0;
+    font-size: toRem(12px);
   }
 }

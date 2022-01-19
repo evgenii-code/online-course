@@ -19,9 +19,9 @@
       </div>
     </div>
 
-    <div v-if="internalError" :class="$style['error-message']">
+    <p v-if="internalError" :class="$style.message">
       {{ internalError }}
-    </div>
+    </p>
   </div>
 </template>
 
@@ -103,7 +103,6 @@ export default {
         [this.$style.input]: true,
         [this.$style[this.size]]: true,
         [this.$style[this.theme]]: true,
-        [this.$style['has-postfix']]: this.hasPostfix,
         [this.$style.error]: !!this.internalError,
         [this.$style.success]: this.success,
         [this.$style.disabled]: this.disabled,
