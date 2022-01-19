@@ -7,15 +7,11 @@
     padding: 0;
     list-style: none;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-gap: toRem(20px);
+    grid-template-columns: repeat(auto-fit, toRem(24px));
 
     .item {
-      margin-right: toRem(20px);
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-
       .link {
         color: inherit;
 
