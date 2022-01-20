@@ -44,7 +44,13 @@ export default {
 </script>
 
 <template>
-  <span v-if="name" :class="classes" v-html="url" />
+  <span
+    v-if="name"
+    :class="classes"
+    role="img"
+    :aria-label="name"
+    v-html="url"
+  />
 </template>
 
 <style lang="scss" module>
