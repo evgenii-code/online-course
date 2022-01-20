@@ -1,5 +1,11 @@
 <template>
-  <div :class="$style.test">test</div>
+  <main :class="$style.main">
+    <app-background :class="[$style.section, $style.usp]">
+      <app-container :class="$style.container">
+        <app-unique-selling-point :class="$style.content" />
+      </app-container>
+    </app-background>
+  </main>
 </template>
 
 <script>
@@ -9,9 +15,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import '~/scss/utils/_spacing.scss';
-
-.test {
-  font-size: toRem(40px);
-}
+@import './index.module';
 </style>

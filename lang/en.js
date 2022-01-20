@@ -31,5 +31,25 @@ export default {
 
   usp: {
     playShowreel: 'Play showreel',
+    title: 'Enjoy studying with Createx Online Courses',
+    aboutUs: 'About us',
+    courses: 'Explore courses',
+    benefits: [{
+        count: '1200',
+        text: 'Students graduated',
+      },
+      {
+        count: '84',
+        text: 'Completed courses',
+      },
+      {
+        count: '16',
+        text: 'Qualified tutors',
+      },
+      {
+        count: '5',
+        text: 'Years of experience',
+      },
+    ],
   },
 }
