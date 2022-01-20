@@ -27,5 +27,9 @@ export default {
     copyright: 'All rights reserved. Made with {love} by Createx Studio',
     email: 'Email address',
     footnote: '*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.',
-  }
+  },
+
+  usp: {
+    playShowreel: 'Play showreel',
+  },
 }
