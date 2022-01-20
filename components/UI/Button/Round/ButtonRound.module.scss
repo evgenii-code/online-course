@@ -1,0 +1,40 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.button {
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  position: relative;
+
+  &.regular {
+    width: toRem(52px);
+    height: toRem(52px);
+
+    &.icon-default {
+      .icon {
+        left: toRem(1px);
+      }
+    }
+  }
+
+  &.large {
+    width: toRem(80px);
+    height: toRem(80px);
+
+    &.icon-default {
+      .icon {
+        left: toRem(2px);
+      }
+    }
+  }
+
+  &.outter-glow {
+    box-shadow: 0 0 0 toRem(16px) rgba(var(--color-primary-rgb), 0.12);
+  }
+
+  .icon {
+    position: relative;
+    left: unset;
+  }
+}
