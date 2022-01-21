@@ -1,6 +1,8 @@
 @import '~/scss/utils/_spacing.scss';
 
 .section {
+  position: relative;
+
   &.usp {
     padding: toRem(200px) 0 toRem(80px);
     min-height: 100vh;
@@ -15,6 +17,30 @@
 
     @media screen and (max-width: 768px) {
       padding: toRem(100px) 0 toRem(60px);
+    }
+  }
+
+  &.about {
+    padding: toRem(180px) 0 toRem(60px);
+
+    @media screen and (max-width: 768px) {
+      padding: toRem(60px) 0;
+    }
+  }
+
+  .image {
+    position: absolute;
+    z-index: 0;
+    transform: translateY(-50%);
+
+    &.dots {
+      top: 40%;
+      left: 0;
+    }
+
+    &.circles {
+      top: 60%;
+      right: 0;
     }
   }
 }

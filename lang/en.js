@@ -52,4 +52,29 @@ export default {
       },
     ],
   },
+
+  about: {
+    subtitle: 'Who we are',
+    title: 'Why Createx?',
+    facts: [{
+        text: 'A fermentum in morbi pretium aliquam adipiscing donec tempus.',
+      },
+      {
+        text: 'Vulputate placerat amet pulvinar lorem nisl.',
+      },
+      {
+        text: 'Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.',
+      },
+      {
+        text: 'Etiam duis lobortis in fames ultrices commodo nibh.',
+      },
+      {
+        text: 'Tincidunt sagittis neque sem ac eget.',
+      },
+      {
+        text: 'Ultricies amet justo et eget quisque purus vulputate dapibus tortor.',
+      },
+    ],
+    more: 'More about us',
+  },
 }
