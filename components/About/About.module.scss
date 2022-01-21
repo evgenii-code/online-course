@@ -1,0 +1,87 @@
+@import '~/scss/utils/spacing.scss';
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .picture {
+    max-width: toRem(705px);
+    width: 57%;
+
+    .image {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .info {
+    max-width: toRem(390px);
+    margin-left: toRem(40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .heading {
+      width: 100%;
+    }
+
+    .facts {
+      margin: toRem(40px) 0 0;
+      padding: 0;
+      list-style: none;
+
+      .fact {
+        margin-bottom: toRem(16px);
+        display: flex;
+        align-items: center;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        .icon {
+          margin-right: toRem(16px);
+          color: var(--color-primary);
+        }
+
+        .text {
+          margin: 0;
+          font-size: toRem(16px);
+          line-height: 160%;
+          color: (--color-grey-800);
+        }
+      }
+    }
+
+    .link {
+      text-decoration: none;
+      margin-top: toRem(48px);
+      align-self: flex-start;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+
+    .picture {
+      width: 100%;
+    }
+
+    .info {
+      margin: toRem(40px) 0 0;
+
+      .heading {
+        text-align: center;
+      }
+
+      .facts {
+        margin-top: toRem(20px);
+      }
+
+      .link {
+        align-self: center;
+      }
+    }
+  }
+}

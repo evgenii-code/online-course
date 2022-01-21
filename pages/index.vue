@@ -5,6 +5,28 @@
         <app-unique-selling-point :class="$style.content" />
       </app-container>
     </app-background>
+
+    <section :class="[$style.section, $style.about]">
+      <img
+        src="~/assets/images/about/dots.svg"
+        alt="Background image"
+        aria-hidden="true"
+        role="none"
+        :class="[$style.image, $style.dots]"
+      />
+
+      <img
+        src="~/assets/images/about/circles.svg"
+        alt="Background image"
+        aria-hidden="true"
+        role="none"
+        :class="[$style.image, $style.circles]"
+      />
+
+      <app-container :class="$style.container">
+        <app-about :class="$style.content" />
+      </app-container>
+    </section>
   </main>
 </template>
 
