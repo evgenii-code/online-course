@@ -4,6 +4,7 @@
 $colors-light: (
   light: #ffffff,
   primary: #ff3f3a,
+  primary-shade: #f75e05,
   secondary: #ffcf2d,
   success: #03cea4,
   danger: #ff4242,
@@ -24,11 +25,10 @@ $colors-light: (
 :root {
   @include generateColors($colors-light);
 
-  --gradient-primary: linear-gradient(
-    55.95deg,
-    var(--color-primary) 0%,
-    #f75e05 100%
-  );
+  --gradient-primary: #{getLinearGradient(
+      var(--color-primary-rgb),
+      var(--color-primary-shade-rgb)
+    )};
 
   --focus-shadow-primary: 0px 80px 80px -20px rgba(var(--color-primary-rgb), 0.08),
     0px 30px 24px -10px rgba(var(--color-primary-rgb), 0.05),
