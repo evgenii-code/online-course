@@ -28,6 +28,10 @@
     }
   }
 
+  &.courses {
+    padding: toRem(60px) 0;
+  }
+
   .image {
     position: absolute;
     z-index: 0;
