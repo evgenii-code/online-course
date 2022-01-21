@@ -1,0 +1,31 @@
+@import '~/scss/utils/spacing.scss';
+
+.header {
+  &.centered {
+    text-align: center;
+  }
+
+  .subtitle {
+    margin: 0 0 toRem(6px);
+    font-size: toRem(16px);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .title {
+    margin: 0;
+    font-weight: 900;
+    font-size: toRem(46px);
+    line-height: 130%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .subtitle {
+      font-size: toRem(14px);
+    }
+
+    .title {
+      font-size: toRem(36px);
+    }
+  }
+}
