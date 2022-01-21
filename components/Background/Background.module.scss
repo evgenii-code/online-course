@@ -1,18 +1,17 @@
+@import '~/scss/utils/color';
+
 .background {
   position: relative;
   display: flex;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    background-image: var(--gradient-primary);
-    opacity: 0.2;
-  }
+  background-image: url('~assets/images/usp/shapes.svg'),
+    #{getLinearGradient(
+        var(--color-primary-rgb),
+        var(--color-primary-shade-rgb),
+        0.12
+      )};
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .content {
     position: relative;
