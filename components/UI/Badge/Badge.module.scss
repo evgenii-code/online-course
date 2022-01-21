@@ -1,0 +1,39 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.badge {
+  margin: 0;
+  padding: toRem(1px) toRem(8px);
+  min-height: toRem(23px);
+  border-radius: toRem(4px);
+  font-size: toRem(14px);
+  color: var(--color-light);
+  display: inline-flex;
+  align-items: center;
+
+  @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+  &.primary {
+    background-color: var(--color-primary);
+  }
+
+  &.secondary {
+    background-color: var(--color-secondary);
+  }
+
+  &.success {
+    background-color: var(--color-success);
+  }
+
+  &.info {
+    background-color: var(--color-info);
+  }
+
+  &.warning {
+    background-color: var(--color-warning);
+  }
+
+  &.alert {
+    background-color: var(--color-alert);
+  }
+}
