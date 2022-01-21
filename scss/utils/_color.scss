@@ -1,4 +1,26 @@
-/// Convert a given hex color to rgb
+/* Convert a given hex color to rgb
+* @param {String} $hex
+*/
 @function hexToRGB($hex) {
   @return red($hex), green($hex), blue($hex);
+}
+
+/* Convert a given hex color to rgb
+* @param {String} $rgbColorStart - RGB color code at 0%
+* @param {String} $rgbColorEnd - RGB color code at 100%
+* @param {Number} $opacity [1] - Opacity of all the colors
+* @param {String} $angle CSS [55.95deg] - The gradient line's angle of direction
+* @return {Function} CSS `linear-gradient()` function
+*/
+@function getLinearGradient(
+  $rgbColorStart,
+  $rgbColorEnd,
+  $opacity: 1,
+  $angle: 55.95deg
+) {
+  @return linear-gradient(
+    $angle,
+    rgba($rgbColorStart, $opacity) 0%,
+    rgba($rgbColorEnd, $opacity) 100%
+  );
 }

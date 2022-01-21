@@ -1,0 +1,163 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.usp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: toRem(80px);
+
+    .side {
+      max-width: toRem(500px);
+      margin-right: toRem(40px);
+
+      .showreel {
+        display: flex;
+        align-items: center;
+
+        .play {
+          margin-right: toRem(16px);
+        }
+
+        .text {
+          margin: 0;
+          font-size: toRem(14px);
+          font-weight: bold;
+        }
+      }
+
+      .title {
+        margin: toRem(24px) 0 0;
+        font-weight: 900;
+        font-size: toRem(64px);
+        line-height: 130%;
+      }
+
+      .buttons {
+        margin-top: toRem(60px);
+        display: flex;
+
+        .button {
+          margin-right: toRem(24px);
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .image {
+      width: 48vw;
+      max-width: toRem(602px);
+      object-fit: contain;
+    }
+  }
+
+  .benefits {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 0 0;
+    padding: 0;
+    list-style: none;
+
+    .benefit {
+      display: flex;
+      align-items: center;
+
+      &.bullet {
+        &:first-of-type {
+          display: none;
+        }
+
+        span {
+          margin: 0 toRem(20px);
+          width: toRem(8px);
+          height: toRem(8px);
+          border-radius: 50%;
+          background-color: var(--color-primary);
+        }
+      }
+
+      .count {
+        margin: 0 toRem(12px) 0 0;
+        font-weight: 900;
+        font-size: toRem(46px);
+      }
+
+      .text {
+        margin: 0;
+        font-weight: normal;
+        font-size: toRem(16px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .top {
+      .side {
+        .title {
+          font-size: toRem(40px);
+        }
+
+        .buttons {
+          margin-top: toRem(20px);
+        }
+      }
+    }
+
+    .benefits {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .bullet {
+        &.bullet {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .top {
+      margin-bottom: toRem(40px);
+
+      .side {
+        margin: 0;
+      }
+
+      .image {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .top {
+      .side {
+        .title {
+          font-size: toRem(30px);
+        }
+
+        .buttons {
+          flex-direction: column;
+
+          .button {
+            margin: 0 0 toRem(14px);
+
+            &:last-of-type {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

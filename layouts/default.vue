@@ -3,9 +3,7 @@
     <!-- header -->
     <app-header :class="$style.header" />
 
-    <main :class="$style.main">
-      <Nuxt />
-    </main>
+    <Nuxt />
 
     <!-- footer -->
     <app-footer :class="$style.footer" />
