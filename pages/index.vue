@@ -30,17 +30,7 @@
 
     <section :class="[$style.section, $style.courses]">
       <app-container :class="$style.container">
-        <app-card-course
-          :class="$style.content"
-          href="/some-url"
-          badge="Marketing"
-        >
-          <template #title>The Ultimate Google Ads Training Course</template>
-
-          <template #price>$100</template>
-
-          <template #author>by Jerome Bell</template>
-        </app-card-course>
+        <app-courses :class="$style.content" />
       </app-container>
     </section>
   </main>
