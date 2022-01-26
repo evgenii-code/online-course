@@ -77,4 +77,71 @@ export default {
     ],
     more: 'More about us',
   },
+
+  courses: {
+    subtitle: 'Ready to learn?',
+    title: 'Featured Courses',
+    all: 'View all courses',
+    themes: {
+      marketing: 'Marketing',
+      management: 'Management',
+      hr: 'HR & Recruting',
+      design: 'Design',
+      development: 'Development',
+    },
+    items: [{
+        title: 'The Ultimate Google Ads Training Course',
+        theme: 'marketing',
+        price: '$100',
+        author: 'Jerome Bell',
+        link: '/',
+        img: 'images/courses/team/jerome-bell.jpg'
+      },
+
+      {
+        title: 'Product Management Fundamentals',
+        theme: 'management',
+        price: '$480',
+        author: 'Marvin McKinney',
+        link: '/',
+        img: 'images/courses/team/marvin-mckinney.jpg'
+      },
+
+      {
+        title: 'HR  Management and Analytics',
+        theme: 'hr',
+        price: '$200',
+        author: 'Leslie Alexander Li',
+        link: '/',
+        img: 'images/courses/team/leslie-alexander-li.jpg'
+      },
+
+      {
+        title: 'Brand Management & PR Communications',
+        theme: 'marketing',
+        price: '$530',
+        author: 'Kristin Watson',
+        link: '/',
+        img: 'images/courses/team/kristin-watson.jpg'
+      },
+
+      {
+        title: 'Business Development Management',
+        theme: 'management',
+        price: '$400',
+        author: 'Dianne Russell',
+        link: '/',
+        img: 'images/courses/team/dianne-russell.jpg'
+      },
+
+      {
+        title: 'Graphic Design Basic',
+        theme: 'design',
+        price: '$500',
+        author: 'Guy Hawkins',
+        link: '/',
+        img: 'images/courses/team/guy-hawkins.jpg'
+      },
+    ]
+  }
 }

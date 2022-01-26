@@ -1,7 +1,24 @@
 @import '~/scss/utils/spacing.scss';
 @import '~/scss/mixins/_animations.scss';
 
+@mixin vartical-card {
+  flex-direction: column;
+
+  .picture {
+    max-width: unset;
+
+    &::before {
+      padding-top: 61.5385%;
+    }
+  }
+
+  .content {
+    padding: toRem(24px);
+  }
+}
+
 .card {
+  width: 100%;
   background: var(--color-light);
   border: 1px solid var(--color-gray-300);
   box-sizing: border-box;
@@ -13,19 +30,7 @@
   @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
   &.vertical {
-    flex-direction: column;
-
-    .picture {
-      max-width: unset;
-
-      &::before {
-        padding-top: 61.5385%;
-      }
-    }
-
-    .content {
-      padding: toRem(24px);
-    }
+    @include vartical-card;
   }
 
   .picture {
@@ -53,6 +58,9 @@
   .content {
     padding: toRem(32px);
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     .badge {
       margin: 0 0 toRem(20px);
@@ -67,13 +75,11 @@
     }
 
     .details {
-      margin: 0;
+      margin: auto 0 0;
       font-weight: normal;
       font-size: toRem(18px);
       line-height: 150%;
       color: var(--color-gray-700);
-      display: flex;
-      align-items: center;
 
       .price {
         font-weight: bold;
@@ -88,12 +94,17 @@
       }
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    @include vartical-card;
+  }
 }
 
 a {
   cursor: pointer;
+  box-shadow: var(--card-shadow);
 
   &:hover {
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--card-shadow-hover);
   }
 }
