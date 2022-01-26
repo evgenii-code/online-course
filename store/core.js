@@ -3,7 +3,8 @@ export default {
     links: {
       menu: [],
       contacts: [],
-      social: []
+      social: [],
+      courses: [],
     },
   }),
 
@@ -11,6 +12,7 @@ export default {
     menuLinks: (state) => state.links.menu,
     contactLinks: (state) => state.links.contacts,
     socialLinks: (state) => state.links.social,
+    coursesLinks: (state) => state.links.courses,
   },
 
   mutations: {
@@ -44,6 +46,7 @@ export default {
       await dispatch('getLinkItems', 'menu');
       await dispatch('getLinkItems', 'contacts');
       await dispatch('getLinkItems', 'social');
+      await dispatch('getLinkItems', 'courses');
     },
   },
 };

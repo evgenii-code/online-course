@@ -1,0 +1,36 @@
+[{
+    "theme": "marketing",
+    "title": "courses.themes.arketing",
+    "variant": "success",
+    "link": "/",
+    "tag": "nuxt-link"
+  },
+  {
+    "theme": "management",
+    "title": "courses.themes.management",
+    "variant": "info",
+    "link": "/",
+    "tag": "nuxt-link"
+  },
+  {
+    "theme": "hr",
+    "title": "courses.themes.hr",
+    "variant": "warning",
+    "link": "/",
+    "tag": "nuxt-link"
+  },
+  {
+    "theme": "design",
+    "title": "courses.themes.design",
+    "variant": "alert",
+    "link": "/",
+    "tag": "nuxt-link"
+  },
+  {
+    "theme": "development",
+    "title": "courses.themes.development",
+    "variant": "secondary",
+    "link": "/",
+    "tag": "nuxt-link"
+  }
+]
