@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <slot />
+  <div v-show="isActive" :class="$style.tab">
+    <slot></slot>
   </div>
 </template>
 
@@ -8,11 +8,33 @@
 export default {
   name: 'AppTabsItem',
 
+  _isTabComponent: true,
+
   props: {
+    icon: {
+      type: String,
+      default: null,
+    },
+
     title: {
       type: String,
-      required: true,
+      default: 'Tab',
     },
+
+    selected: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+  data() {
+    return {
+      isActive: false,
+    };
+  },
+
+  mounted() {
+    this.isActive = this.selected;
   },
 };
 </script>
