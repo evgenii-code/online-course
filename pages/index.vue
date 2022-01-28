@@ -33,6 +33,23 @@
         <app-courses :class="$style.content" />
       </app-container>
     </section>
+
+    <section :class="[$style.section, $style.benefits]">
+      <app-container :class="$style.container">
+        <v-tabs full-width-tabs :class="$style.content">
+          <v-tabs-item title="Experienced Tutors" icon="star" selected
+            >Content 1</v-tabs-item
+          >
+          <v-tabs-item title="Feedback & Support" icon="like"
+            >Content 2</v-tabs-item
+          >
+          <v-tabs-item title="24/7 Online Library" icon="layouts"
+            >Content 3</v-tabs-item
+          >
+          <v-tabs-item title="Community" icon="chat">Content 4</v-tabs-item>
+        </v-tabs>
+      </app-container>
+    </section>
   </main>
 </template>
 
