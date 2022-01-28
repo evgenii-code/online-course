@@ -1,0 +1,51 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.tabs {
+  width: 100%;
+
+  .header {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .tab {
+      &.wide {
+        width: 100%;
+      }
+
+      .button {
+        width: 100%;
+        font-weight: bold;
+        font-size: toRem(16px);
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        border-radius: toRem(4px);
+        color: var(--color-gray-600);
+        padding: toRem(10px) toRem(20px);
+        min-height: toRem(42px);
+
+        @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+        &.selected {
+          border-color: var(--color-primary);
+          color: var(--color-primary);
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &:not(&.selected):hover {
+          color: var(--color-gray-800);
+        }
+
+        .icon {
+          margin-right: toRem(8px);
+        }
+      }
+    }
+  }
+}

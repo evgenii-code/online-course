@@ -1,65 +1,63 @@
 <template>
-  <div :class="$style.wrapper">
-    <!-- <ul :class="$style.tabs">
+  <div :class="$style.tabs">
+    <ul :class="$style.header">
       <li
-        v-for="(tab, index) in tabList"
-        :key="`tabTitle-${index + 1}`"
-        :class="$style.tab"
+        v-for="(tab, index) in tabs"
+        :key="`tab-title-${index}`"
+        :class="[$style.tab, { [$style.wide]: fullWidthTabs }]"
       >
-        <label :class="$style.label" :for="`${uuid}${index}`">
-          <slot :name="`tabTitle-${index + 1}`" />
-        </label>
-
-        <input
-          :id="`${uuid}${index}`"
-          v-model="activeTab"
-          type="radio"
-          :name="`${uuid}-tab`"
-          :value="index + 1"
-          :class="$style.radio"
-        />
+        <v-button-clear
+          :class="[$style.button, { [$style.selected]: tab.isActive }]"
+          @click="selectTab(index)"
+        >
+          <v-icon
+            v-if="tab.icon"
+            :name="tab.icon"
+            size="small"
+            :class="$style.icon"
+          />
+          {{ tab.title }}
+        </v-button-clear>
       </li>
     </ul>
-
-    <template v-for="(tab, index) in tabList">
-      <div v-show="index + 1 === activeTab" :key="`tabPanel-${index + 1}`">
-        <slot :name="`tabPanel-${index + 1}`" />
-      </div>
-    </template> -->
 
     <slot />
   </div>
 </template>
 
 <script>
-import getUID from '~/utils/getUID';
-
 export default {
   name: 'AppTabs',
 
   props: {
-    tabList: {
-      type: Array,
-      required: true,
+    fullWidthTabs: {
+      type: Boolean,
+      default: false,
     },
   },
 
   data() {
     return {
-      activeTab: 1,
       tabs: [],
     };
   },
 
   computed: {
-    tabsTitle() {
-      console.log('this.$slots.default', this.$slots.default);
-      return this.$slots.default.map((tab) => tab.props.title);
+    tabsItemComponents() {
+      return this.$children.filter((child) => child.$options._isTabComponent);
     },
   },
 
-  beforeCreate() {
-    this.uuid = getUID();
+  mounted() {
+    this.tabs = this.tabsItemComponents;
+  },
+
+  methods: {
+    selectTab(selectedTabIndex) {
+      this.tabs.forEach((tab, index) => {
+        tab.isActive = selectedTabIndex === index;
+      });
+    },
   },
 };
 </script>
