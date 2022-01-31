@@ -32,6 +32,12 @@ export default {
     },
   },
 
+  data() {
+    return {
+      isScrolled: false,
+    };
+  },
+
   computed: {
     ...mapGetters({
       menuLinks: 'core/menuLinks',
@@ -40,8 +46,37 @@ export default {
     headerClasses() {
       return {
         [this.$style.header]: true,
+        [this.$style.scrolled]: this.isScrolled,
         [this.$style[this.theme]]: true,
       };
+    },
+  },
+
+  created() {
+    this.setEventListeners();
+  },
+
+  destroyed() {
+    this.removeEventListeners();
+  },
+
+  methods: {
+    setEventListeners() {
+      if (process.server || !window) return;
+
+      window.addEventListener('scroll', this.handleScroll);
+    },
+
+    removeEventListeners() {
+      if (process.server || !window) return;
+
+      window.removeEventListener('scroll', this.handleScroll);
+    },
+
+    handleScroll() {
+      const { scrollY = 0 } = window || {};
+
+      this.isScrolled = scrollY >= 100;
     },
   },
 };
