@@ -6,7 +6,8 @@
 
   .header {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(toRem(220px), 1fr));
     margin: 0;
     padding: 0;
     list-style: none;
@@ -14,6 +15,7 @@
     .tab {
       &.wide {
         width: 100%;
+        display: flex;
       }
 
       .button {
