@@ -32,6 +32,10 @@
     padding: toRem(60px) 0;
   }
 
+  &.benefits {
+    padding: toRem(60px) 0 toRem(120px);
+  }
+
   .image {
     position: absolute;
     z-index: 0;

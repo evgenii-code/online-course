@@ -33,6 +33,12 @@
         <app-courses :class="$style.content" />
       </app-container>
     </section>
+
+    <section :class="[$style.section, $style.benefits]">
+      <app-container :class="$style.container">
+        <app-benefits :class="$style.content" />
+      </app-container>
+    </section>
   </main>
 </template>
 

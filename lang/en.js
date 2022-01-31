@@ -143,5 +143,39 @@ export default {
         img: 'images/courses/team/guy-hawkins.jpg'
       },
     ]
+  },
+
+  benefits: {
+    title: 'That’s how we do it',
+    subtitle: 'Our benefits',
+    items: [{
+        name: 'Experienced Tutors',
+        icon: 'star',
+        title: 'Only practicing tutors',
+        description: 'Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.',
+        img: 'images/benefits/illustration-1.svg',
+      },
+      {
+        name: 'Feedback & Support',
+        icon: 'like',
+        title: 'Please contact us in any case',
+        description: 'Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa.{break}Lorem ipsum dolor sit amet consectetur adipisicing elit. At exercitationem, architecto ipsum veritatis facilis cupiditate similique, consequuntur a laboriosam voluptatibus eligendi quidem? Quas dignissimos sint, accusantium debitis aliquid tenetur? Adipisci?',
+        img: 'images/benefits/illustration-2.svg',
+      },
+      {
+        name: '24/7 Online Library',
+        icon: 'layouts',
+        title: 'The best free online library',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At exercitationem, architecto ipsum veritatis facilis cupiditate similique, consequuntur a laboriosam voluptatibus eligendi quidem? Quas dignissimos sint, accusantium debitis aliquid tenetur? Adipisci?{break}Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. ',
+        img: 'images/benefits/illustration-3.svg',
+      },
+      {
+        name: 'Community',
+        icon: 'chat',
+        title: 'This is the place we live in',
+        description: 'Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula. At exercitationem, architecto ipsum veritatis facilis cupiditate similique, consequuntur a laboriosam voluptatibus eligendi quidem? Quas dignissimos sint, accusantium debitis aliquid tenetur? Adipisci?',
+        img: 'images/benefits/illustration-4.svg',
+      },
+    ]
   }
 }
