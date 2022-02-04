@@ -1,0 +1,150 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+@mixin vartical-card {
+  flex-direction: column;
+  padding: toRem(24px);
+
+  .heading {
+    .date {
+      grid-template-areas:
+        'day month'
+        'time time';
+
+      .day {
+        margin: 0;
+      }
+
+      .month {
+        margin-left: toRem(4px);
+      }
+
+      .day,
+      .month {
+        font-weight: bold;
+        font-size: toRem(28px);
+        line-height: 150%;
+        color: var(--color-primary);
+      }
+
+      .time {
+        margin-top: toRem(4px);
+      }
+    }
+  }
+
+  .description {
+    margin: toRem(20px) 0 0;
+
+    .category {
+      margin: toRem(8px) 0 0;
+    }
+  }
+
+  .button {
+    margin: toRem(24px) 0 0;
+    width: 100%;
+  }
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid var(--color-gray-300);
+  box-sizing: border-box;
+  box-shadow: var(--card-shadow-grey);
+  border-radius: 4px;
+  flex-direction: row;
+  padding: toRem(32px) toRem(40px);
+
+  @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+  &:hover {
+    box-shadow: var(--card-shadow-grey-hover);
+  }
+
+  &.colored {
+    box-shadow: var(--card-shadow-primary);
+    border: none;
+
+    &:hover {
+      box-shadow: var(--card-shadow-primary-hover);
+    }
+  }
+
+  .heading {
+    margin: 0;
+
+    .date {
+      display: grid;
+      grid-template-areas:
+        'day month'
+        'day time';
+
+      .day {
+        grid-area: day;
+        font-weight: 900;
+        font-size: toRem(48px);
+        line-height: 130%;
+        margin-right: toRem(20px);
+        color: var(--color-primary);
+      }
+
+      .month {
+        grid-area: month;
+        margin: 0;
+        font-weight: bold;
+        font-size: toRem(20px);
+        line-height: 150%;
+        color: var(--color-gray-900);
+      }
+
+      .time {
+        grid-area: time;
+        font-weight: normal;
+        font-size: toRem(16px);
+        line-height: 160%;
+        color: var(--color-gray-700);
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .description {
+    margin: 0 toRem(40px);
+
+    .title {
+      margin: 0;
+      font-weight: bold;
+      font-size: toRem(20px);
+      line-height: 150%;
+      color: var(--color-gray-900);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .category {
+      margin: toRem(4px) 0 0;
+      font-size: toRem(16px);
+      line-height: 160%;
+      color: var(--color-gray-700);
+    }
+  }
+
+  .button {
+    width: unset;
+    min-width: toRem(140px);
+    margin: 0 0 0 auto;
+  }
+
+  &.vertical {
+    @include vartical-card;
+  }
+
+  @media screen and (max-width: 1024px) {
+    @include vartical-card;
+  }
+}

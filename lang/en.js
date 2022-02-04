@@ -197,5 +197,7 @@ export default {
       manager: 'Who is a project manager and do I want to be PM?',
       vacancies: "The company's business page as an additional tool to support the announcement of vacancies.",
     },
+
+    more: 'View more',
   },
 }
