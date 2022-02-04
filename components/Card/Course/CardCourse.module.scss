@@ -102,9 +102,9 @@
 
 a.card {
   cursor: pointer;
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--card-shadow-grey);
 
   &:hover {
-    box-shadow: var(--card-shadow-hover);
+    box-shadow: var(--card-shadow-grey-hover);
   }
 }
