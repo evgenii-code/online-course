@@ -7,11 +7,13 @@
         <template #title>{{ $t('courses.title') }}</template>
       </app-heading>
 
-      <nuxt-link :to="localePath('/')" :class="$style.link">
-        <v-button :class="$style.button" outline>{{
-          $t('courses.all')
-        }}</v-button>
-      </nuxt-link>
+      <v-button
+        link
+        :to="localePath('/courses')"
+        :class="$style.button"
+        outline
+        >{{ $t('courses.all') }}</v-button
+      >
     </div>
 
     <ul :class="$style.items">

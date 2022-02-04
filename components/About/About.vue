@@ -32,9 +32,9 @@
         </li>
       </ul>
 
-      <nuxt-link :class="$style.link" :to="localePath('/about')">
-        <v-button :class="$style.button">{{ $t('about.more') }}</v-button>
-      </nuxt-link>
+      <v-button link :to="localePath('/about')" :class="$style.button">{{
+        $t('about.more')
+      }}</v-button>
     </div>
   </article>
 </template>

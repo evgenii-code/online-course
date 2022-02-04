@@ -11,11 +11,17 @@
         <h2 :class="$style.title">{{ $t('usp.title') }}</h2>
 
         <div :class="$style.buttons">
-          <v-button :class="$style.button" outline>{{
-            $t('usp.aboutUs')
-          }}</v-button>
+          <v-button
+            link
+            :to="localePath('/about')"
+            :class="$style.button"
+            outline
+            >{{ $t('usp.aboutUs') }}</v-button
+          >
 
-          <v-button :class="$style.button">{{ $t('usp.courses') }}</v-button>
+          <v-button link :to="localePath('/courses')" :class="$style.button">{{
+            $t('usp.courses')
+          }}</v-button>
         </div>
       </div>
 
