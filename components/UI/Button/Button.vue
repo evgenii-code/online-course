@@ -1,5 +1,6 @@
 <template>
-  <button
+  <component
+    :is="tag"
     :class="classes"
     :disabled="disabled"
     v-bind="$attrs"
@@ -7,7 +8,7 @@
   >
     <slot></slot>
     <v-icon v-if="icon" :name="icon" :size="iconSize" :class="$style.icon" />
-  </button>
+  </component>
 </template>
 
 <script>
@@ -44,9 +45,18 @@ export default {
       type: String,
       default: null,
     },
+
+    link: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
+    tag() {
+      return this.link ? 'nuxt-link' : 'button';
+    },
+
     iconSize() {
       return this.size === 'large' ? 'regular' : 'small';
     },
