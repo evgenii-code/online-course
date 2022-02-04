@@ -40,36 +40,17 @@
       </app-container>
     </section>
 
-    <section :class="[$style.section, $style.benefits]">
+    <section :class="[$style.section, $style.events]">
       <app-container :class="$style.container">
-        <app-card-event
-          v-for="event in events"
-          :key="event.title"
-          :class="$style.content"
-          :date-start="event.date.start"
-          :date-end="event.date.end"
-          :href="event.link"
-          colored-shadow
-        >
-          <template #title>{{ $t(event.title) }}</template>
-          <template #category>{{ $t(event.category) }}</template>
-        </app-card-event>
+        <app-events :class="$style.content" />
       </app-container>
     </section>
   </main>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
 export default {
   name: 'IndexPage',
-
-  computed: {
-    ...mapGetters({
-      events: 'core/eventsLinks',
-    }),
-  },
 };
 </script>
 

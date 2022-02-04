@@ -48,6 +48,7 @@
 }
 
 .card {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -61,10 +62,12 @@
   @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
   &:hover {
+    z-index: 1;
     box-shadow: var(--card-shadow-grey-hover);
   }
 
   &.colored {
+    background-color: var(--color-light);
     box-shadow: var(--card-shadow-primary);
     border: none;
 

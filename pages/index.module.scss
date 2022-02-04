@@ -1,3 +1,4 @@
+@import '~/scss/utils/color';
 @import '~/scss/utils/_spacing.scss';
 
 .section {
@@ -34,6 +35,15 @@
 
   &.benefits {
     padding: toRem(60px) 0 toRem(120px);
+  }
+
+  &.events {
+    padding: toRem(80px) 0;
+    background-image: #{getLinearGradient(
+        var(--color-primary-rgb),
+        var(--color-primary-shade-rgb),
+        0.12
+      )};
   }
 
   .image {
