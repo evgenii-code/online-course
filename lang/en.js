@@ -177,5 +177,25 @@ export default {
         img: 'images/benefits/illustration-4.svg',
       },
     ]
-  }
+  },
+
+  events: {
+    categories: {
+      masterclass: 'Onine master-class',
+      lecture: 'Online lecture',
+      workshop: 'Online workshop'
+    },
+
+    titles: {
+      formation: 'Formation of the organizational structure of the company in the face of uncertainty.',
+      building: 'Building a customer service department. Best Practices.',
+      prototyping: 'How to apply methods of speculative design in practice. Worldbuilding prototyping.',
+      candidates: 'Find and evaluate: search and assessment tools for candidates.',
+      visualization: 'Connection to Microsoft Excel and Google Sheets, Data Visualization in Power BI',
+      marketing: 'Marketing or growth hacking: main differences and what business needs.',
+      design: 'How to brief a client and present your design to approve it from the first show.',
+      manager: 'Who is a project manager and do I want to be PM?',
+      vacancies: "The company's business page as an additional tool to support the announcement of vacancies.",
+    },
+  },
 }
