@@ -180,6 +180,9 @@ export default {
   },
 
   events: {
+    title: 'Lectures & workshops',
+    subtitle: 'Our Events',
+
     categories: {
       masterclass: 'Onine master-class',
       lecture: 'Online lecture',
@@ -199,5 +202,7 @@ export default {
     },
 
     more: 'View more',
+    footnote: 'Do you want more?',
+    all: 'Explore all events'
   },
 }
