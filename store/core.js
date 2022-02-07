@@ -6,6 +6,7 @@ export default {
       social: [],
       courses: [],
       events: [],
+      partners: [],
     },
   }),
 
@@ -15,6 +16,7 @@ export default {
     socialLinks: (state) => state.links.social,
     coursesLinks: (state) => state.links.courses,
     eventsLinks: (state) => state.links.events,
+    partnersLinks: (state) => state.links.partners,
   },
 
   mutations: {
@@ -50,6 +52,7 @@ export default {
       await dispatch('getLinkItems', 'social');
       await dispatch('getLinkItems', 'courses');
       await dispatch('getLinkItems', 'events');
+      await dispatch('getLinkItems', 'partners');
     },
   },
 };

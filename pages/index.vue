@@ -45,6 +45,12 @@
         <app-events :class="$style.content" />
       </app-container>
     </section>
+
+    <section :class="[$style.section, $style.certificate]">
+      <app-container :class="$style.container">
+        <app-certificate :class="$style.content" />
+      </app-container>
+    </section>
   </main>
 </template>
 
