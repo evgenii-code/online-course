@@ -1,22 +1,22 @@
 export default {
   state: () => ({
-    links: {
-      menu: [],
-      contacts: [],
-      social: [],
-      courses: [],
-      events: [],
-      partners: [],
-    },
+    menu: [],
+    contacts: [],
+    social: [],
+    courses: [],
+    events: [],
+    partners: [],
+    team: [],
   }),
 
   getters: {
-    menuLinks: (state) => state.links.menu,
-    contactLinks: (state) => state.links.contacts,
-    socialLinks: (state) => state.links.social,
-    coursesLinks: (state) => state.links.courses,
-    eventsLinks: (state) => state.links.events,
-    partnersLinks: (state) => state.links.partners,
+    menuLinks: (state) => state.menu,
+    contactLinks: (state) => state.contacts,
+    socialLinks: (state) => state.social,
+    coursesLinks: (state) => state.courses,
+    eventsLinks: (state) => state.events,
+    partnersLinks: (state) => state.partners,
+    teamLinks: (state) => state.team,
   },
 
   mutations: {
@@ -24,7 +24,7 @@ export default {
       linksType,
       links
     }) {
-      state.links[linksType] = links;
+      state[linksType] = links;
     },
   },
 
@@ -53,6 +53,7 @@ export default {
       await dispatch('getLinkItems', 'courses');
       await dispatch('getLinkItems', 'events');
       await dispatch('getLinkItems', 'partners');
+      await dispatch('getLinkItems', 'team');
     },
   },
 };
