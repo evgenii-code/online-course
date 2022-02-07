@@ -54,6 +54,14 @@
     }
   }
 
+  &.team {
+    .container {
+      display: grid;
+      gap: toRem(30px);
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
   .image {
     position: absolute;
     z-index: 0;
