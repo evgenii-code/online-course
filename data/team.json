@@ -1,0 +1,89 @@
+[{
+    "id": 1,
+    "name": "Dianne Russell",
+    "position": "Founder and CEO",
+    "img": "dianne-russell.png",
+    "links": {
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "linked-in": "https://linkedin.com/"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Jerome Bell",
+    "position": "Founder and Program Director",
+    "img": "jerome-bell.png",
+    "links": {
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "linked-in": "https://linkedin.com/"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Kristin Watson",
+    "position": "Marketer, Curator of Marketing Course",
+    "img": "kristin-watson.png",
+    "links": {
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "linked-in": "https://linkedin.com/"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Marvin McKinney",
+    "position": "PM, Curator of Management Course",
+    "img": "marvin-mckinney.png",
+    "links": {
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "linked-in": "https://linkedin.com/"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Leslie Alexander Li",
+    "position": "Curator of HR & Recruting Course",
+    "img": "leslie-alexander-li.png",
+    "links": {
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "linked-in": "https://linkedin.com/"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Kathryn Murphy",
+    "position": "Analyst and Marketing specialist",
+    "img": "kathryn-murphy.png",
+    "links": {
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "linked-in": "https://linkedin.com/"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Brooklyn Simmons",
+    "position": "Curator of Development Course",
+    "img": "brooklyn-simmons.png",
+    "links": {
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "linked-in": "https://linkedin.com/"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Cody Fisher",
+    "position": "UX Designer, Curator of Design Course",
+    "img": "cody-fisher.png",
+    "links": {
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "linked-in": "https://linkedin.com/"
+    }
+  }
+]
