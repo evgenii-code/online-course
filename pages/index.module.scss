@@ -55,11 +55,7 @@
   }
 
   &.team {
-    .container {
-      display: grid;
-      gap: toRem(30px);
-      grid-template-columns: repeat(4, 1fr);
-    }
+    padding: toRem(166px) 0 toRem(90px);
   }
 
   .image {
