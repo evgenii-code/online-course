@@ -54,28 +54,15 @@
 
     <section :class="[$style.section, $style.team]">
       <app-container :class="$style.container">
-        <app-card-team
-          v-for="teamMember in teamLinks"
-          :key="`team-member-${teamMember.id}`"
-          :class="$style.content"
-          :team-member="teamMember"
-        />
+        <app-team :class="$style.content" is-swiper />
       </app-container>
     </section>
   </main>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
 export default {
   name: 'IndexPage',
-
-  computed: {
-    ...mapGetters({
-      teamLinks: 'core/teamLinks',
-    }),
-  },
 };
 </script>
 

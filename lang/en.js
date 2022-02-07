@@ -210,5 +210,10 @@ export default {
     title: 'Your expertise will be confirmed',
     subtitle: 'Createx Certificate',
     description: 'We are accredited by international professional organizations and institutes:',
+  },
+
+  team: {
+    title: 'Meet our team',
+    subtitle: 'Best tutors are all here',
   }
 }
