@@ -51,7 +51,7 @@
     z-index: 2;
     padding: toRem(120px) 0 0;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       padding: toRem(80px) 0;
     }
   }
@@ -62,6 +62,11 @@
     margin-top: toRem(-50px);
     padding: toRem(166px) 0 toRem(90px);
     background-color: var(--color-gray-200);
+
+    @media screen and (max-width: 1024px) {
+      margin: 0;
+      padding: toRem(80px) 0;
+    }
   }
 
   .image {

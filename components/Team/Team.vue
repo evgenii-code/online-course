@@ -1,9 +1,21 @@
 <template>
   <div :class="$style.team">
-    <app-heading :class="$style.heading">
-      <template #title>{{ $t('team.title') }}</template>
-      <template #subtitle>{{ $t('team.subtitle') }}</template>
-    </app-heading>
+    <header :class="$style.header">
+      <app-heading :class="$style.heading">
+        <template #title>{{ $t('team.title') }}</template>
+        <template #subtitle>{{ $t('team.subtitle') }}</template>
+      </app-heading>
+
+      <div v-if="isSwiper" :class="$style.controls">
+        <v-button-control :class="$style.button" class="button-prev">
+          <v-icon name="arrow-left" />
+        </v-button-control>
+
+        <v-button-control :class="$style.button" class="button-next">
+          <v-icon name="arrow-right" />
+        </v-button-control>
+      </div>
+    </header>
 
     <div v-swiper:teamMembers="swiperOption" :class="$style.swiper">
       <ul
@@ -48,6 +60,12 @@ export default {
     return {
       swiperOption: {
         enabled: this.isSwiper,
+
+        navigation: {
+          nextEl: '.button-next',
+          prevEl: '.button-prev',
+        },
+
         slidesPerView: 1,
         spaceBetween: 30,
 
