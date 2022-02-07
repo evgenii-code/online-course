@@ -46,6 +46,14 @@
       )};
   }
 
+  &.certificate {
+    padding: toRem(120px) 0 0;
+
+    @media screen and (max-width: 768px) {
+      padding: toRem(80px) 0;
+    }
+  }
+
   .image {
     position: absolute;
     z-index: 0;

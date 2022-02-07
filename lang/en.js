@@ -205,4 +205,10 @@ export default {
     footnote: 'Do you want more?',
     all: 'Explore all events'
   },
+
+  certificate: {
+    title: 'Your expertise will be confirmed',
+    subtitle: 'Createx Certificate',
+    description: 'We are accredited by international professional organizations and institutes:',
+  }
 }

@@ -1,0 +1,117 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.certificate {
+  display: grid;
+  grid-template-columns: minmax(32.2764%, toRem(400px)) minmax(
+      57.317%,
+      toRem(705px)
+    );
+  gap: 0 toRem(40px);
+  justify-content: space-between;
+  grid-template-areas:
+    'heading picture'
+    'partners picture'
+    'empty picture';
+
+  .heading {
+    grid-area: heading;
+    width: 100%;
+  }
+
+  .wrapper {
+    grid-area: partners;
+    margin: toRem(48px) 0 0;
+
+    .description {
+      margin: 0;
+      font-weight: normal;
+      font-size: toRem(16px);
+      line-height: 160%;
+      color: car(--color-grey-800);
+    }
+
+    .partners {
+      margin: toRem(32px) 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: toRem(10px) toRem(40px);
+      grid-template-columns: repeat(auto-fill, toRem(105px));
+
+      .partner {
+        display: flex;
+
+        .link {
+          text-decoration: none;
+
+          @include animation-motion(
+            $duration-very-fast,
+            'ease-in-out',
+            'basic'
+          );
+
+          &:hover {
+            opacity: 0.6;
+          }
+
+          .image {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .picture {
+    grid-area: picture;
+    width: 100%;
+    max-width: toRem(705px);
+    position: relative;
+    display: flex;
+    border: 1px solid var(--color-gray-100);
+    box-sizing: border-box;
+    box-shadow: var(--card-shadow-grey);
+    border-radius: 4px;
+    overflow: hidden;
+    align-self: start;
+
+    &:before {
+      content: '';
+      width: 100%;
+      padding-bottom: 70.9219%;
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'heading'
+      'picture'
+      'partners';
+    gap: toRem(40px);
+    justify-items: center;
+
+    .heading {
+      text-align: center;
+    }
+
+    .wrapper {
+      margin: 0;
+
+      .partners {
+        justify-content: center;
+      }
+    }
+  }
+}
