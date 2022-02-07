@@ -1,3 +1,34 @@
-.team {
+@import '~/scss/utils/color';
+@import '~/scss/utils/_spacing.scss';
 
+.team {
+  .heading {
+  }
+
+  .swiper {
+    margin: toRem(60px) 0 0;
+
+    .members {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(toRem(230px), 1fr));
+        gap: toRem(30px);
+
+        .member {
+          max-width: unset;
+        }
+      }
+
+      .member {
+        max-width: toRem(285px);
+
+        .card {
+        }
+      }
+    }
+  }
 }

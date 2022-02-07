@@ -47,6 +47,8 @@
   }
 
   &.certificate {
+    position: relative;
+    z-index: 2;
     padding: toRem(120px) 0 0;
 
     @media screen and (max-width: 768px) {
@@ -55,7 +57,11 @@
   }
 
   &.team {
+    position: relative;
+    z-index: 1;
+    margin-top: toRem(-50px);
     padding: toRem(166px) 0 toRem(90px);
+    background-color: var(--color-gray-200);
   }
 
   .image {

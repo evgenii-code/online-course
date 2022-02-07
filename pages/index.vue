@@ -54,7 +54,7 @@
 
     <section :class="[$style.section, $style.team]">
       <app-container :class="$style.container">
-        <app-team :class="$style.content" />
+        <app-team :class="$style.content" is-swiper />
       </app-container>
     </section>
   </main>
