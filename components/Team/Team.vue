@@ -7,11 +7,11 @@
       </app-heading>
 
       <div v-if="isSwiper" :class="$style.controls">
-        <v-button-control :class="$style.button" class="button-prev">
+        <v-button-control :class="[$style.button, $style.prev]">
           <v-icon name="arrow-left" />
         </v-button-control>
 
-        <v-button-control :class="$style.button" class="button-next">
+        <v-button-control :class="[$style.button, $style.next]">
           <v-icon name="arrow-right" />
         </v-button-control>
       </div>
@@ -62,8 +62,8 @@ export default {
         enabled: this.isSwiper,
 
         navigation: {
-          nextEl: '.button-next',
-          prevEl: '.button-prev',
+          nextEl: `.${this.$style.next}`,
+          prevEl: `.${this.$style.prev}`,
         },
 
         slidesPerView: 1,

@@ -54,7 +54,9 @@
 
     <section :class="[$style.section, $style.team]">
       <app-container :class="$style.container">
-        <app-team :class="$style.content" is-swiper />
+        <app-team :class="[$style.content, $style.team]" is-swiper />
+
+        <app-testimonials :class="[$style.content, $style.testimonials]" />
       </app-container>
     </section>
   </main>

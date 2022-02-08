@@ -10,6 +10,13 @@
     .controls {
       display: flex;
       margin-left: toRem(40px);
+
+      .button {
+        &.prev,
+        &.next {
+          opacity: 1;
+        }
+      }
     }
   }
 
@@ -32,7 +39,7 @@
       }
 
       .member {
-        // max-width: toRem(320px);
+        max-width: toRem(320px);
 
         .card {
         }
@@ -53,6 +60,12 @@
 
     .swiper {
       margin: toRem(30px) 0 0;
+
+      .members {
+        .member {
+          max-width: unset;
+        }
+      }
     }
   }
 }

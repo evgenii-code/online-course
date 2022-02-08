@@ -60,12 +60,33 @@
     position: relative;
     z-index: 1;
     margin-top: toRem(-50px);
-    padding: toRem(166px) 0 toRem(90px);
+    padding: toRem(166px) 0 toRem(100px);
     background-color: var(--color-gray-200);
+    overflow: hidden;
+
+    .content {
+      &.team {
+        padding: 0 0 toRem(90px);
+      }
+
+      &.testimonials {
+        padding: toRem(90px) 0 0;
+      }
+    }
 
     @media screen and (max-width: 1024px) {
       margin: 0;
       padding: toRem(80px) 0;
+
+      .content {
+        &.team {
+          padding: 0 0 toRem(40px);
+        }
+
+        &.testimonials {
+          padding: toRem(40px) 0 0;
+        }
+      }
     }
   }
 
