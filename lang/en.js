@@ -215,5 +215,47 @@ export default {
   team: {
     title: 'Meet our team',
     subtitle: 'Best tutors are all here',
+  },
+
+  testimonials: {
+    title: 'What our students say',
+    subtitle: 'Testimonials',
+
+    items: [{
+        id: 1,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
+        author: 'Eleanor Pena',
+        course: 'Data Visualization',
+        img: 'user.jpg'
+      },
+      {
+        id: 2,
+        text: 'Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi.{break}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
+        author: 'Jasmine Quadranto',
+        course: 'Middle Designer, Design',
+        img: 'user.jpg'
+      },
+      {
+        id: 3,
+        text: 'Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.{break}Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi.  Pulvinar neque pharetra arcu diam maecenas diam integer in.',
+        author: 'Max Double',
+        course: 'Marketing',
+        img: 'user.jpg'
+      },
+      {
+        id: 4,
+        text: 'Pulvinar neque pharetra arcu diam maecenas diam integer in.{break}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros.',
+        author: 'Anna Herbrew',
+        course: 'Worldbuilding prototyping',
+        img: 'user.jpg'
+      },
+      {
+        id: 5,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
+        author: 'Doug Demuro',
+        course: 'Position, Course',
+        img: 'user.jpg'
+      },
+    ]
   }
 }

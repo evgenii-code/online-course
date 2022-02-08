@@ -1,0 +1,221 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.testimonials {
+  .heading {
+    text-align: center;
+  }
+
+  .carousel {
+    position: relative;
+    z-index: 1;
+    margin: toRem(60px) auto 0;
+    max-width: toRem(1020px) !important;
+  }
+
+  .button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    &.prev {
+      right: calc(100% + toRem(69px));
+    }
+
+    &.next {
+      left: calc(100% + toRem(69px));
+    }
+  }
+
+  .swiper {
+    $offset: 80px;
+    margin: toRem(-$offset);
+    width: calc(100% + 2 * #{$offset});
+
+    .wrapper {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .slide {
+        height: unset;
+        padding: toRem($offset);
+
+        &.active {
+          .quote {
+            box-shadow: var(--card-shadow-grey);
+
+            @include animation-motion($duration-slow, 'ease-in-out', 'basic');
+
+            transition-delay: 250ms;
+          }
+        }
+
+        .quote {
+          padding: toRem(64px);
+          background-color: var(--color-light);
+          max-width: toRem(1020px);
+          margin: 0;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .container {
+            position: relative;
+            max-width: toRem(810px);
+            margin: auto;
+            padding-left: toRem(58px);
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: toRem(28px);
+              height: toRem(20px);
+              background-image: url('~assets/images/testimonials/braces.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+            }
+          }
+
+          .text {
+            margin: 0;
+            font-weight: normal;
+            font-size: toRem(20px);
+            line-height: 150%;
+            color: var(--color-gray-800);
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            .break {
+            }
+          }
+
+          .autor {
+            margin: toRem(24px) 0 0;
+            display: flex;
+            align-items: center;
+
+            .avatar {
+              width: toRem(72px);
+              min-width: toRem(72px);
+              height: toRem(72px);
+              border-radius: 50%;
+              overflow: hidden;
+              object-fit: cover;
+              margin-right: toRem(20px);
+            }
+
+            .info {
+              .name,
+              .course {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
+
+              .name {
+                margin: 0;
+                font-style: normal;
+                font-weight: bold;
+                font-size: toRem(16px);
+                line-height: 160%;
+                color: var(--color-gray-900);
+              }
+
+              .course {
+                margin: toRem(4px) 0 0;
+                font-weight: normal;
+                font-size: toRem(14px);
+                line-height: 150%;
+                color: var(--color-gray-700);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    margin: toRem(60px) auto 0;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+
+    :global(.swiper-pagination-bullet) {
+      background-color: var(--color-gray-500);
+      width: toRem(30px);
+      height: toRem(3px);
+      margin-right: toRem(12px);
+      border-radius: 1px;
+      opacity: 1;
+
+      @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+      background-color: var(--color-gray-800);
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .button {
+      &.prev {
+        right: unset;
+        left: toRem(15px);
+      }
+
+      &.next {
+        left: unset;
+        right: toRem(15px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    .button {
+      display: none;
+    }
+
+    .carousel {
+      margin: toRem(30px) auto 0;
+    }
+
+    .swiper {
+      .wrapper {
+        .slide {
+          .quote {
+            padding: toRem(24px);
+
+            .container {
+              padding: 0 0 0 toRem(20px);
+
+              &::before {
+                top: toRem(10px);
+                left: toRem(-8px);
+                width: toRem(14px);
+                height: toRem(10px);
+              }
+            }
+
+            .text {
+              font-size: toRem(16px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
