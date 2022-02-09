@@ -2,7 +2,7 @@
   <div :class="$style.card">
     <p :class="$style.badge">
       <v-icon :class="$style.icon" :name="iconName" size="small" />
-      {{ $t(`blog.format.${post.format}`) }}
+      {{ $t(`posts.format.${post.format}`) }}
     </p>
 
     <picture :class="$style.picture">
@@ -25,7 +25,7 @@
         <h3 :class="$style.title">{{ $t(post.title) }}</h3>
       </header>
 
-      <p :class="$style.description">{{ $t('blog.description') }}</p>
+      <p :class="$style.description">{{ $t('posts.description') }}</p>
 
       <footer :class="$style.footer">
         <nuxt-link :to="localePath(post.link)" :class="$style.link">
@@ -77,7 +77,7 @@ export default {
     action() {
       const action = getActionByPostFormat(this.post.format);
 
-      return this.$t(`blog.actions.${action}`);
+      return this.$t(`posts.actions.${action}`);
     },
 
     iconName() {
