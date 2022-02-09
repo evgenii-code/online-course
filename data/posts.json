@@ -1,6 +1,6 @@
 [{
     "format": "podcast",
-    "title": "blog.titles.arbitrage",
+    "title": "posts.titles.arbitrage",
     "theme": "courses.themes.marketing",
     "date": "2022-01-15T12:00:00",
     "duration": "36 min",
@@ -10,7 +10,7 @@
 
   {
     "format": "article",
-    "title": "blog.titles.development",
+    "title": "posts.titles.development",
     "theme": "courses.themes.development",
     "date": "2021-12-20T14:00:00",
     "img": "development.jpg",
@@ -19,7 +19,7 @@
 
   {
     "format": "video",
-    "title": "blog.titles.creativity",
+    "title": "posts.titles.creativity",
     "theme": "courses.themes.design",
     "date": "2021-11-02T12:00:00",
     "duration": "40 min",
@@ -29,7 +29,7 @@
 
   {
     "format": "article",
-    "title": "blog.titles.recruiting",
+    "title": "posts.titles.recruiting",
     "theme": "courses.themes.hr",
     "date": "2022-02-17T12:00:00",
     "img": "recruiting.jpg",
@@ -38,7 +38,7 @@
 
   {
     "format": "video",
-    "title": "blog.titles.feedback",
+    "title": "posts.titles.feedback",
     "theme": "courses.themes.management",
     "date": "2022-01-20T12:00:00",
     "duration": "45 min",
@@ -48,7 +48,7 @@
 
   {
     "format": "podcast",
-    "title": "blog.titles.color",
+    "title": "posts.titles.color",
     "theme": "courses.themes.design",
     "date": "2021-10-30T12:00:00",
     "duration": "36 min",
@@ -58,7 +58,7 @@
 
   {
     "format": "video",
-    "title": "blog.titles.startup",
+    "title": "posts.titles.startup",
     "theme": "courses.themes.management",
     "date": "2021-09-08T12:00:00",
     "duration": "45 min",
@@ -68,7 +68,7 @@
 
   {
     "format": "article",
-    "title": "blog.titles.business",
+    "title": "posts.titles.business",
     "theme": "courses.themes.marketing",
     "date": "2021-12-23T12:00:00",
     "duration": "",

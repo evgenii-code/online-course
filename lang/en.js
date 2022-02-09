@@ -259,9 +259,11 @@ export default {
     ]
   },
 
-  blog: {
+  posts: {
     title: 'Latest posts',
     subtitle: 'Our blog',
+
+    toBlog: 'Go to blog',
 
     actions: {
       listen: 'Listen',
