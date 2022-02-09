@@ -7,6 +7,7 @@ export default {
     events: [],
     partners: [],
     team: [],
+    posts: [],
   }),
 
   getters: {
@@ -17,6 +18,7 @@ export default {
     eventsLinks: (state) => state.events,
     partnersLinks: (state) => state.partners,
     teamLinks: (state) => state.team,
+    posts: (state) => state.posts,
   },
 
   mutations: {
@@ -54,6 +56,7 @@ export default {
       await dispatch('getLinkItems', 'events');
       await dispatch('getLinkItems', 'partners');
       await dispatch('getLinkItems', 'team');
+      await dispatch('getLinkItems', 'posts');
     },
   },
 };
