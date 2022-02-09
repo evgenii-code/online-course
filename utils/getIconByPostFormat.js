@@ -1,7 +1,7 @@
 const ICONS = {
   podcast: 'mic',
-  video: 'files',
-  article: 'play'
+  video: 'play',
+  article: 'files'
 };
 
 export default (format) => ICONS[format] || ICONS.article;
