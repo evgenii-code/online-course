@@ -257,5 +257,35 @@ export default {
         img: 'user.jpg'
       },
     ]
-  }
+  },
+
+  blog: {
+    title: 'Latest posts',
+    subtitle: 'Our blog',
+
+    actions: {
+      listen: 'Listen',
+      watch: 'Watch',
+      read: 'Read',
+    },
+
+    format: {
+      podcast: 'Podcast',
+      video: 'Video',
+      article: 'Article',
+    },
+
+    description: "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida. Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida.",
+
+    titles: {
+      arbitrage: 'What is traffic arbitrage and does it really make money?',
+      development: 'How to choose the first programming language for a beginner',
+      creativity: 'Should you choose a creative profession if you are attracted to creativity?',
+      recruiting: 'HR statistics: job search,  interviews, hiring and recruiting',
+      feedback: 'What to do and who to talk to if you want to get feedback on the product',
+      color: 'What are color profiles and how they work in graphic design',
+      startup: 'Startup: how to build a team that will live longer than a year',
+      business: 'How to get customers to love your business from the start'
+    },
+  },
 }
