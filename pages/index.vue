@@ -62,28 +62,15 @@
 
     <section :class="[$style.section, $style.posts]">
       <app-container :class="$style.container">
-        <app-card-blog
-          v-for="(post, index) in posts"
-          :key="`post-${index}`"
-          :class="$style.content"
-          :post="post"
-        />
+        <app-posts-latest :class="$style.content" />
       </app-container>
     </section>
   </main>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
 export default {
   name: 'IndexPage',
-
-  computed: {
-    ...mapGetters({
-      posts: 'core/posts',
-    }),
-  },
 };
 </script>
 
