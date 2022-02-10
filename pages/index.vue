@@ -12,7 +12,7 @@
         alt="Background image"
         aria-hidden="true"
         role="none"
-        :class="[$style.image, $style.dots]"
+        :class="[$style.image, $style.forms, $style.dots]"
       />
 
       <img
@@ -20,7 +20,7 @@
         alt="Background image"
         aria-hidden="true"
         role="none"
-        :class="[$style.image, $style.circles]"
+        :class="[$style.image, $style.forms, $style.circles]"
       />
 
       <app-container :class="$style.container">
@@ -63,6 +63,32 @@
     <section :class="[$style.section, $style.posts]">
       <app-container :class="$style.container">
         <app-posts-latest :class="$style.content" />
+      </app-container>
+    </section>
+
+    <section :class="[$style.section, $style.subscribe]">
+      <img
+        src="~/assets/images/subscribe/illustration-1.svg"
+        alt="Background image"
+        aria-hidden="true"
+        role="none"
+        :class="[$style.image, $style.illustration, $style.left]"
+      />
+      <img
+        src="~/assets/images/subscribe/illustration-1.svg"
+        alt="Background image"
+        aria-hidden="true"
+        role="none"
+        :class="[$style.image, $style.illustration, $style.right]"
+      />
+
+      <app-container :class="$style.container">
+        <app-subscribe :class="$style.content">
+          <template #title>{{ $t('subscribe.announcements.title') }}</template>
+          <template #subtitle>{{
+            $t('subscribe.announcements.subtitle')
+          }}</template>
+        </app-subscribe>
       </app-container>
     </section>
   </main>

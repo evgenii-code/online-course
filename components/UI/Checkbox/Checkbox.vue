@@ -10,8 +10,10 @@
       v-on="events"
     />
 
-    <label :for="uuid">
-      <span>
+    <label :class="$style.label" :for="uuid">
+      <i :class="$style.fake" />
+
+      <span :class="$style.content">
         {{ label }}
         <slot />
       </span>

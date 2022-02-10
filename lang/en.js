@@ -2,6 +2,11 @@ export default {
   appName: 'Createx',
   logo: 'Logo',
 
+  ui: {
+    email: 'Email',
+    consent: 'Сonsent',
+  },
+
   header: {
     menu: {
       about: 'About us',
@@ -289,5 +294,24 @@ export default {
       startup: 'Startup: how to build a team that will live longer than a year',
       business: 'How to get customers to love your business from the start'
     },
+  },
+
+  subscribe: {
+    announcements: {
+      title: 'Subscribe to the Createx School announcements',
+      subtitle: 'Don’t miss anything',
+    },
+
+    events: {
+      title: 'Don’t want to miss the best events?{break}Subscribe to our newsletter!',
+    },
+
+    articles: {
+      title: 'Want to get the best articles weekly?{break}Subscribe to our newsletter!',
+    },
+
+    email: 'Your working email',
+    consent: 'I agree to receive communications from Createx Online School',
+    action: 'Subscribe',
   },
 }
