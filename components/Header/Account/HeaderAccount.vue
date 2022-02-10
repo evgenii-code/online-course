@@ -4,9 +4,9 @@
 
     <ul :class="$style.items">
       <li :class="$style.item">
-        <button :class="$style.button">
+        <v-button-clear :class="$style.button">
           {{ $t('header.logIn') }}
-        </button>
+        </v-button-clear>
       </li>
 
       <li :class="$style.item">
@@ -14,9 +14,9 @@
       </li>
 
       <li :class="$style.item">
-        <button :class="$style.button">
+        <v-button-clear :class="$style.button">
           {{ $t('header.register') }}
-        </button>
+        </v-button-clear>
       </li>
     </ul>
   </nav>
