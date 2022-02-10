@@ -1,0 +1,17 @@
+@import '~/scss/utils/spacing.scss';
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .heading {
+    max-width: toRem(810px);
+    text-align: center;
+  }
+
+  .form {
+    margin: toRem(60px) auto 0;
+    max-width: toRem(600px);
+  }
+}
