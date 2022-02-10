@@ -90,9 +90,9 @@
           </i18n>
         </small>
 
-        <button :class="$style.top" @click="scrollToTop">
+        <v-button-clear :class="$style.scroll" @click="scrollToTop">
           {{ $t('footer.goToTop') }}
-        </button>
+        </v-button-clear>
       </app-container>
     </div>
   </footer>
