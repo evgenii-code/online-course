@@ -42,25 +42,35 @@
         <div :class="$style.subscription">
           <h2 :class="$style.title">{{ $t('footer.subscription') }}</h2>
 
-          <form :class="$style.form" @submit.prevent>
-            <v-input
-              v-model="fields.email"
-              :class="$style.email"
-              :placeholder="$t('footer.email')"
-              theme="dark"
-              size="small"
+          <validation-observer tag="form" :class="$style.form" @submit.prevent>
+            <validation-provider
+              v-slot="{ errors, valid }"
+              rules="required|email"
+              slim
+              :name="$t('footer.email')"
+              mode="eager"
             >
-              <template #postfix>
-                <v-button-clear :class="$style.submit">
-                  <v-icon
-                    name="arrow-right"
-                    :class="$style.icon"
-                    size="small"
-                  />
-                </v-button-clear>
-              </template>
-            </v-input>
-          </form>
+              <v-input
+                v-model="fields.email"
+                :class="$style.email"
+                :placeholder="$t('footer.email')"
+                theme="dark"
+                size="small"
+                :error="errors[0]"
+                :success="valid"
+              >
+                <template #postfix>
+                  <v-button-clear :class="$style.submit" :disabled="errors[0]">
+                    <v-icon
+                      name="arrow-right"
+                      :class="$style.icon"
+                      size="small"
+                    />
+                  </v-button-clear>
+                </template>
+              </v-input>
+            </validation-provider>
+          </validation-observer>
 
           <p :class="$style.footnote">{{ $t('footer.footnote') }}</p>
         </div>
@@ -90,9 +100,15 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import { ValidationProvider, ValidationObserver } from 'vee-validate';
 
 export default {
   name: 'AppFooter',
+
+  components: {
+    ValidationProvider,
+    ValidationObserver,
+  },
 
   data() {
     return {
