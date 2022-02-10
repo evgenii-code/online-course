@@ -4,36 +4,50 @@
 .checkbox {
   height: 100%;
 
-  label {
+  .label {
     display: flex;
     align-items: center;
     cursor: pointer;
     position: relative;
-    padding-left: toRem(28px);
     vertical-align: middle;
 
-    span {
+    .content {
+      margin-left: toRem(12px);
+
       @include animation-motion($duration-instant, 'ease-in-out', 'basic');
     }
 
-    &:before,
-    &:after {
+    .fake {
+      position: relative;
       user-select: none;
-      position: absolute;
-      content: '';
-      box-sizing: border-box;
+      display: inline-flex;
+      flex-shrink: 0;
 
-      @include animation-motion($duration-instant, 'ease-in-out', 'basic');
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+
+        @include animation-motion($duration-instant, 'ease-in-out', 'basic');
+      }
+
+      &::before {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     // Check square
-    &:before {
-      border: 1px solid transparent;
-      border-radius: 3px;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      margin: auto;
+    .fake {
+      &:before {
+        border: 1px solid transparent;
+        border-radius: 3px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
   }
 
@@ -49,64 +63,72 @@
     visibility: visible;
     white-space: nowrap;
 
-    &:focus-visible ~ label::before {
+    &:focus-visible ~ .label .fake::before {
       outline: 2px solid red;
       outline-offset: 1px;
     }
 
     // Styles for disabled state
-    &:disabled ~ label,
-    &:checked:disabled ~ label {
+    &:disabled ~ .label,
+    &:checked:disabled ~ .label {
       cursor: not-allowed;
 
-      span {
+      .content {
         opacity: 0.5;
       }
 
-      &::after {
-        border-color: var(--color-gray-500);
-      }
+      .fale {
+        &::after {
+          border-color: var(--color-gray-500);
+        }
 
-      &::before {
-        border-color: var(--color-gray-400);
-        background-color: var(--color-gray-200);
+        &::before {
+          border-color: var(--color-gray-400);
+          background-color: var(--color-gray-200);
+        }
       }
     }
   }
 
   &.checked {
-    label {
+    .label {
       // Check icon
-      &:after {
-        margin: auto;
-        border-right: 2px solid transparent;
-        border-bottom: 2px solid transparent;
-        transform: rotate(40deg);
-        transform-origin: center;
+      .fake {
+        &:after {
+          margin: auto;
+          border-right: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          transform: rotate(40deg);
+          transform-origin: center;
+        }
       }
     }
   }
 
   // VARIANTS
   &.primary {
-    label {
+    .label {
       color: var(--color-gray-800);
 
-      &:before {
-        border-color: var(--color-gray-500);
-        background-color: var(--color-light);
+      .fake {
+        &:before {
+          border-color: var(--color-gray-500);
+          background-color: var(--color-light);
+        }
       }
     }
 
     &.checked {
-      label {
-        &:before {
-          background-color: var(--color-primary);
-          border-color: var(--color-primary);
-        }
+      .label {
+        .fake {
+          &:before {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+          }
 
-        &:after {
-          border-color: var(--color-light);
+          &:after {
+            border-color: var(--color-light);
+          }
         }
       }
     }
@@ -114,17 +136,17 @@
 
   // SIZES
   &.regular {
-    label {
-      &:before {
+    .label {
+      .fake {
         width: toRem(16px);
         height: toRem(16px);
-      }
 
-      &:after {
-        width: toRem(6px);
-        height: toRem(11px);
-        top: toRem(3px);
-        left: toRem(5px);
+        &:after {
+          width: toRem(6px);
+          height: toRem(11px);
+          top: toRem(1px);
+          left: toRem(5px);
+        }
       }
     }
   }
