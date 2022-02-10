@@ -1,5 +1,4 @@
 @import '~/scss/utils/_spacing.scss';
-@import '~/scss/mixins/_animations.scss';
 
 .account {
   display: flex;
@@ -30,22 +29,12 @@
 
       .button {
         margin: 0;
-        padding: 0;
-        background-color: transparent;
-        border: none;
-        outline: none;
         font-size: inherit;
         font-family: inherit;
         font-style: inherit;
         font-weight: inherit;
         color: inherit;
         cursor: pointer;
-
-        @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
-
-        &:hover {
-          opacity: 0.6;
-        }
       }
     }
   }
