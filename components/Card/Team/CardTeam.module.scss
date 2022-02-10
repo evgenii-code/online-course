@@ -39,7 +39,8 @@
 
       @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
-      &:hover {
+      &:hover,
+      &:focus-within {
         opacity: 1;
       }
 
