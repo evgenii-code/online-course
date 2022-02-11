@@ -30,7 +30,7 @@
 
     <section :class="[$style.section, $style.courses]">
       <app-container :class="$style.container">
-        <app-courses :class="$style.content" />
+        <app-courses-featured :class="$style.content" />
       </app-container>
     </section>
 

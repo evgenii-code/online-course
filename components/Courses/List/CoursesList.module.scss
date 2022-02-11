@@ -1,0 +1,16 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.list {
+  margin: 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-gap: toRem(30px);
+  grid-template-columns: repeat(2, 1fr);
+
+  .item {
+    display: flex;
+    width: 100%;
+  }
+}
