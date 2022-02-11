@@ -1,36 +1,90 @@
 [{
+    "id": 1,
+    "title": "courses.titles.ads",
     "theme": "marketing",
-    "title": "courses.themes.arketing",
-    "variant": "success",
+    "price": "$100",
+    "author_id": 2,
     "link": "/",
-    "tag": "nuxt-link"
+    "img": "images/courses/team/jerome-bell.jpg"
   },
+
   {
+    "id": 2,
+    "title": "courses.titles.fundamentals",
     "theme": "management",
-    "title": "courses.themes.management",
-    "variant": "info",
+    "price": "$480",
+    "author_id": 4,
     "link": "/",
-    "tag": "nuxt-link"
+    "img": "images/courses/team/marvin-mckinney.jpg"
   },
+
   {
+    "id": 3,
+    "title": "courses.titles.analytics",
     "theme": "hr",
-    "title": "courses.themes.hr",
-    "variant": "warning",
+    "price": "$200",
+    "author_id": 5,
     "link": "/",
-    "tag": "nuxt-link"
+    "img": "images/courses/team/leslie-alexander-li.jpg"
   },
+
   {
+    "id": 4,
+    "title": "courses.titles.communications",
+    "theme": "marketing",
+    "price": "$530",
+    "author_id": 3,
+    "link": "/",
+    "img": "images/courses/team/kristin-watson.jpg"
+  },
+
+  {
+    "id": 5,
+    "title": "courses.titles.business",
+    "theme": "management",
+    "price": "$400",
+    "author_id": 1,
+    "link": "/",
+    "img": "images/courses/team/dianne-russell.jpg"
+  },
+
+  {
+    "id": 6,
+    "title": "courses.titles.design",
     "theme": "design",
-    "title": "courses.themes.design",
-    "variant": "alert",
+    "price": "$500",
+    "author_id": 7,
     "link": "/",
-    "tag": "nuxt-link"
+    "img": "images/courses/team/guy-hawkins.jpg"
   },
+
   {
+    "id": 7,
+    "title": "courses.titles.development",
     "theme": "development",
-    "title": "courses.themes.development",
-    "variant": "secondary",
+    "price": "$600",
+    "author_id": 7,
     "link": "/",
-    "tag": "nuxt-link"
+    "img": "images/courses/team/brooklyn-simmons.jpg"
+  },
+
+  {
+    "id": 8,
+    "title": "courses.titles.recruitment",
+    "theme": "hr",
+    "price": "$150",
+    "author_id": 6,
+    "link": "/",
+    "img": "images/courses/team/kathryn-murphy.jpg"
+  },
+
+  {
+    "id": 9,
+    "title": "courses.titles.experience",
+    "theme": "design",
+    "price": "$240",
+    "author_id": 8,
+    "link": "/",
+    "img": "images/courses/team/cody-fisher.jpg"
   }
 ]

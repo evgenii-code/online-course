@@ -94,60 +94,17 @@ export default {
       design: 'Design',
       development: 'Development',
     },
-    items: [{
-        title: 'The Ultimate Google Ads Training Course',
-        theme: 'marketing',
-        price: '$100',
-        author: 'Jerome Bell',
-        link: '/',
-        img: 'images/courses/team/jerome-bell.jpg'
-      },
-
-      {
-        title: 'Product Management Fundamentals',
-        theme: 'management',
-        price: '$480',
-        author: 'Marvin McKinney',
-        link: '/',
-        img: 'images/courses/team/marvin-mckinney.jpg'
-      },
-
-      {
-        title: 'HR  Management and Analytics',
-        theme: 'hr',
-        price: '$200',
-        author: 'Leslie Alexander Li',
-        link: '/',
-        img: 'images/courses/team/leslie-alexander-li.jpg'
-      },
-
-      {
-        title: 'Brand Management & PR Communications',
-        theme: 'marketing',
-        price: '$530',
-        author: 'Kristin Watson',
-        link: '/',
-        img: 'images/courses/team/kristin-watson.jpg'
-      },
-
-      {
-        title: 'Business Development Management',
-        theme: 'management',
-        price: '$400',
-        author: 'Dianne Russell',
-        link: '/',
-        img: 'images/courses/team/dianne-russell.jpg'
-      },
-
-      {
-        title: 'Graphic Design Basic',
-        theme: 'design',
-        price: '$500',
-        author: 'Guy Hawkins',
-        link: '/',
-        img: 'images/courses/team/guy-hawkins.jpg'
-      },
-    ]
+    titles: {
+      ads: 'The Ultimate Google Ads Training Course',
+      fundamentals: 'Product Management Fundamentals',
+      analytics: 'HR  Management and Analytics',
+      communications: 'Brand Management & PR Communications',
+      business: 'Business Development Management',
+      design: 'Graphic Design Basic',
+      development: 'Highload Software Architecture',
+      recruitment: 'Human Resources – Selection and Recruitment',
+      experience: 'User Experience. Human-centered Design',
+    },
   },
 
   benefits: {
@@ -220,6 +177,40 @@ export default {
   team: {
     title: 'Meet our team',
     subtitle: 'Best tutors are all here',
+    members: {
+      russell: {
+        name: 'Dianne Russell',
+        position: 'Founder and CEO',
+      },
+      bell: {
+        name: 'Jerome Bell',
+        position: 'Founder and Program Director',
+      },
+      watson: {
+        name: 'Kristin Watson',
+        position: 'Marketer, Curator of Marketing Course',
+      },
+      mcKinney: {
+        name: 'Marvin McKinney',
+        position: 'PM, Curator of Management Course',
+      },
+      li: {
+        name: 'Leslie Alexander Li',
+        position: 'Curator of HR & Recruting Course',
+      },
+      murphy: {
+        name: 'Kathryn Murphy',
+        position: 'Analyst and Marketing specialist',
+      },
+      simmons: {
+        name: 'Brooklyn Simmons',
+        position: 'Curator of Development Course',
+      },
+      fisher: {
+        name: 'Cody Fisher',
+        position: 'UX Designer, Curator of Design Course',
+      },
+    },
   },
 
   testimonials: {
