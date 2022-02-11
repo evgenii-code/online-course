@@ -1,0 +1,9 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  position: relative;
+
+  &.courses {
+    padding: toRem(152px) 0 toRem(120px);
+  }
+}
