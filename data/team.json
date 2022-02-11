@@ -1,7 +1,7 @@
 [{
     "id": 1,
-    "name": "Dianne Russell",
-    "position": "Founder and CEO",
+    "name": "team.members.russell.name",
+    "position": "team.members.russell.position",
     "img": "dianne-russell.png",
     "links": {
       "facebook": "https://facebook.com/",
@@ -11,8 +11,8 @@
   },
   {
     "id": 2,
-    "name": "Jerome Bell",
-    "position": "Founder and Program Director",
+    "name": "team.members.bell.name",
+    "position": "team.members.bell.position",
     "img": "jerome-bell.png",
     "links": {
       "facebook": "https://facebook.com/",
@@ -22,8 +22,8 @@
   },
   {
     "id": 3,
-    "name": "Kristin Watson",
-    "position": "Marketer, Curator of Marketing Course",
+    "name": "team.members.watson.name",
+    "position": "team.members.watson.position",
     "img": "kristin-watson.png",
     "links": {
       "facebook": "https://facebook.com/",
@@ -33,8 +33,8 @@
   },
   {
     "id": 4,
-    "name": "Marvin McKinney",
-    "position": "PM, Curator of Management Course",
+    "name": "team.members.mcKinney.name",
+    "position": "team.members.mcKinney.position",
     "img": "marvin-mckinney.png",
     "links": {
       "facebook": "https://facebook.com/",
@@ -44,8 +44,8 @@
   },
   {
     "id": 5,
-    "name": "Leslie Alexander Li",
-    "position": "Curator of HR & Recruting Course",
+    "name": "team.members.li.name",
+    "position": "team.members.li.position",
     "img": "leslie-alexander-li.png",
     "links": {
       "facebook": "https://facebook.com/",
@@ -55,8 +55,8 @@
   },
   {
     "id": 6,
-    "name": "Kathryn Murphy",
-    "position": "Analyst and Marketing specialist",
+    "name": "team.members.murphy.name",
+    "position": "team.members.murphy.position",
     "img": "kathryn-murphy.png",
     "links": {
       "facebook": "https://facebook.com/",
@@ -66,8 +66,8 @@
   },
   {
     "id": 7,
-    "name": "Brooklyn Simmons",
-    "position": "Curator of Development Course",
+    "name": "team.members.simmons.name",
+    "position": "team.members.simmons.position",
     "img": "brooklyn-simmons.png",
     "links": {
       "facebook": "https://facebook.com/",
@@ -77,8 +77,8 @@
   },
   {
     "id": 8,
-    "name": "Cody Fisher",
-    "position": "UX Designer, Curator of Design Course",
+    "name": "team.members.fisher.name",
+    "position": "team.members.fisher.position",
     "img": "cody-fisher.png",
     "links": {
       "facebook": "https://facebook.com/",

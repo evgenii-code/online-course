@@ -3,6 +3,7 @@ export default {
     menu: [],
     contacts: [],
     social: [],
+    themes: [],
     courses: [],
     events: [],
     partners: [],
@@ -14,10 +15,12 @@ export default {
     menuLinks: (state) => state.menu,
     contactLinks: (state) => state.contacts,
     socialLinks: (state) => state.social,
-    coursesLinks: (state) => state.courses,
+    themes: (state) => state.themes,
+    courses: (state) => state.courses,
     eventsLinks: (state) => state.events,
     partnersLinks: (state) => state.partners,
-    teamLinks: (state) => state.team,
+    team: (state) => state.team,
+    teamMemberById: (state) => (id) => state.team.find((member) => member.id === id),
     posts: (state) => state.posts,
   },
 
@@ -52,6 +55,7 @@ export default {
       await dispatch('getLinkItems', 'menu');
       await dispatch('getLinkItems', 'contacts');
       await dispatch('getLinkItems', 'social');
+      await dispatch('getLinkItems', 'themes');
       await dispatch('getLinkItems', 'courses');
       await dispatch('getLinkItems', 'events');
       await dispatch('getLinkItems', 'partners');
