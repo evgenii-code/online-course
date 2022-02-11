@@ -28,8 +28,8 @@
     </div>
 
     <footer :class="$style.footer">
-      <h3 :class="$style.title">{{ teamMember.name }}</h3>
-      <p :class="$style.position">{{ teamMember.position }}</p>
+      <h3 :class="$style.title">{{ $t(teamMember.name) }}</h3>
+      <p :class="$style.position">{{ $t(teamMember.position) }}</p>
     </footer>
   </div>
 </template>

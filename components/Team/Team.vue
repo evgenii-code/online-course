@@ -26,7 +26,7 @@
         ]"
       >
         <li
-          v-for="teamMember in teamLinks"
+          v-for="teamMember in team"
           :key="`team-member-${teamMember.id}`"
           :class="[$style.member, { 'swiper-slide': isSwiper }]"
         >
@@ -88,7 +88,7 @@ export default {
 
   computed: {
     ...mapGetters({
-      teamLinks: 'core/teamLinks',
+      team: 'core/team',
     }),
 
     attrs() {
