@@ -94,6 +94,7 @@ export default {
       design: 'Design',
       development: 'Development',
     },
+    allThemes: 'All',
     titles: {
       ads: 'The Ultimate Google Ads Training Course',
       fundamentals: 'Product Management Fundamentals',

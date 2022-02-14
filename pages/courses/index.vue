@@ -2,7 +2,7 @@
   <main :class="$style.main">
     <section :class="[$style.section, $style.courses]">
       <app-container :class="$style.container">
-        <app-courses-featured :class="$style.content" />
+        <app-courses-all :class="$style.content" />
       </app-container>
     </section>
   </main>

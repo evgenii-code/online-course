@@ -35,7 +35,6 @@ export default {
 
   computed: {
     ...mapGetters({
-      themes: 'core/themes',
       courses: 'core/courses',
     }),
 

@@ -11,6 +11,7 @@
         :badge="$t(`courses.themes.${course.theme}`)"
         :badge-variant="getVariant(course.theme)"
         :path-to-image="course.img"
+        :vertical="vertical"
       >
         <template #title>{{ $t(course.title) }}</template>
 
@@ -30,6 +31,11 @@ export default {
   name: 'AppCoursesList',
 
   props: {
+    vertical: {
+      type: Boolean,
+      default: false,
+    },
+
     courses: {
       type: Array,
       required: true,
