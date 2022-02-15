@@ -44,13 +44,9 @@
       :courses="filteredCourses"
     />
 
-    <v-button-clear :class="$style.load">
-      <v-icon name="arrow-convert" :class="$style.icon" />
-
-      <span :class="$style.text">
-        {{ $t('courses.filters.more') }}
-      </span>
-    </v-button-clear>
+    <v-button-load-more :class="$style.load">
+      {{ $t('courses.filters.more') }}
+    </v-button-load-more>
   </div>
 </template>
 
