@@ -8,11 +8,18 @@
       </app-heading>
     </div>
 
-    <v-button-group
-      v-model="selectedTheme"
-      :options="themesOptions"
-      name="theme-options"
-    />
+    <nav :class="$style.themes">
+      <v-button-group-item
+        v-for="(option, index) in themesOptions"
+        :key="`options-${index}`"
+        v-model="selectedTheme"
+        name="theme-options"
+        :current-value="option.value"
+        :class="$style.theme"
+      >
+        {{ option.text }}
+      </v-button-group-item>
+    </nav>
 
     <app-courses-list
       vertical
