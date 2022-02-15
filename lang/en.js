@@ -94,7 +94,13 @@ export default {
       design: 'Design',
       development: 'Development',
     },
-    allThemes: 'All',
+    filters: {
+      title: 'Our online courses',
+      subtitle: 'Enjoy your studying!',
+      all: 'All',
+      search: 'Search course...',
+      more: 'Load more',
+    },
     titles: {
       ads: 'The Ultimate Google Ads Training Course',
       fundamentals: 'Product Management Fundamentals',

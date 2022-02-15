@@ -4,6 +4,40 @@
   position: relative;
 
   &.courses {
+    min-height: 100vh;
     padding: toRem(152px) 0 toRem(120px);
+  }
+
+  .image {
+    position: absolute;
+    z-index: 0;
+    object-fit: contain;
+
+    &.courses {
+      transform: translateY(-50%);
+
+      &.circles {
+        top: 30%;
+        left: 3%;
+      }
+
+      &.dots {
+        top: 10%;
+        right: 0;
+      }
+
+      &.arrows {
+        top: 60%;
+        right: 5%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .image {
+      &.courses {
+        display: none;
+      }
+    }
   }
 }
