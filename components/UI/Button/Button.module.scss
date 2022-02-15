@@ -7,7 +7,7 @@
   align-items: center;
   position: relative;
   margin: 0;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
   color: var(--color-light);
@@ -16,6 +16,7 @@
   text-decoration: none;
   letter-spacing: 0.5px;
   background-color: transparent;
+  background-origin: border-box;
 
   @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
@@ -23,6 +24,8 @@
     outline: 2px solid red;
     outline-offset: toRem(3px);
   }
+
+  // Button themes
 
   &.primary {
     background-image: var(--gradient-primary);
@@ -37,7 +40,6 @@
     }
   }
 
-  // Button themes
   &.secondary {
     background-color: var(--color-gray-300);
     color: var(--color-gray-800);
