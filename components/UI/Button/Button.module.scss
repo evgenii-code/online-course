@@ -90,6 +90,16 @@
     }
   }
 
+  &.clear {
+    background-color: transparent;
+    color: var(--color-gray-800);
+
+    &[disabled],
+    &:not(:hover) {
+      color: var(--color-gray-600);
+    }
+  }
+
   // Button sizes
   &.small {
     font-size: toRem(12px);

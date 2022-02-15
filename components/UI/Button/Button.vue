@@ -12,7 +12,7 @@
 </template>
 
 <script>
-const BUTTON_THEME_NAMES = ['primary', 'secondary', 'dark', 'white'];
+const BUTTON_THEME_NAMES = ['primary', 'secondary', 'dark', 'white', 'clear'];
 const BUTTON_SIZES = ['small', 'regular', 'large'];
 
 export default {

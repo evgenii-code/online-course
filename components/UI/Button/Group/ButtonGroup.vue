@@ -16,9 +16,9 @@
 
       <v-button
         outline
+        :theme="getButtonTheme(option)"
         tag="span"
         :class="$style.button"
-        :to="`#${option.value}`"
         >{{ option.text }}</v-button
       >
     </label>
@@ -49,6 +49,16 @@ export default {
       type: [Array, String],
       required: true,
     },
+
+    checkedTheme: {
+      type: String,
+      default: 'primary',
+    },
+
+    notCheckedTheme: {
+      type: String,
+      default: 'clear',
+    },
   },
 
   computed: {
@@ -62,6 +72,12 @@ export default {
   },
 
   methods: {
+    getButtonTheme(option) {
+      const isChecked = this.isChecked(option);
+
+      return isChecked ? this.checkedTheme : this.notCheckedTheme;
+    },
+
     emitNewValue(newValue) {
       this.$emit('change', newValue);
     },
