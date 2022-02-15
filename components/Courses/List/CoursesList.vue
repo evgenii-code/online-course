@@ -5,19 +5,22 @@
       :key="`course-${index}`"
       :class="$style.item"
     >
-      <app-card-course
-        :class="$style.card"
-        :href="localePath(course.link)"
-        :badge="$t(`courses.themes.${course.theme}`)"
-        :badge-variant="getVariant(course.theme)"
-        :path-to-image="course.img"
-      >
-        <template #title>{{ $t(course.title) }}</template>
+      <nuxt-link :to="localePath(course.link)" :class="$style.link">
+        <app-card-course
+          :class="$style.card"
+          :href="localePath(course.link)"
+          :badge="$t(`courses.themes.${course.theme}`)"
+          :badge-variant="getVariant(course.theme)"
+          :path-to-image="course.img"
+          :vertical="vertical"
+        >
+          <template #title>{{ $t(course.title) }}</template>
 
-        <template #price>{{ course.price }}</template>
+          <template #price>{{ course.price }}</template>
 
-        <template #author>{{ authorName(course.author_id) }}</template>
-      </app-card-course>
+          <template #author>{{ authorName(course.author_id) }}</template>
+        </app-card-course>
+      </nuxt-link>
     </li>
   </ul>
 </template>
@@ -30,6 +33,11 @@ export default {
   name: 'AppCoursesList',
 
   props: {
+    vertical: {
+      type: Boolean,
+      default: false,
+    },
+
     courses: {
       type: Array,
       required: true,
@@ -45,6 +53,7 @@ export default {
   computed: {
     ...mapGetters({
       teamMember: 'core/teamMemberById',
+      themes: 'core/themes',
     }),
   },
 

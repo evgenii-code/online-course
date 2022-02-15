@@ -1,0 +1,90 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/srOnly.scss';
+
+.courses {
+  .heading {
+    text-align: center;
+  }
+
+  .content {
+    margin-top: toRem(60px);
+
+    &.filters {
+      display: flex;
+      justify-content: space-between;
+
+      .themes {
+        margin-right: toRem(40px);
+
+        .theme {
+          sup {
+            font-size: toRem(10px);
+          }
+        }
+      }
+
+      .search {
+        flex-grow: 1;
+        max-width: toRem(315px);
+
+        span {
+          @include srOnly();
+        }
+
+        .icon {
+          color: var(--color-gray-600);
+        }
+      }
+    }
+
+    &.list {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(290px), 1fr));
+    }
+  }
+
+  .load {
+    margin: toRem(80px) auto 0;
+    color: var(--color-gray-800);
+    font-weight: bold;
+    font-size: toRem(16px);
+    line-height: 160%;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .content {
+      margin-top: toRem(40px);
+
+      &.filters {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .themes {
+          width: 100%;
+          margin: 0;
+          margin-bottom: toRem(20px);
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(toRem(170px), 1fr));
+
+          .theme {
+            display: flex;
+            width: 100%;
+          }
+        }
+
+        .search {
+          width: 100%;
+          max-width: unset;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .content {
+      &.list {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

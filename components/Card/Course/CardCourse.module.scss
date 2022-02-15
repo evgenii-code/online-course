@@ -13,6 +13,7 @@
   }
 
   .content {
+    height: 100%;
     padding: toRem(24px);
   }
 }
@@ -26,8 +27,14 @@
   overflow: hidden;
   display: flex;
   text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--card-shadow-grey);
 
   @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+  &:hover {
+    box-shadow: var(--card-shadow-grey-hover);
+  }
 
   &.vertical {
     @include vartical-card;
@@ -97,14 +104,5 @@
 
   @media screen and (max-width: 1024px) {
     @include vartical-card;
-  }
-}
-
-a.card {
-  cursor: pointer;
-  box-shadow: var(--card-shadow-grey);
-
-  &:hover {
-    box-shadow: var(--card-shadow-grey-hover);
   }
 }

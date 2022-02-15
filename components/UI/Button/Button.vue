@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag"
+    :is="component"
     :class="classes"
     :disabled="disabled"
     v-bind="$attrs"
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-const BUTTON_THEME_NAMES = ['primary', 'secondary', 'dark', 'white'];
+const BUTTON_THEME_NAMES = ['primary', 'secondary', 'dark', 'white', 'clear'];
 const BUTTON_SIZES = ['small', 'regular', 'large'];
 
 export default {
@@ -50,10 +50,17 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    tag: {
+      type: String,
+      default: null,
+    },
   },
 
   computed: {
-    tag() {
+    component() {
+      if (this.tag) return this.tag;
+
       return this.link ? 'nuxt-link' : 'button';
     },
 
