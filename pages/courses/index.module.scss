@@ -1,3 +1,4 @@
+@import '~/scss/utils/color';
 @import '~/scss/utils/_spacing.scss';
 
 .section {
@@ -8,6 +9,33 @@
     padding: toRem(152px) 0 toRem(120px);
   }
 
+  &.testimonials {
+    padding: toRem(80px) 0 toRem(100px);
+    background-color: var(--color-gray-200);
+    overflow: hidden;
+  }
+
+  &.certificate {
+    padding: toRem(120px) 0;
+
+    @media screen and (max-width: 1024px) {
+      padding: toRem(80px) 0;
+    }
+  }
+
+  &.subscribe {
+    padding: toRem(120px) 0 toRem(180px);
+    background-image: #{getLinearGradient(
+        var(--color-primary-rgb),
+        var(--color-primary-shade-rgb),
+        0.2
+      )};
+
+    @media screen and (max-width: 1024px) {
+      padding: toRem(80px) 0;
+    }
+  }
+
   .image {
     position: absolute;
     z-index: 0;
@@ -16,19 +44,39 @@
     &.courses {
       transform: translateY(-50%);
 
-      &.circles {
-        top: 30%;
-        left: 3%;
-      }
-
       &.dots {
-        top: 10%;
+        top: 25vh;
         right: 0;
       }
 
+      &.circles {
+        top: 80vh;
+        left: 3%;
+      }
+
       &.arrows {
-        top: 60%;
+        top: 120vh;
         right: 5%;
+      }
+    }
+
+    &.illustration {
+      bottom: 0;
+      width: toRem(354px);
+      height: toRem(246px);
+
+      &.left {
+        left: 0;
+      }
+
+      &.right {
+        right: 0;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      &.illustration {
+        display: none;
       }
     }
   }
