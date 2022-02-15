@@ -16,7 +16,12 @@
           :current-value="option.value"
           :class="$style.theme"
         >
-          {{ option.text }}
+          <span>
+            {{ option.text }}
+            <sup>
+              {{ option.count }}
+            </sup>
+          </span>
         </v-button-group-item>
       </nav>
 
@@ -83,6 +88,7 @@ export default {
         this.themes.map(({ theme, title }) => ({
           value: theme,
           text: this.$t(title),
+          count: this.countCoursesByTheme(theme),
         })) || [];
 
       return [this.$options.allThemes, ...themes];
@@ -109,8 +115,20 @@ export default {
     },
   },
 
-  beforeCreate() {
+  created() {
     this.$options.allThemes.text = this.$t('courses.filters.all');
+    this.$options.allThemes.count = this.courses?.length || 0;
+  },
+
+  methods: {
+    countCoursesByTheme(theme) {
+      return (
+        this.courses?.reduce(
+          (count, course) => (course.theme === theme ? ++count : count),
+          0
+        ) || 0
+      );
+    },
   },
 };
 </script>

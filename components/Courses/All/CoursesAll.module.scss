@@ -15,6 +15,12 @@
 
       .themes {
         margin-right: toRem(40px);
+
+        .theme {
+          sup {
+            font-size: toRem(10px);
+          }
+        }
       }
 
       .search {
