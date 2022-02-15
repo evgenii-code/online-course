@@ -1,5 +1,5 @@
 <template>
-  <component :is="component" v-bind="to" :class="classes">
+  <article :class="classes">
     <picture :class="$style.picture">
       <img :class="$style.image" :src="imgSrc" :alt="badge" />
     </picture>
@@ -25,7 +25,7 @@
         </span>
       </p>
     </div>
-  </component>
+  </article>
 </template>
 
 <script>
@@ -66,14 +66,6 @@ export default {
         [this.$style.card]: true,
         [this.$style.vertical]: this.vertical,
       };
-    },
-
-    component() {
-      return this.href ? 'nuxt-link' : 'div';
-    },
-
-    to() {
-      return this.href ? { to: this.localePath(this.href) } : null;
     },
 
     imgSrc() {

@@ -1,5 +1,7 @@
-export const getVariantByTheme = (courses = [], theme = '') => {
-  const matchedVariant = courses.find((course) => course.theme === theme);
+export const getVariantByTheme = (themes = [], themeToFind = '') => {
+  const matchedVariant = themes.find(({
+    theme
+  }) => theme === themeToFind);
 
   if (matchedVariant) {
     return matchedVariant.variant;
