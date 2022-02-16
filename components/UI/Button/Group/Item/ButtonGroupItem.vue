@@ -67,7 +67,7 @@ export default {
       },
     },
 
-    shouldBeChecked() {
+    isChecked() {
       if (this.multiple) {
         return this.modelValue.includes(this.currentValue);
       }
@@ -76,7 +76,7 @@ export default {
     },
 
     theme() {
-      return this.shouldBeChecked ? this.checkedTheme : this.notCheckedTheme;
+      return this.isChecked ? this.checkedTheme : this.notCheckedTheme;
     },
   },
 
