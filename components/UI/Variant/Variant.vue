@@ -7,6 +7,7 @@
       :value="currentValue"
       v-bind="$attrs"
       :class="$style.input"
+      v-on="events"
     />
 
     <span :class="$style.content">
@@ -26,7 +27,7 @@
 import getUID from '~/utils/getUID';
 
 export default {
-  name: 'AppRadioButton',
+  name: 'AppVarianToggler',
 
   model: {
     prop: 'modelValue',
@@ -43,16 +44,6 @@ export default {
       type: String,
       required: true,
     },
-
-    checkedTheme: {
-      type: String,
-      default: 'primary',
-    },
-
-    notCheckedTheme: {
-      type: String,
-      default: 'clear',
-    },
   },
 
   computed: {
@@ -62,6 +53,14 @@ export default {
 
     multiple() {
       return Array.isArray(this.modelValue);
+    },
+
+    events() {
+      const listeners = { ...this.$listeners };
+
+      delete listeners.change;
+
+      return listeners;
     },
 
     model: {
