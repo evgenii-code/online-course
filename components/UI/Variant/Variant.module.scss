@@ -1,0 +1,34 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.variant {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  .input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    visibility: visible;
+    white-space: nowrap;
+
+    &:not([disabled]):focus-visible ~ .content {
+      outline: 2px solid red;
+      outline-offset: toRem(3px);
+    }
+  }
+
+  .content {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+
+    @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+  }
+}
