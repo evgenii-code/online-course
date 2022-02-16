@@ -17,6 +17,11 @@
         margin-right: toRem(40px);
 
         .theme {
+          .button {
+            width: 100%;
+            white-space: nowrap;
+          }
+
           sup {
             font-size: toRem(10px);
           }
