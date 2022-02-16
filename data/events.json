@@ -5,7 +5,8 @@
       "start": "2022-08-05T11:00:00",
       "end": "2022-08-05T14:00:00"
     },
-    "link": "/events"
+    "link": "/events",
+    "theme": "management"
   },
   {
     "title": "events.titles.building",
@@ -14,7 +15,8 @@
       "start": "2022-07-24T11:00:00",
       "end": "2022-07-24T12:30:00"
     },
-    "link": "/events"
+    "link": "/events",
+    "theme": "management"
   },
   {
     "title": "events.titles.prototyping",
@@ -23,7 +25,8 @@
       "start": "2022-07-16T10:00:00",
       "end": "2022-07-16T13:00:00"
     },
-    "link": "/events"
+    "link": "/events",
+    "theme": "design"
   },
   {
     "title": "events.titles.candidates",
@@ -32,7 +35,8 @@
       "start": "2022-06-10T09:00:00",
       "end": "2022-06-10T14:00:00"
     },
-    "link": "/events"
+    "link": "/events",
+    "theme": "hr"
   },
   {
     "title": "events.titles.visualization",
@@ -41,7 +45,8 @@
       "start": "2022-06-27T15:00:00",
       "end": "2022-06-27T19:00:00"
     },
-    "link": "/events"
+    "link": "/events",
+    "theme": "marketing"
   },
   {
     "title": "events.titles.marketing",
@@ -50,7 +55,8 @@
       "start": "2022-06-15T10:00:00",
       "end": "2022-06-15T12:00:00"
     },
-    "link": "/events"
+    "link": "/events",
+    "theme": "marketing"
   },
   {
     "title": "events.titles.design",
@@ -59,7 +65,8 @@
       "start": "2022-06-02T11:00:00",
       "end": "2022-06-02T13:00:00"
     },
-    "link": "/events"
+    "link": "/events",
+    "theme": "design"
   },
   {
     "title": "events.titles.manager",
@@ -68,7 +75,8 @@
       "start": "2022-05-29T11:00:00",
       "end": "2022-05-29T12:00:00"
     },
-    "link": "/events"
+    "link": "/events",
+    "theme": "management"
   },
   {
     "title": "events.titles.vacancies",
@@ -77,6 +85,7 @@
       "start": "2022-05-18T10:00:00",
       "end": "2022-05-18T12:00:00"
     },
-    "link": "/events"
+    "link": "/events",
+    "theme": "hr"
   }
 ]

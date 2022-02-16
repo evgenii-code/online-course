@@ -10,24 +10,69 @@
     margin: toRem(60px) 0 0;
     display: flex;
     justify-content: space-between;
+    gap: toRem(20px) toRem(40px);
+    flex-wrap: wrap;
 
-    .search {
+    .filter {
       flex-grow: 1;
-      max-width: toRem(282px);
+      display: flex;
 
-      .description {
-        @include srOnly();
+      .description,
+      .text {
+        cursor: pointer;
+        align-self: center;
+        white-space: nowrap;
       }
 
-      .icon {
-        color: var(--color-gray-600);
+      .description {
+        margin-right: toRem(12px);
+        font-weight: bold;
+      }
+
+      .text {
+        margin-left: toRem(12px);
+        color: var(--color-gray-700);
+        text-transform: lowercase;
+      }
+
+      .select {
+        font-size: toRem(14px);
+      }
+
+      &.theme {
+        .select {
+          min-width: toRem(160px);
+        }
+      }
+
+      &.sort {
+        .select {
+          min-width: toRem(160px);
+        }
+      }
+
+      &.per-page {
+        flex-grow: 0;
+
+        .select {
+          min-width: toRem(72px);
+        }
+      }
+
+      &.search {
+        .description {
+          @include srOnly();
+        }
+
+        .icon {
+          color: var(--color-gray-600);
+        }
       }
     }
 
     .views {
       display: flex;
       align-items: center;
-      margin-left: toRem(40px);
 
       .toggler {
         color: var(--color-gray-800);
