@@ -1,0 +1,13 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: toRem(24px);
+
+  @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+}

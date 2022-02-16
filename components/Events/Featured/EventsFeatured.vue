@@ -6,24 +6,11 @@
       <template #title>{{ $t('events.title') }}</template>
     </app-heading>
 
-    <ul :class="$style.items">
-      <li
-        v-for="event in filteredEvents"
-        :key="event.title"
-        :class="$style.item"
-      >
-        <app-card-event
-          :class="$style.content"
-          :date-start="event.date.start"
-          :date-end="event.date.end"
-          :href="event.link"
-          colored-shadow
-        >
-          <template #title>{{ $t(event.title) }}</template>
-          <template #category>{{ $t(event.category) }}</template>
-        </app-card-event>
-      </li>
-    </ul>
+    <app-events-list
+      :class="$style.list"
+      :events="filteredEvents"
+      colored-shadow
+    />
 
     <div :class="$style.footnote">
       <p :class="$style.more">{{ $t('events.footnote') }}</p>
@@ -39,7 +26,7 @@
 import { mapGetters } from 'vuex';
 
 export default {
-  name: 'AppEvents',
+  name: 'AppEventsFeatured',
 
   computed: {
     ...mapGetters({
@@ -54,5 +41,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import './Events.module';
+@import './EventsFeatured.module';
 </style>
