@@ -1,0 +1,11 @@
+@import '~/scss/utils/color';
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  position: relative;
+
+  &.events {
+    min-height: 100vh;
+    padding: toRem(152px) 0 toRem(180px);
+  }
+}

@@ -5,6 +5,9 @@ export default {
   ui: {
     email: 'Email',
     consent: 'Сonsent',
+    show: 'Show',
+    list: 'List',
+    grid: 'Grid',
   },
 
   header: {
@@ -156,6 +159,19 @@ export default {
       masterclass: 'Onine master-class',
       lecture: 'Online lecture',
       workshop: 'Online workshop'
+    },
+
+    filters: {
+      title: 'Lectures, workshops & master-classes',
+      subtitle: 'Our events',
+      search: 'Search event...',
+      category: 'Event category',
+      all: 'All themes',
+      sortBy: 'Sort by',
+      newest: 'Newest',
+      oldest: 'Oldest',
+      show: 'Show',
+      perPage: 'Events per page',
     },
 
     titles: {

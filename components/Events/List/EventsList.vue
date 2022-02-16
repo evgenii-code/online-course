@@ -11,6 +11,7 @@
         :date-end="event.date.end"
         :href="event.link"
         :colored-shadow="coloredShadow"
+        :vertical="vertical"
       >
         <template #title>{{ $t(event.title) }}</template>
 
@@ -28,6 +29,11 @@ export default {
     events: {
       type: Array,
       required: true,
+    },
+
+    vertical: {
+      type: Boolean,
+      default: false,
     },
 
     coloredShadow: {
