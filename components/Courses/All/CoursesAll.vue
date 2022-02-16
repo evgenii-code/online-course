@@ -26,7 +26,7 @@
       </nav>
 
       <label :class="$style.search">
-        <span>
+        <span :class="$style.description">
           {{ $t('courses.filters.search') }}
         </span>
 

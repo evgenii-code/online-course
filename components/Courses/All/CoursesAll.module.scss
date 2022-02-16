@@ -27,7 +27,7 @@
         flex-grow: 1;
         max-width: toRem(315px);
 
-        span {
+        .description {
           @include srOnly();
         }
 
