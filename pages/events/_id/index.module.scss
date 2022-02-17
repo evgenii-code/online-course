@@ -1,0 +1,9 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  position: relative;
+
+  &.title {
+    padding: toRem(192px) 0 toRem(120px);
+  }
+}

@@ -9,7 +9,7 @@
         :class="$style.card"
         :date-start="event.date.start"
         :date-end="event.date.end"
-        :href="event.link"
+        :href="event.link + '/' + event.slug"
         :colored-shadow="coloredShadow"
         :vertical="vertical"
       >

@@ -196,6 +196,11 @@ export default {
     all: 'Explore all events'
   },
 
+  event: {
+    title: 'Formation of the organizational structure of the company in the face of uncertainty',
+    subtitle: 'Online lecture',
+  },
+
   certificate: {
     title: 'Your expertise will be confirmed',
     subtitle: 'Createx Certificate',

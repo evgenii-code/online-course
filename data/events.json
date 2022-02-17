@@ -6,6 +6,7 @@
       "end": "2022-08-05T14:00:00"
     },
     "link": "/events",
+    "slug": "formation-of-the-organizational-structure",
     "theme": "management"
   },
   {
@@ -16,6 +17,7 @@
       "end": "2022-07-24T12:30:00"
     },
     "link": "/events",
+    "slug": "building-a-customer-service-department",
     "theme": "management"
   },
   {
@@ -26,6 +28,7 @@
       "end": "2022-07-16T13:00:00"
     },
     "link": "/events",
+    "slug": "methods-of-speculative-design-in-practice",
     "theme": "design"
   },
   {
@@ -36,6 +39,7 @@
       "end": "2022-06-10T14:00:00"
     },
     "link": "/events",
+    "slug": "search-and-assessment-tools-for-candidates",
     "theme": "hr"
   },
   {
@@ -46,6 +50,7 @@
       "end": "2022-06-27T19:00:00"
     },
     "link": "/events",
+    "slug": "dat-visualization-in-power-bi",
     "theme": "marketing"
   },
   {
@@ -56,6 +61,7 @@
       "end": "2022-06-15T12:00:00"
     },
     "link": "/events",
+    "slug": "marketing-or-growth-hacking",
     "theme": "marketing"
   },
   {
@@ -66,6 +72,7 @@
       "end": "2022-06-02T13:00:00"
     },
     "link": "/events",
+    "slug": "how-to-brief-a-client",
     "theme": "design"
   },
   {
@@ -76,6 +83,7 @@
       "end": "2022-05-29T12:00:00"
     },
     "link": "/events",
+    "slug": "who-is-a-project-manager",
     "theme": "management"
   },
   {
@@ -86,6 +94,7 @@
       "end": "2022-05-18T12:00:00"
     },
     "link": "/events",
+    "slug": "the-companys-business-page",
     "theme": "hr"
   }
 ]
