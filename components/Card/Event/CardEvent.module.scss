@@ -58,6 +58,7 @@
   border-radius: 4px;
   flex-direction: row;
   padding: toRem(32px) toRem(40px);
+  background-color: var(--color-light);
 
   @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
@@ -67,7 +68,6 @@
   }
 
   &.colored {
-    background-color: var(--color-light);
     box-shadow: var(--card-shadow-primary);
     border: none;
 

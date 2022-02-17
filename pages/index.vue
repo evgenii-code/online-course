@@ -42,7 +42,7 @@
 
     <section :class="[$style.section, $style.events]">
       <app-container :class="$style.container">
-        <app-events :class="$style.content" />
+        <app-events-featured :class="$style.content" />
       </app-container>
     </section>
 

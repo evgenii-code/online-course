@@ -25,7 +25,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import sortPostsByDate from '~/utils/sortPostsByDate';
+import sortByDate from '~/utils/sortByDate';
 
 export default {
   name: 'AppPostsLatests',
@@ -36,7 +36,7 @@ export default {
     }),
 
     latestPosts() {
-      return sortPostsByDate(this.posts, true).slice(0, 3);
+      return sortByDate(this.posts, true).slice(0, 3);
     },
   },
 };

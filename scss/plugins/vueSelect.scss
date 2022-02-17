@@ -1,0 +1,97 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/srOnly.scss';
+@import 'vue-select/src/scss/vue-select.scss';
+
+.v-select {
+  width: 100%;
+}
+
+.vs__dropdown-toggle {
+  padding: 0;
+  height: 100%;
+  min-height: toRem(42px);
+  border: 1px solid var(--color-gray-400);
+  border-radius: 4px;
+
+  &:focus-within {
+    border-color: #{rgba(var(--color-primary-rgb), 0.4)};
+  }
+}
+
+.vs--open .vs__dropdown-toggle {
+  border-bottom-color: transparent;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.vs__selected-options,
+.vs__dropdown-option {
+  padding: toRem(11px) toRem(16px) toRem(11px);
+}
+
+.vs__selected,
+.vs__search,
+.vs__search:focus {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  line-height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.vs__search,
+.vs__search:focus {
+  // display: none;
+  @include srOnly();
+}
+
+.vs--single.vs--open .vs__selected {
+  position: relative;
+}
+
+.vs--multiple .vs__selected {
+  padding: 0 toRem(4px);
+  margin-right: toRem(4px);
+  background-color: var(--color-primary);
+  color: var(--color-light);
+
+  &:last-of-type {
+    margin: 0;
+  }
+
+  .vs__deselect {
+    fill: var(--color-light);
+  }
+}
+
+.vs__actions {
+  padding: 0 toRem(16px) 0 0;
+}
+
+.vs__dropdown-menu {
+  min-width: unset;
+  overflow: hidden;
+  border-color: #{rgba(var(--color-primary-rgb), 0.4)};
+  box-shadow: var(--focus-shadow-primary);
+}
+
+.vs__dropdown-option--highlight {
+  background-color: var(--color-primary);
+}
+
+// .vs__search::placeholder,
+// .vs__dropdown-toggle,
+// .vs__dropdown-menu {
+//   background: #dfe5fb;
+//   border: none;
+//   color: #394066;
+//   text-transform: lowercase;
+//   font-variant: small-caps;
+// }
+
+// .vs__clear,
+// .vs__open-indicator {
+//   fill: #394066;
+// }

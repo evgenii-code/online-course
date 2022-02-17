@@ -2,15 +2,8 @@
 @import '~/scss/mixins/_animations.scss';
 
 .events {
-  .items {
+  .list {
     margin: toRem(60px) 0 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: toRem(24px);
-
-    @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
   }
 
   .footnote {
@@ -29,13 +22,13 @@
   }
 
   @media screen and (max-width: 1024px) {
-    .items {
+    .list {
       grid-template-columns: 1fr 1fr;
     }
   }
 
   @media screen and (max-width: 650px) {
-    .items {
+    .list {
       margin: toRem(30px) 0 0;
       grid-template-columns: 1fr;
     }

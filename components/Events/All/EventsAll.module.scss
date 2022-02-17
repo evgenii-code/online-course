@@ -1,0 +1,135 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/srOnly.scss';
+
+.events {
+  .heading {
+    text-align: center;
+  }
+
+  .filters {
+    margin: toRem(60px) 0 0;
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(20px) toRem(40px);
+    flex-wrap: wrap;
+
+    .filter {
+      flex-grow: 1;
+      display: flex;
+
+      .description,
+      .text {
+        cursor: pointer;
+        align-self: center;
+        white-space: nowrap;
+      }
+
+      .description {
+        margin-right: toRem(12px);
+        font-weight: bold;
+      }
+
+      .text {
+        margin-left: toRem(12px);
+        color: var(--color-gray-700);
+        text-transform: lowercase;
+      }
+
+      .select {
+        font-size: toRem(14px);
+      }
+
+      &.theme {
+        .select {
+          min-width: toRem(160px);
+        }
+      }
+
+      &.sort {
+        .select {
+          min-width: toRem(160px);
+        }
+      }
+
+      &.per-page {
+        flex-grow: 0;
+
+        .select {
+          min-width: toRem(72px);
+        }
+      }
+
+      &.search {
+        .description {
+          @include srOnly();
+        }
+
+        .icon {
+          color: var(--color-gray-600);
+        }
+      }
+    }
+
+    .views {
+      display: flex;
+      align-items: center;
+
+      .toggler {
+        color: var(--color-gray-800);
+        margin-right: toRem(12px);
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        svg {
+          width: toRem(20px);
+          height: toRem(20px);
+        }
+
+        .active {
+          color: var(--color-primary);
+        }
+
+        .label {
+          @include srOnly();
+        }
+      }
+    }
+  }
+
+  .results {
+    margin: toRem(60px) 0 0;
+
+    .items {
+      &.list {
+        grid-template-columns: 1fr;
+      }
+
+      &.grid {
+        grid-template-columns: repeat(auto-fill, minmax(toRem(290px), 1fr));
+      }
+    }
+
+    .nothing-found {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .pagination {
+    margin: toRem(60px) auto 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .filters {
+      .views {
+        display: none;
+      }
+    }
+  }
+}

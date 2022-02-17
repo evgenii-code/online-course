@@ -5,6 +5,13 @@ export default {
   ui: {
     email: 'Email',
     consent: 'Сonsent',
+    show: 'Show',
+    list: 'List',
+    grid: 'Grid',
+    pagination: 'Pagination',
+    previousPage: 'Previous page',
+    nextPage: 'Next page',
+    goToPage: 'Go to page',
   },
 
   header: {
@@ -156,6 +163,20 @@ export default {
       masterclass: 'Onine master-class',
       lecture: 'Online lecture',
       workshop: 'Online workshop'
+    },
+
+    filters: {
+      title: 'Lectures, workshops & master-classes',
+      subtitle: 'Our events',
+      search: 'Search event...',
+      category: 'Event category',
+      all: 'All themes',
+      sortBy: 'Sort by',
+      newest: 'Newest',
+      oldest: 'Oldest',
+      show: 'Show',
+      perPage: 'Events per page',
+      nothing: 'Sorry, nothing found',
     },
 
     titles: {

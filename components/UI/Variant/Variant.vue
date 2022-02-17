@@ -1,5 +1,5 @@
 <template>
-  <label :class="$style.label" :for="uuid">
+  <label :class="$style.variant" :for="uuid">
     <input
       :id="uuid"
       v-model="model"
@@ -7,11 +7,19 @@
       :value="currentValue"
       v-bind="$attrs"
       :class="$style.input"
+      v-on="events"
     />
 
-    <v-button outline :theme="theme" tag="span" :class="$style.button"
-      ><slot
-    /></v-button>
+    <span :class="$style.content">
+      <slot name="custom" :isChecked="isChecked">
+        <!-- TODO - make custom radio && checkbox check mark -->
+        <span :class="$style.mark" />
+      </slot>
+
+      <span :class="$style.label">
+        <slot name="label" />
+      </span>
+    </span>
   </label>
 </template>
 
@@ -19,7 +27,7 @@
 import getUID from '~/utils/getUID';
 
 export default {
-  name: 'AppButtonGroupItem',
+  name: 'AppVarianToggler',
 
   model: {
     prop: 'modelValue',
@@ -36,16 +44,6 @@ export default {
       type: String,
       required: true,
     },
-
-    checkedTheme: {
-      type: String,
-      default: 'primary',
-    },
-
-    notCheckedTheme: {
-      type: String,
-      default: 'clear',
-    },
   },
 
   computed: {
@@ -55,6 +53,14 @@ export default {
 
     multiple() {
       return Array.isArray(this.modelValue);
+    },
+
+    events() {
+      const listeners = { ...this.$listeners };
+
+      delete listeners.change;
+
+      return listeners;
     },
 
     model: {
@@ -67,16 +73,12 @@ export default {
       },
     },
 
-    shouldBeChecked() {
+    isChecked() {
       if (this.multiple) {
         return this.modelValue.includes(this.currentValue);
       }
 
       return this.modelValue === this.currentValue;
-    },
-
-    theme() {
-      return this.shouldBeChecked ? this.checkedTheme : this.notCheckedTheme;
     },
   },
 
@@ -87,5 +89,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import './ButtonGroupItem.module';
+@import './Variant.module';
 </style>

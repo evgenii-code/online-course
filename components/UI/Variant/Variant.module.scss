@@ -1,7 +1,7 @@
 @import '~/scss/utils/spacing.scss';
 @import '~/scss/mixins/_animations.scss';
 
-.label {
+.variant {
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -17,9 +17,18 @@
     border: 0;
     visibility: visible;
     white-space: nowrap;
+
+    &:not([disabled]):focus-visible ~ .content {
+      outline: 2px solid red;
+      outline-offset: toRem(3px);
+    }
   }
 
-  .button {
+  .content {
     width: 100%;
+    cursor: pointer;
+    display: flex;
+
+    @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
   }
 }

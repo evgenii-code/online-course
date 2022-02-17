@@ -8,25 +8,35 @@
 
     <div :class="[$style.content, $style.filters]">
       <nav :class="$style.themes">
-        <v-button-group-item
+        <v-variant
           v-for="(option, index) in themesOptions"
-          :key="`options-${index}`"
+          :key="`option-toggler-${index}`"
           v-model="selectedTheme"
           name="theme-options"
           :current-value="option.value"
+          :aria-controls="listId"
           :class="$style.theme"
         >
-          <span>
-            {{ option.text }}
-            <sup>
-              {{ option.count }}
-            </sup>
-          </span>
-        </v-button-group-item>
+          <template #custom="{ isChecked }">
+            <v-button
+              outline
+              :theme="isChecked ? 'primary' : 'clear'"
+              tag="span"
+              :class="$style.button"
+            >
+              <span>
+                {{ option.text }}
+                <sup>
+                  {{ option.count }}
+                </sup>
+              </span>
+            </v-button>
+          </template>
+        </v-variant>
       </nav>
 
       <label :class="$style.search">
-        <span>
+        <span :class="$style.description">
           {{ $t('courses.filters.search') }}
         </span>
 
@@ -44,6 +54,7 @@
     </div>
 
     <app-courses-list
+      :id="listId"
       vertical
       :class="[$style.content, $style.list]"
       :courses="filteredCourses"
@@ -72,6 +83,7 @@ export default {
     return {
       selectedTheme: this.$options.allThemes.value || '',
       search: '',
+      listId: 'courses-list',
     };
   },
 
