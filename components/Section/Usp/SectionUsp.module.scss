@@ -1,0 +1,61 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  min-height: 100vh;
+
+  .container {
+    height: 100%;
+
+    .content {
+      height: 100%;
+    }
+  }
+
+  .image {
+    position: absolute;
+    z-index: 0;
+    object-fit: contain;
+    opacity: 0.3;
+
+    &.up {
+      top: 10%;
+      left: 5%;
+    }
+
+    &.down {
+      top: 0;
+      right: 7%;
+    }
+
+    &.semi-circle-three {
+      top: 50%;
+      left: 45%;
+    }
+
+    &.semi-circle-one {
+      top: 70%;
+      left: 40%;
+    }
+
+    &.circles {
+      bottom: 0;
+      left: 0;
+      opacity: 0.2;
+    }
+
+    &.dots {
+      bottom: 30%;
+      right: 0;
+      opacity: 0.8;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .image {
+      &.semi-circle-three,
+      &.semi-circle-one {
+        display: none;
+      }
+    }
+  }
+}

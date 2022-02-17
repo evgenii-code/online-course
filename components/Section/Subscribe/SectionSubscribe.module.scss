@@ -1,0 +1,26 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  .image {
+    position: absolute;
+    z-index: 0;
+    object-fit: contain;
+    bottom: 0;
+    width: toRem(354px);
+    height: toRem(246px);
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .image {
+      display: none;
+    }
+  }
+}

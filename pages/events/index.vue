@@ -1,10 +1,10 @@
 <template>
   <main :class="$style.main">
-    <section :class="[$style.section, $style.events]">
-      <app-container :class="$style.container">
-        <app-events-all :class="$style.content" />
-      </app-container>
-    </section>
+    <app-section-wrapper :class="[$style.section, $style.events]">
+      <app-events-all :class="$style.content" />
+    </app-section-wrapper>
+
+    <app-section-subscribe :class="[$style.section, $style.subscribe]" />
   </main>
 </template>
 
