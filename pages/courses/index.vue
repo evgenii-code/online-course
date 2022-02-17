@@ -1,72 +1,47 @@
 <template>
   <main :class="$style.main">
-    <section :class="[$style.section, $style.courses]">
-      <img
-        src="~/assets/images/courses/background/dots.svg"
-        alt="Background image"
-        aria-hidden="true"
-        role="none"
-        :class="[$style.image, $style.courses, $style.dots]"
-      />
+    <app-section-wrapper :class="[$style.section, $style.courses]">
+      <template #noContainer>
+        <img
+          src="~/assets/images/courses/background/dots.svg"
+          alt="Background image"
+          aria-hidden="true"
+          role="none"
+          :class="[$style.image, $style.courses, $style.dots]"
+        />
 
-      <img
-        src="~/assets/images/courses/background/circles.svg"
-        alt="Background image"
-        aria-hidden="true"
-        role="none"
-        :class="[$style.image, $style.courses, $style.circles]"
-      />
+        <img
+          src="~/assets/images/courses/background/circles.svg"
+          alt="Background image"
+          aria-hidden="true"
+          role="none"
+          :class="[$style.image, $style.courses, $style.circles]"
+        />
 
-      <img
-        src="~/assets/images/courses/background/arrows.svg"
-        alt="Background image"
-        aria-hidden="true"
-        role="none"
-        :class="[$style.image, $style.courses, $style.arrows]"
-      />
+        <img
+          src="~/assets/images/courses/background/arrows.svg"
+          alt="Background image"
+          aria-hidden="true"
+          role="none"
+          :class="[$style.image, $style.courses, $style.arrows]"
+        />
+      </template>
 
-      <app-container :class="$style.container">
-        <app-courses-all :class="$style.content" />
-      </app-container>
-    </section>
+      <app-courses-all :class="$style.content" />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.testimonials]">
-      <app-container :class="$style.container">
-        <app-testimonials :class="$style.content" />
-      </app-container>
-    </section>
+    <app-section-wrapper
+      background="gray"
+      :class="[$style.section, $style.testimonials]"
+    >
+      <app-testimonials :class="$style.content" />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.certificate]">
-      <app-container :class="$style.container">
-        <app-certificate :class="$style.content" />
-      </app-container>
-    </section>
+    <app-section-wrapper :class="[$style.section, $style.certificate]">
+      <app-certificate :class="$style.content" />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.subscribe]">
-      <img
-        src="~/assets/images/subscribe/illustration-1.svg"
-        alt="Background image"
-        aria-hidden="true"
-        role="none"
-        :class="[$style.image, $style.illustration, $style.left]"
-      />
-      <img
-        src="~/assets/images/subscribe/illustration-1.svg"
-        alt="Background image"
-        aria-hidden="true"
-        role="none"
-        :class="[$style.image, $style.illustration, $style.right]"
-      />
-
-      <app-container :class="$style.container">
-        <app-subscribe :class="$style.content">
-          <template #title>{{ $t('subscribe.announcements.title') }}</template>
-          <template #subtitle>{{
-            $t('subscribe.announcements.subtitle')
-          }}</template>
-        </app-subscribe>
-      </app-container>
-    </section>
+    <app-section-subscribe :class="[$style.section, $style.subscribe]" />
   </main>
 </template>
 

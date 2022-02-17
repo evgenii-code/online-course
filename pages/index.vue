@@ -1,96 +1,62 @@
 <template>
   <main :class="$style.main">
-    <app-background :class="[$style.section, $style.usp]">
-      <app-container :class="$style.container">
-        <app-unique-selling-point :class="$style.content" />
-      </app-container>
-    </app-background>
+    <app-section-usp :class="[$style.section, $style.usp]" />
 
-    <section :class="[$style.section, $style.about]">
-      <img
-        src="~/assets/images/about/dots.svg"
-        alt="Background image"
-        aria-hidden="true"
-        role="none"
-        :class="[$style.image, $style.forms, $style.dots]"
-      />
+    <app-section-wrapper :class="[$style.section, $style.about]">
+      <template #noContainer>
+        <img
+          src="~/assets/images/about/dots.svg"
+          alt="Background image"
+          aria-hidden="true"
+          role="none"
+          :class="[$style.image, $style.forms, $style.dots]"
+        />
 
-      <img
-        src="~/assets/images/about/circles.svg"
-        alt="Background image"
-        aria-hidden="true"
-        role="none"
-        :class="[$style.image, $style.forms, $style.circles]"
-      />
+        <img
+          src="~/assets/images/about/circles.svg"
+          alt="Background image"
+          aria-hidden="true"
+          role="none"
+          :class="[$style.image, $style.forms, $style.circles]"
+        />
+      </template>
 
-      <app-container :class="$style.container">
-        <app-about :class="$style.content" />
-      </app-container>
-    </section>
+      <app-about />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.courses]">
-      <app-container :class="$style.container">
-        <app-courses-featured :class="$style.content" />
-      </app-container>
-    </section>
+    <app-section-wrapper :class="[$style.section, $style.courses]">
+      <app-courses-featured />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.benefits]">
-      <app-container :class="$style.container">
-        <app-benefits :class="$style.content" />
-      </app-container>
-    </section>
+    <app-section-wrapper :class="[$style.section, $style.benefits]">
+      <app-benefits />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.events]">
-      <app-container :class="$style.container">
-        <app-events-featured :class="$style.content" />
-      </app-container>
-    </section>
+    <app-section-wrapper
+      background="gradient-primary"
+      :class="[$style.section, $style.events]"
+    >
+      <app-events-featured />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.certificate]">
-      <app-container :class="$style.container">
-        <app-certificate :class="$style.content" />
-      </app-container>
-    </section>
+    <app-section-wrapper :class="[$style.section, $style.certificate]">
+      <app-certificate />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.team]">
-      <app-container :class="$style.container">
-        <app-team :class="[$style.content, $style.team]" is-swiper />
+    <app-section-wrapper
+      background="gray"
+      :class="[$style.section, $style.team]"
+    >
+      <app-team :class="[$style.content, $style.team]" is-swiper />
 
-        <app-testimonials :class="[$style.content, $style.testimonials]" />
-      </app-container>
-    </section>
+      <app-testimonials :class="[$style.content, $style.testimonials]" />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.posts]">
-      <app-container :class="$style.container">
-        <app-posts-latest :class="$style.content" />
-      </app-container>
-    </section>
+    <app-section-wrapper :class="[$style.section, $style.posts]">
+      <app-posts-latest />
+    </app-section-wrapper>
 
-    <section :class="[$style.section, $style.subscribe]">
-      <img
-        src="~/assets/images/subscribe/illustration-1.svg"
-        alt="Background image"
-        aria-hidden="true"
-        role="none"
-        :class="[$style.image, $style.illustration, $style.left]"
-      />
-      <img
-        src="~/assets/images/subscribe/illustration-1.svg"
-        alt="Background image"
-        aria-hidden="true"
-        role="none"
-        :class="[$style.image, $style.illustration, $style.right]"
-      />
-
-      <app-container :class="$style.container">
-        <app-subscribe :class="$style.content">
-          <template #title>{{ $t('subscribe.announcements.title') }}</template>
-          <template #subtitle>{{
-            $t('subscribe.announcements.subtitle')
-          }}</template>
-        </app-subscribe>
-      </app-container>
-    </section>
+    <app-section-subscribe :class="[$style.section, $style.subscribe]" />
   </main>
 </template>
 

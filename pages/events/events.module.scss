@@ -1,4 +1,3 @@
-@import '~/scss/utils/color';
 @import '~/scss/utils/_spacing.scss';
 
 .section {
@@ -7,5 +6,13 @@
   &.events {
     min-height: 100vh;
     padding: toRem(152px) 0 toRem(180px);
+  }
+
+  &.subscribe {
+    padding: toRem(120px) 0 toRem(180px);
+
+    @media screen and (max-width: 1024px) {
+      padding: toRem(80px) 0;
+    }
   }
 }

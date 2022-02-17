@@ -1,0 +1,21 @@
+@import '~/scss/utils/_color';
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  position: relative;
+
+  &.none {
+  }
+
+  &.gradient-primary {
+    background-image: #{getLinearGradient(
+        var(--color-primary-rgb),
+        var(--color-primary-shade-rgb),
+        0.2
+      )};
+  }
+
+  &.gray {
+    background-color: var(--color-gray-200);
+  }
+}
