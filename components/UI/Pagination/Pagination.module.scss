@@ -1,0 +1,57 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+  .pages {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+
+    .page {
+      display: flex;
+      justify-content: center;
+
+      &.arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.prev {
+          right: calc(100% + toRem(10px));
+        }
+
+        &.next {
+          left: calc(100% + toRem(10px));
+        }
+      }
+
+      .button {
+        width: 100%;
+        height: 100%;
+        font-weight: bold;
+        line-height: 1;
+
+        &.regular {
+          min-width: toRem(30px);
+          min-height: toRem(30px);
+        }
+
+        &.page {
+          padding: toRem(4px);
+        }
+
+        &.active {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
