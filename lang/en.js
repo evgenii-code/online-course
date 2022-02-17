@@ -8,6 +8,10 @@ export default {
     show: 'Show',
     list: 'List',
     grid: 'Grid',
+    pagination: 'Pagination',
+    previousPage: 'Previous page',
+    nextPage: 'Next page',
+    goToPage: 'Go to page',
   },
 
   header: {
@@ -172,6 +176,7 @@ export default {
       oldest: 'Oldest',
       show: 'Show',
       perPage: 'Events per page',
+      nothing: 'Sorry, nothing found',
     },
 
     titles: {

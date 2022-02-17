@@ -102,16 +102,27 @@
     }
   }
 
-  .items {
+  .results {
     margin: toRem(60px) 0 0;
 
-    &.list {
-      grid-template-columns: 1fr;
+    .items {
+      &.list {
+        grid-template-columns: 1fr;
+      }
+
+      &.grid {
+        grid-template-columns: repeat(auto-fill, minmax(toRem(290px), 1fr));
+      }
     }
 
-    &.grid {
-      grid-template-columns: repeat(auto-fill, minmax(toRem(290px), 1fr));
+    .nothing-found {
+      margin: 0;
+      text-align: center;
     }
+  }
+
+  .pagination {
+    margin: toRem(60px) auto 0;
   }
 
   @media screen and (max-width: 1024px) {

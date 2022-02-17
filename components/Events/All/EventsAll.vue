@@ -79,10 +79,10 @@
         </span>
 
         <v-input
-          v-model.trim="search"
+          v-model.trim="fields.search"
           type="search"
           :placeholder="$t('events.filters.search')"
-          :name="search"
+          :name="$t('events.filters.search')"
         >
           <template #postfix>
             <v-icon :class="$style.icon" size="small" name="search" />
@@ -115,11 +115,31 @@
       </div>
     </div>
 
-    <app-events-list
-      :id="listId"
-      :vertical="isGrid"
-      :class="itemsClasses"
-      :events="cropedEvents"
+    <div :class="$style.results">
+      <app-events-list
+        v-if="totalFilteredEvents > 0"
+        :id="listId"
+        :vertical="isGrid"
+        :class="itemsClasses"
+        :events="eventsOnCurrentPage"
+      />
+
+      <p v-else :class="$style['nothing-found']">
+        {{ $t('events.filters.nothing') }}
+      </p>
+    </div>
+
+    <v-pagination
+      v-if="showPagination"
+      v-model="currentPage"
+      :class="$style.pagination"
+      :aria-controls="listId"
+      :per-page="fields.perPage"
+      :total-items="totalFilteredEvents"
+      :title="$t('ui.pagination')"
+      :previous-label="$t('ui.previousPage')"
+      :next-label="$t('ui.nextPage')"
+      :page-label="$t('ui.goToPage')"
     />
   </div>
 </template>
@@ -141,7 +161,6 @@ export default {
 
   data() {
     return {
-      search: '',
       listId: 'event-list',
       views: ['list', 'grid'],
       fields: {
@@ -149,8 +168,10 @@ export default {
         theme: this.$options.allThemes.value || '',
         sort: 'newest',
         perPage: 9,
+        search: '',
       },
       perPageOptions: [3, 6, 9],
+      currentPage: 1,
     };
   },
 
@@ -190,7 +211,8 @@ export default {
       ];
     },
 
-    sortedEvents() {
+    // First filter - Sort by date
+    eventsWithSortFilter() {
       const events = [...(this.events || [])];
 
       if (this.fields.sort === 'oldest') {
@@ -200,40 +222,45 @@ export default {
       return sortByDate(events, true, 'date.start');
     },
 
-    themedEvents() {
+    // Second filter - Search input
+    eventsWithSearchFilter() {
+      return (
+        this.eventsWithSortFilter?.filter((event) => {
+          // Get event i18n title
+          const title = this.$t(event.title).toLowerCase();
+
+          return title.includes(this.fields.search.toLowerCase());
+        }) || []
+      );
+    },
+
+    // Third filter - Theme
+    eventsWithThemeFilter() {
       if (this.fields.theme === this.$options.allThemes.value) {
-        return this.sortedEvents || [];
+        return this.eventsWithSearchFilter || [];
       }
 
       return (
-        this.sortedEvents.filter(
+        this.eventsWithSearchFilter.filter(
           (event) => event.theme === this.fields.theme
         ) || []
       );
     },
 
-    cropedEvents() {
-      return this.themedEvents?.slice(0, this.fields.perPage) || [];
+    totalFilteredEvents() {
+      // Length from the last filter
+      return this.eventsWithThemeFilter.length || 0;
     },
 
-    filteredEvents() {
-      const filteredEvents =
-        this.events?.filter((course) => {
-          // Get course i18n title
-          const title = this.$t(course.title).toLowerCase();
+    eventsOnCurrentPage() {
+      const start = (this.currentPage - 1) * this.fields.perPage;
+      const end = start + this.fields.perPage;
 
-          return title.includes(this.search.toLowerCase());
-        }) || [];
+      return this.eventsWithThemeFilter?.slice(start, end) || [];
+    },
 
-      if (this.selectedTheme === this.$options.allThemes.value) {
-        return filteredEvents;
-      }
-
-      return (
-        filteredEvents.filter(
-          (course) => course.theme === this.selectedTheme
-        ) || []
-      );
+    showPagination() {
+      return this.totalFilteredEvents > this.fields.perPage;
     },
 
     itemsClasses() {
@@ -244,8 +271,21 @@ export default {
     },
   },
 
+  watch: {
+    fields: {
+      handler: 'handleFiltersChange',
+      deep: true,
+    },
+  },
+
   created() {
     this.$options.allThemes.text = this.$t('events.filters.all');
+  },
+
+  methods: {
+    handleFiltersChange() {
+      this.currentPage = 1;
+    },
   },
 };
 </script>
