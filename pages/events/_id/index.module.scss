@@ -6,4 +6,14 @@
   &.title {
     padding: toRem(192px) 0 toRem(120px);
   }
+
+  &.agenda {
+    padding: toRem(120px) 0 toRem(114px);
+  }
+
+  @media screen and (max-width: 480px) {
+    &.agenda {
+      padding: toRem(60px) 0 toRem(60px);
+    }
+  }
 }

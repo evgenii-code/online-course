@@ -1,0 +1,25 @@
+@import '~/scss/utils/spacing';
+@import '~/scss/mixins/animations';
+
+.item {
+  $icon-size: 20px;
+  list-style: none;
+
+  .button {
+    text-align: left;
+
+    .icon {
+      margin-right: toRem($icon-size);
+      color: var(--color-primary);
+
+      svg {
+        width: toRem($icon-size);
+        height: toRem($icon-size);
+      }
+    }
+  }
+
+  .content {
+    padding: toRem(16px) toRem($icon-size * 2) 0;
+  }
+}

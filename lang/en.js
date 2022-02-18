@@ -199,6 +199,46 @@ export default {
   event: {
     title: 'Formation of the organizational structure of the company in the face of uncertainty',
     subtitle: 'Online lecture',
+
+    agenda: 'We will talk about:',
+    details: [{
+        title: 'Time',
+        value: '{date}',
+        text: 'Metus turpis sit lorem lacus, in elit tellus lacus.',
+      },
+      {
+        title: 'Price',
+        value: 'Free',
+        text: 'Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis.',
+      },
+    ],
+    link: 'Event on Facebook',
+    join: 'Join the event',
+
+    themes: [{
+        prefix: 'Theme 1.',
+        title: 'Aliquet lectus urna viverra in odio.',
+        content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+      },
+
+      {
+        prefix: 'Theme 2.',
+        title: 'Orci commodo, viverra orci mollis ut euismod.',
+        content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+      },
+
+      {
+        prefix: 'Theme 3.',
+        title: 'Sagittis vitae facilisi rutrum amet mauris quisque vel.',
+        content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+      },
+
+      {
+        prefix: 'Theme 4.',
+        title: 'In id dolor quis nunc, urna hendrerit pharetra.',
+        content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+      },
+    ],
   },
 
   certificate: {

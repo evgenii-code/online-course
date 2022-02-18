@@ -4,6 +4,10 @@
       <template #subtitle>{{ $t('event.subtitle') }}</template>
       <template #title>{{ $t(event.title) }}</template>
     </app-section-title>
+
+    <app-section-wrapper :class="[$style.section, $style.agenda]">
+      <app-agenda :event="event" />
+    </app-section-wrapper>
   </main>
 </template>
 
