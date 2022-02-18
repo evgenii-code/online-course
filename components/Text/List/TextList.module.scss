@@ -1,0 +1,28 @@
+@import '~/scss/utils/spacing.scss';
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: inherit;
+
+  .item {
+    margin-bottom: toRem(16px);
+    display: flex;
+    align-items: center;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .icon {
+      margin-right: toRem(16px);
+      color: var(--color-primary);
+    }
+
+    .text {
+      margin: 0;
+      font: inherit;
+    }
+  }
+}

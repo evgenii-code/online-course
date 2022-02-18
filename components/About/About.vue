@@ -20,17 +20,14 @@
         <template #title>{{ $t('about.title') }}</template>
       </app-heading>
 
-      <ul :class="$style.facts">
-        <li
+      <app-text-list :class="$style.facts">
+        <template
           v-for="(fact, index) in $t('about.facts')"
-          :key="`fact-${index}`"
-          :class="$style.fact"
+          #[getSlotName(index)]
         >
-          <v-icon :class="$style.icon" name="check" size="small" />
-
-          <p :class="$style.text">{{ fact.text }}</p>
-        </li>
-      </ul>
+          <span :key="`fact-${index}`">{{ fact.text }}</span>
+        </template>
+      </app-text-list>
 
       <v-button link :to="localePath('/about')" :class="$style.button">{{
         $t('about.more')
@@ -42,6 +39,12 @@
 <script>
 export default {
   name: 'AppAbout',
+
+  methods: {
+    getSlotName(index) {
+      return `item-${index + 1}`;
+    },
+  },
 };
 </script>
 

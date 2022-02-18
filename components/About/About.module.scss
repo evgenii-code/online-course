@@ -30,28 +30,6 @@
       margin: toRem(40px) 0 0;
       padding: 0;
       list-style: none;
-
-      .fact {
-        margin-bottom: toRem(16px);
-        display: flex;
-        align-items: center;
-
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-
-        .icon {
-          margin-right: toRem(16px);
-          color: var(--color-primary);
-        }
-
-        .text {
-          margin: 0;
-          font-size: toRem(16px);
-          line-height: 160%;
-          color: (--color-grey-800);
-        }
-      }
     }
 
     .button {
