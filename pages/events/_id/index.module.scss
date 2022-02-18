@@ -8,7 +8,11 @@
   }
 
   &.agenda {
-    padding: toRem(120px) 0 toRem(114px);
+    padding: toRem(120px) 0 toRem(60px);
+  }
+
+  &.curator {
+    padding: toRem(60px) 0 toRem(90px);
   }
 
   @media screen and (max-width: 480px) {
