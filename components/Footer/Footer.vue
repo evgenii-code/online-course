@@ -9,7 +9,7 @@
 
           <p :class="$style.text">{{ $t('footer.description') }}</p>
 
-          <app-footer-social
+          <app-social-links
             :social-links="socialLinks"
             :class="$style.social"
           />
