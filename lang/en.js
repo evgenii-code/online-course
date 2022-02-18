@@ -241,7 +241,22 @@ export default {
     ],
 
     role: 'Speaker',
-    description: 'Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.'
+    description: 'Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.',
+    audience: {
+      title: 'Who will benefit from the event:',
+      subtitle: 'For whom?',
+
+      items: [{
+          text: 'Specialists with more than 1 year of active work experience',
+        },
+        {
+          text: 'Mobile app designers who want to improve their skills in solving business problems, creating and testing human-centered interfaces',
+        },
+        {
+          text: 'Professional designers who want to feel more confident in UX',
+        },
+      ],
+    },
   },
 
   certificate: {

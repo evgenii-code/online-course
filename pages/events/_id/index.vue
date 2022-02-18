@@ -12,6 +12,10 @@
     <app-section-wrapper :class="[$style.section, $style.curator]">
       <app-curator partners :curator="curator" />
     </app-section-wrapper>
+
+    <app-section-wrapper :class="[$style.section, $style.audience]">
+      <app-audience />
+    </app-section-wrapper>
   </main>
 </template>
 
