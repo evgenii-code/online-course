@@ -23,11 +23,16 @@
     padding: toRem(60px) 0;
   }
 
+  &.request {
+    padding: toRem(120px) 0;
+  }
+
   @media screen and (max-width: 480px) {
     &.agenda,
     &.curator,
     &.audience,
-    &.subscribe {
+    &.subscribe,
+    &.request {
       padding: toRem(60px) 0;
     }
   }

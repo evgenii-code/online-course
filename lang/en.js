@@ -4,6 +4,8 @@ export default {
 
   ui: {
     email: 'Email',
+    fullName: 'Full name',
+    phone: 'Phone',
     consent: 'Сonsent',
     show: 'Show',
     list: 'List',
@@ -395,5 +397,25 @@ export default {
     email: 'Your working email',
     consent: 'I agree to receive communications from Createx Online School',
     action: 'Subscribe',
+  },
+
+  request: {
+    event: {
+      title: 'Leave a request',
+      subtitle: 'Don’t miss the event',
+    },
+
+    course: {
+      title: 'Register for the course',
+      subtitle: 'Leave a request now and get 20% off!',
+    },
+
+    fullName: 'Your full name',
+    email: 'Your working email',
+    phone: 'Your phone number',
+    action: {
+      submit: 'Join the event'
+    },
+    nextStep: '* You will receive a link to the online lecture in an email after registration.'
   },
 }

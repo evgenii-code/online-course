@@ -30,6 +30,15 @@
         </i18n>
       </template>
     </app-section-subscribe>
+
+    <app-section-request
+      variant="event"
+      show-next-step
+      :class="[$style.section, $style.request]"
+    >
+      <template #title>{{ $t('request.event.title') }}</template>
+      <template #subtitle>{{ $t('request.event.subtitle') }}</template>
+    </app-section-request>
   </main>
 </template>
 
