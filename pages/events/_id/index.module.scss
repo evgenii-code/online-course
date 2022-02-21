@@ -19,10 +19,15 @@
     padding: toRem(90px) 0;
   }
 
+  &.subscribe {
+    padding: toRem(60px) 0;
+  }
+
   @media screen and (max-width: 480px) {
     &.agenda,
     &.curator,
-    &.audience {
+    &.audience,
+    &.subscribe {
       padding: toRem(60px) 0;
     }
   }

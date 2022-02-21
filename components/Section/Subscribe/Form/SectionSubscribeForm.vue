@@ -77,5 +77,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import './SubscribeForm.module';
+@import './SectionSubscribeForm.module';
 </style>

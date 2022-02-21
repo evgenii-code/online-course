@@ -16,6 +16,20 @@
     <app-section-wrapper :class="[$style.section, $style.audience]">
       <app-audience />
     </app-section-wrapper>
+
+    <app-section-subscribe
+      show-consent
+      variant="event"
+      :class="[$style.section, $style.subscribe]"
+    >
+      <template #title>
+        <i18n :tag="false" path="subscribe.events.title">
+          <template #break>
+            <br />
+          </template>
+        </i18n>
+      </template>
+    </app-section-subscribe>
   </main>
 </template>
 
