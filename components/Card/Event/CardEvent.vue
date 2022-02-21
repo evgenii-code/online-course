@@ -1,7 +1,7 @@
 <template>
   <div :class="classes">
     <p :class="$style.heading">
-      <time :class="$style.date" :datetime="dateStart">
+      <time :class="$style.date" :datetime="event.date.start">
         <span :class="$style.day">{{ day }}</span>
         <span :class="$style.month">{{ month }}</span>
         <span :class="$style.time">{{ time }}</span>
@@ -9,8 +9,8 @@
     </p>
 
     <div :class="$style.description">
-      <h3 :class="$style.title"><slot name="title" /></h3>
-      <p :class="$style.category"><slot name="category" /></p>
+      <h3 :class="$style.title">{{ $t(event.title) }}</h3>
+      <p :class="$style.category">{{ $t(event.category) }}</p>
     </div>
 
     <v-button link :to="localePath(href)" :class="$style.button" outline>{{
@@ -35,19 +35,9 @@ export default {
       default: false,
     },
 
-    href: {
-      type: String,
-      default: null,
-    },
-
-    dateStart: {
-      type: String,
+    event: {
+      type: Object,
       required: true,
-    },
-
-    dateEnd: {
-      type: String,
-      default: null,
     },
 
     coloredShadow: {
@@ -65,16 +55,20 @@ export default {
       };
     },
 
+    href() {
+      return this.event.link + '/' + this.event.slug;
+    },
+
     locale() {
       return this.$i18n?.locale || 'en';
     },
 
     dateStartObj() {
-      return getDateFromString(this.dateStart);
+      return getDateFromString(this.event.date.start);
     },
 
     dateEndObj() {
-      return getDateFromString(this.dateEnd);
+      return getDateFromString(this.event.date.end);
     },
 
     day() {
