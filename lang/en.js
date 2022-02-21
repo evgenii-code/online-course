@@ -4,6 +4,8 @@ export default {
 
   ui: {
     email: 'Email',
+    fullName: 'Full name',
+    phone: 'Phone',
     consent: 'Сonsent',
     show: 'Show',
     list: 'List',
@@ -196,6 +198,75 @@ export default {
     all: 'Explore all events'
   },
 
+  event: {
+    title: 'Formation of the organizational structure of the company in the face of uncertainty',
+    subtitle: 'Online lecture',
+
+    agenda: 'We will talk about:',
+    details: [{
+        title: 'Time',
+        value: '{date}',
+        text: 'Metus turpis sit lorem lacus, in elit tellus lacus.',
+      },
+      {
+        title: 'Price',
+        value: 'Free',
+        text: 'Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis.',
+      },
+    ],
+    link: 'Event on Facebook',
+    join: 'Join the event',
+
+    themes: [{
+        prefix: 'Theme 1.',
+        title: 'Aliquet lectus urna viverra in odio.',
+        content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+      },
+
+      {
+        prefix: 'Theme 2.',
+        title: 'Orci commodo, viverra orci mollis ut euismod.',
+        content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+      },
+
+      {
+        prefix: 'Theme 3.',
+        title: 'Sagittis vitae facilisi rutrum amet mauris quisque vel.',
+        content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+      },
+
+      {
+        prefix: 'Theme 4.',
+        title: 'In id dolor quis nunc, urna hendrerit pharetra.',
+        content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+      },
+    ],
+
+    role: 'Speaker',
+    description: 'Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.',
+    audience: {
+      title: 'Who will benefit from the event:',
+      subtitle: 'For whom?',
+
+      items: [{
+          text: 'Specialists with more than 1 year of active work experience',
+        },
+        {
+          text: 'Mobile app designers who want to improve their skills in solving business problems, creating and testing human-centered interfaces',
+        },
+        {
+          text: 'Professional designers who want to feel more confident in UX',
+        },
+      ],
+    },
+    all: {
+      title: 'You may be interested in',
+      subtitle: 'Check other online events',
+      more: 'Do you want more?',
+      action: 'Explore all events',
+    },
+  },
+
   certificate: {
     title: 'Your expertise will be confirmed',
     subtitle: 'Createx Certificate',
@@ -332,5 +403,25 @@ export default {
     email: 'Your working email',
     consent: 'I agree to receive communications from Createx Online School',
     action: 'Subscribe',
+  },
+
+  request: {
+    event: {
+      title: 'Leave a request',
+      subtitle: 'Don’t miss the event',
+    },
+
+    course: {
+      title: 'Register for the course',
+      subtitle: 'Leave a request now and get 20% off!',
+    },
+
+    fullName: 'Your full name',
+    email: 'Your working email',
+    phone: 'Your phone number',
+    action: {
+      submit: 'Join the event'
+    },
+    nextStep: '* You will receive a link to the online lecture in an email after registration.'
   },
 }

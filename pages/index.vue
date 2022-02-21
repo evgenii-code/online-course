@@ -43,26 +43,47 @@
       <app-certificate />
     </app-section-wrapper>
 
+    <app-section-carousel
+      :class="[$style.section, $style.team]"
+      :items="team"
+      card-component="app-card-team"
+      carousel-id="carousel-team"
+    >
+      <template #title>{{ $t('team.title') }}</template>
+      <template #subtitle>{{ $t('team.subtitle') }}</template>
+    </app-section-carousel>
+
     <app-section-wrapper
       background="gray"
-      :class="[$style.section, $style.team]"
+      :class="[$style.section, $style.testimonials]"
     >
-      <app-team :class="[$style.content, $style.team]" is-swiper />
-
-      <app-testimonials :class="[$style.content, $style.testimonials]" />
+      <app-testimonials />
     </app-section-wrapper>
 
     <app-section-wrapper :class="[$style.section, $style.posts]">
       <app-posts-latest />
     </app-section-wrapper>
 
-    <app-section-subscribe :class="[$style.section, $style.subscribe]" />
+    <app-section-subscribe :class="[$style.section, $style.subscribe]">
+      <template #title>{{ $t('subscribe.announcements.title') }}</template>
+      <template #subtitle>{{
+        $t('subscribe.announcements.subtitle')
+      }}</template>
+    </app-section-subscribe>
   </main>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'IndexPage',
+
+  computed: {
+    ...mapGetters({
+      team: 'core/team',
+    }),
+  },
 };
 </script>
 

@@ -18,6 +18,7 @@ export default {
     themes: (state) => state.themes,
     courses: (state) => state.courses,
     eventsLinks: (state) => state.events,
+    eventBySlug: (state) => (slug) => state.events.find((event) => event.slug === slug),
     partnersLinks: (state) => state.partners,
     team: (state) => state.team,
     teamMemberById: (state) => (id) => state.team.find((member) => member.id === id),

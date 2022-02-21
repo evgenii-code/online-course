@@ -7,16 +7,10 @@
     >
       <app-card-event
         :class="$style.card"
-        :date-start="event.date.start"
-        :date-end="event.date.end"
-        :href="event.link"
         :colored-shadow="coloredShadow"
         :vertical="vertical"
-      >
-        <template #title>{{ $t(event.title) }}</template>
-
-        <template #category>{{ $t(event.category) }}</template>
-      </app-card-event>
+        :event="event"
+      />
     </li>
   </ul>
 </template>

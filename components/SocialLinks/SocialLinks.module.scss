@@ -1,0 +1,29 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+@import '~/scss/mixins/_srOnly.scss';
+
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-gap: toRem(20px);
+  grid-template-columns: repeat(auto-fit, toRem(24px));
+
+  .item {
+    .link {
+      color: inherit;
+
+      @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .sr-only {
+    @include srOnly();
+  }
+}

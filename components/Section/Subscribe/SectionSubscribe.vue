@@ -1,34 +1,95 @@
 <template>
-  <app-section-wrapper background="gradient-primary" :class="$style.section">
-    <template #noContainer>
+  <app-section-wrapper :background="background" :class="classes">
+    <!-- Background images wth 'main' prop -->
+    <template v-if="variant === 'main'" #noContainer>
       <img
         src="~/assets/images/subscribe/illustration-1.svg"
         alt="Background image"
         aria-hidden="true"
         role="none"
-        :class="[$style.image, $style.illustration, $style.left]"
+        :class="[$style.image, $style.main, $style.left]"
       />
       <img
         src="~/assets/images/subscribe/illustration-1.svg"
         alt="Background image"
         aria-hidden="true"
         role="none"
-        :class="[$style.image, $style.illustration, $style.right]"
+        :class="[$style.image, $style.main, $style.right]"
       />
     </template>
 
-    <app-subscribe :class="$style.content">
-      <template #title>{{ $t('subscribe.announcements.title') }}</template>
-      <template #subtitle>{{
-        $t('subscribe.announcements.subtitle')
-      }}</template>
-    </app-subscribe>
+    <article :class="$style.content">
+      <img
+        v-if="variant === 'event'"
+        src="~/assets/images/subscribe/illustration-2.svg"
+        alt="Background image"
+        :class="[$style.image, $style.event]"
+      />
+
+      <div :class="$style.wrapper">
+        <app-heading :class="$style.heading" :centered="titleCentered">
+          <template #title><slot name="title" /></template>
+          <template #subtitle><slot name="subtitle" /></template>
+        </app-heading>
+
+        <app-section-subscribe-form
+          :class="$style.form"
+          :show-consent="showConsent"
+        />
+      </div>
+    </article>
   </app-section-wrapper>
 </template>
 
 <script>
+const VARIANTS = {
+  main: { background: 'gradient-primary', titleCentered: true },
+  event: { background: 'none', titleCentered: false },
+  blog: { background: 'gray', titleCentered: false },
+};
+
 export default {
   name: 'AppSectionSubscribe',
+
+  props: {
+    showConsent: {
+      type: Boolean,
+      default: false,
+    },
+
+    variant: {
+      type: String,
+      default: 'main',
+      validator: (variant) => !!VARIANTS[variant],
+    },
+  },
+
+  data() {
+    return {
+      VARIANTS,
+    };
+  },
+
+  computed: {
+    variantOptions() {
+      return VARIANTS[this.variant] || VARIANTS.main;
+    },
+
+    background() {
+      return this.variantOptions?.background;
+    },
+
+    titleCentered() {
+      return this.variantOptions?.titleCentered;
+    },
+
+    classes() {
+      return {
+        [this.$style.section]: true,
+        [this.$style[this.variant]]: true,
+      };
+    },
+  },
 };
 </script>
 

@@ -4,7 +4,12 @@
       <app-events-all :class="$style.content" />
     </app-section-wrapper>
 
-    <app-section-subscribe :class="[$style.section, $style.subscribe]" />
+    <app-section-subscribe :class="[$style.section, $style.subscribe]">
+      <template #title>{{ $t('subscribe.announcements.title') }}</template>
+      <template #subtitle>{{
+        $t('subscribe.announcements.subtitle')
+      }}</template>
+    </app-section-subscribe>
   </main>
 </template>
 

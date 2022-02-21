@@ -1,0 +1,49 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+@import '~/scss/mixins/_srOnly.scss';
+
+.partners {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: toRem(10px) toRem(40px);
+  grid-template-columns: repeat(auto-fill, toRem(105px));
+
+  .partner {
+    display: flex;
+
+    .link {
+      text-decoration: none;
+
+      @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+      &.colorless {
+        .image {
+          filter: grayscale(1) contrast(0) brightness(1.3);
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        opacity: 0.6;
+
+        .image {
+          filter: none;
+        }
+      }
+
+      .image {
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .sr-only {
+        @include srOnly();
+      }
+    }
+  }
+}

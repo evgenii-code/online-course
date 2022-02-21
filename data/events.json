@@ -6,6 +6,8 @@
       "end": "2022-08-05T14:00:00"
     },
     "link": "/events",
+    "slug": "formation-of-the-organizational-structure",
+    "curator_id": 6,
     "theme": "management"
   },
   {
@@ -16,6 +18,8 @@
       "end": "2022-07-24T12:30:00"
     },
     "link": "/events",
+    "slug": "building-a-customer-service-department",
+    "curator_id": 6,
     "theme": "management"
   },
   {
@@ -26,6 +30,8 @@
       "end": "2022-07-16T13:00:00"
     },
     "link": "/events",
+    "slug": "methods-of-speculative-design-in-practice",
+    "curator_id": 6,
     "theme": "design"
   },
   {
@@ -36,6 +42,8 @@
       "end": "2022-06-10T14:00:00"
     },
     "link": "/events",
+    "slug": "search-and-assessment-tools-for-candidates",
+    "curator_id": 6,
     "theme": "hr"
   },
   {
@@ -46,6 +54,8 @@
       "end": "2022-06-27T19:00:00"
     },
     "link": "/events",
+    "slug": "dat-visualization-in-power-bi",
+    "curator_id": 6,
     "theme": "marketing"
   },
   {
@@ -56,6 +66,8 @@
       "end": "2022-06-15T12:00:00"
     },
     "link": "/events",
+    "slug": "marketing-or-growth-hacking",
+    "curator_id": 6,
     "theme": "marketing"
   },
   {
@@ -66,6 +78,8 @@
       "end": "2022-06-02T13:00:00"
     },
     "link": "/events",
+    "slug": "how-to-brief-a-client",
+    "curator_id": 6,
     "theme": "design"
   },
   {
@@ -76,6 +90,8 @@
       "end": "2022-05-29T12:00:00"
     },
     "link": "/events",
+    "slug": "who-is-a-project-manager",
+    "curator_id": 6,
     "theme": "management"
   },
   {
@@ -86,6 +102,8 @@
       "end": "2022-05-18T12:00:00"
     },
     "link": "/events",
+    "slug": "the-companys-business-page",
+    "curator_id": 6,
     "theme": "hr"
   }
 ]

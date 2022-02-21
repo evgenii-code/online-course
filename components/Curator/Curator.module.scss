@@ -1,0 +1,93 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_srOnly.scss';
+
+.curator {
+  display: grid;
+  grid-template-columns: minmax(auto, toRem(495px)) minmax(auto, toRem(600px));
+  justify-content: space-between;
+  grid-template-areas:
+    'picture title'
+    'picture info'
+    'picture empty';
+  gap: toRem(16px) toRem(40px);
+
+  .picture {
+    grid-area: picture;
+    align-self: start;
+    width: 100%;
+    display: flex;
+    background-color: var(--color-secondary);
+    border-radius: 4px;
+
+    .image {
+      margin: toRem(-20px) toRem(20px) 0;
+      aspect-ratio: 0.76633;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .heading {
+    grid-area: title;
+  }
+
+  .info {
+    grid-area: info;
+    width: 100%;
+
+    .position {
+      margin: 0;
+      font-size: torem(20px);
+      line-height: 150%;
+      color: var(--color-gray-700);
+    }
+
+    .description {
+      margin: toRem(32px) 0 0;
+      font-size: torem(16px);
+      line-height: 160%;
+      color: var(--color-gray-800);
+    }
+
+    .partners {
+      margin: toRem(40px) 0 0;
+    }
+
+    .links {
+      color: var(--color-gray-700);
+      margin: toRem(40px) 0 0;
+    }
+  }
+
+  .sr-only {
+    @include srOnly();
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'title'
+      'picture'
+      'info';
+
+    .heading {
+      text-align: center;
+    }
+
+    .picture {
+      max-width: toRem(495px);
+      margin: toRem(40px) auto 0;
+    }
+
+    .info {
+      .position {
+        text-align: center;
+      }
+
+      .partners,
+      .links {
+        margin: toRem(20px) auto 0;
+      }
+    }
+  }
+}

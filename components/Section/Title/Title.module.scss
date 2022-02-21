@@ -1,0 +1,53 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  min-height: toRem(468px);
+
+  .heading {
+    margin: 0 auto;
+    text-align: center;
+    max-width: toRem(1020px);
+
+    > p {
+      color: var(--color-primary);
+    }
+  }
+
+  .image {
+    position: absolute;
+    z-index: 0;
+    object-fit: contain;
+    opacity: 0.3;
+
+    &.up {
+      bottom: 0;
+      right: 15%;
+    }
+
+    &.semi-circle-three {
+      top: 20%;
+      left: 5%;
+    }
+
+    &.circles {
+      bottom: 0;
+      left: 0;
+      opacity: 0.2;
+    }
+
+    &.dots {
+      top: 30%;
+      right: 0;
+      opacity: 0.8;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .image {
+      &.semi-circle-three,
+      &.up {
+        display: none;
+      }
+    }
+  }
+}

@@ -33,34 +33,6 @@
 
     .partners {
       margin: toRem(32px) 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: toRem(10px) toRem(40px);
-      grid-template-columns: repeat(auto-fill, toRem(105px));
-
-      .partner {
-        display: flex;
-
-        .link {
-          text-decoration: none;
-
-          @include animation-motion(
-            $duration-very-fast,
-            'ease-in-out',
-            'basic'
-          );
-
-          &:hover {
-            opacity: 0.6;
-          }
-
-          .image {
-            width: 100%;
-            object-fit: contain;
-          }
-        }
-      }
     }
   }
 

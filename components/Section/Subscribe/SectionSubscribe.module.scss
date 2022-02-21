@@ -1,26 +1,139 @@
+@import '~/scss/utils/_color';
 @import '~/scss/utils/_spacing.scss';
 
 .section {
   .image {
-    position: absolute;
-    z-index: 0;
     object-fit: contain;
-    bottom: 0;
-    width: toRem(354px);
-    height: toRem(246px);
+    display: flex;
 
-    &.left {
-      left: 0;
+    &.main {
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      width: toRem(354px);
+      height: toRem(246px);
+
+      &.left {
+        left: 0;
+      }
+
+      &.right {
+        right: 0;
+      }
     }
 
-    &.right {
-      right: 0;
+    &.event {
+      width: 100%;
+      max-width: toRem(308px);
+    }
+  }
+
+  &.main {
+    .content {
+      .wrapper {
+        margin: 0 auto;
+
+        .heading {
+          max-width: toRem(810px);
+        }
+
+        .form {
+          margin: toRem(60px) auto 0;
+          max-width: toRem(600px);
+        }
+      }
+    }
+  }
+
+  &.event {
+    .content {
+      padding: toRem(60px) toRem(105px);
+      border-radius: 4px;
+      background-image: #{getLinearGradient(
+          var(--color-primary-rgb),
+          var(--color-primary-shade-rgb),
+          0.2
+        )};
+
+      .wrapper {
+        max-width: toRem(600px);
+      }
+
+      .heading {
+        h2 {
+          font-size: toRem(32px);
+          line-height: 130%;
+        }
+      }
+    }
+
+    .form {
+      margin: toRem(48px) auto 0;
+    }
+  }
+
+  &.blog {
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(40px);
+    align-items: center;
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .heading {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    &.event {
+      .content {
+        padding: toRem(60px);
+      }
     }
   }
 
   @media screen and (max-width: 1024px) {
     .image {
-      display: none;
+      &.main,
+      &.event {
+        display: none;
+      }
+    }
+
+    &.event {
+      background-image: #{getLinearGradient(
+          var(--color-primary-rgb),
+          var(--color-primary-shade-rgb),
+          0.2
+        )};
+
+      .content {
+        padding: 0;
+        background: none;
+
+        .wrapper {
+          margin: 0 auto;
+        }
+
+        .heading {
+          text-align: center;
+
+          h2 {
+            font-size: toRem(26px);
+            line-height: 130%;
+          }
+        }
+      }
     }
   }
 }
