@@ -1,5 +1,6 @@
 @import '~/scss/utils/color';
 @import '~/scss/utils/_spacing.scss';
+@import '~/scss/config.scss';
 
 .team {
   .header {
@@ -23,27 +24,8 @@
   .swiper {
     margin: toRem(60px) 0 0;
 
-    .members {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      &.grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(toRem(230px), 1fr));
-        gap: toRem(30px);
-
-        .member {
-          max-width: unset;
-        }
-      }
-
-      .member {
-        max-width: toRem(320px);
-
-        .card {
-        }
-      }
+    li {
+      max-width: toRem(320px);
     }
   }
 
@@ -59,13 +41,8 @@
     }
 
     .swiper {
-      margin: toRem(30px) 0 0;
-
-      .members {
-        .member {
-          max-width: unset;
-        }
-      }
+      margin: toRem(30px) -#{$gutter-width-regular} 0;
+      width: calc(100% + 2 * #{$gutter-width-regular});
     }
   }
 }

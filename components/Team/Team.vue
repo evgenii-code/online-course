@@ -17,23 +17,13 @@
       </div>
     </header>
 
-    <div v-swiper:teamMembers="swiperOption" :class="$style.swiper">
-      <ul
-        :class="[
-          $style.members,
-          { [$style.grid]: !isSwiper },
-          { 'swiper-wrapper': isSwiper },
-        ]"
-      >
-        <li
-          v-for="teamMember in team"
-          :key="`team-member-${teamMember.id}`"
-          :class="[$style.member, { 'swiper-slide': isSwiper }]"
-        >
-          <app-card-team :class="$style.card" :team-member="teamMember" />
-        </li>
-      </ul>
-    </div>
+    <app-carousel-cards
+      carousel-id="carousel-team"
+      :items="team"
+      card-component="app-card-team"
+      :navigation="swiperOption.navigation"
+      :class="$style.swiper"
+    />
   </div>
 </template>
 
