@@ -259,6 +259,12 @@ export default {
         },
       ],
     },
+    all: {
+      title: 'You may be interested in',
+      subtitle: 'Check other online events',
+      more: 'Do you want more?',
+      action: 'Explore all events',
+    },
   },
 
   certificate: {

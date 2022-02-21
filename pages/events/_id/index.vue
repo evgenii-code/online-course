@@ -1,7 +1,7 @@
 <template>
   <main :class="$style.main">
     <app-section-title :class="[$style.section, $style.title]">
-      <template #subtitle>{{ $t('event.subtitle') }}</template>
+      <template #subtitle>{{ $t(event.category) }}</template>
       <template #title>{{ $t(event.title) }}</template>
     </app-section-title>
 
@@ -39,6 +39,27 @@
       <template #title>{{ $t('request.event.title') }}</template>
       <template #subtitle>{{ $t('request.event.subtitle') }}</template>
     </app-section-request>
+
+    <app-section-carousel
+      background="gray"
+      :class="[$style.section, $style.events]"
+      :items="events"
+      card-component="app-card-event"
+      carousel-id="carousel-events"
+    >
+      <template #title>{{ $t('event.all.title') }}</template>
+      <template #subtitle>{{ $t('event.all.subtitle') }}</template>
+      <template #footer>
+        <div :class="$style.footer">
+          <p :class="$style.text">
+            {{ $t('event.all.more') }}
+          </p>
+          <v-button :class="$style.button" link :to="localePath('/events')">{{
+            $t('event.all.action')
+          }}</v-button>
+        </div>
+      </template>
+    </app-section-carousel>
   </main>
 </template>
 
@@ -52,6 +73,7 @@ export default {
     ...mapGetters({
       eventBySlug: 'core/eventBySlug',
       teamMemberById: 'core/teamMemberById',
+      events: 'core/eventsLinks',
     }),
 
     slug() {
