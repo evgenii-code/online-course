@@ -21,6 +21,22 @@
         <template #subtitle>{{ $t('course.audience.subtitle') }}</template>
       </app-audience>
     </app-section-wrapper>
+
+    <app-section-wrapper
+      background="gray"
+      :class="[$style.section, $style.testimonials]"
+    >
+      <app-testimonials />
+    </app-section-wrapper>
+
+    <app-section-request
+      variant="course"
+      :class="[$style.section, $style.request]"
+    >
+      <template #title>{{ $t('request.course.title') }}</template>
+      <template #subtitle>{{ $t('request.course.subtitle') }}</template>
+      <template #submit>{{ $t('request.course.submit') }}</template>
+    </app-section-request>
   </main>
 </template>
 

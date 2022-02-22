@@ -40,7 +40,7 @@
             :class="[$style.button, $style.submit]"
             type="submit"
             :disabled="invalid"
-            >{{ $t('request.action.submit') }}</v-button
+            ><slot name="submit">{{ $t('ui.submit') }}</slot></v-button
           >
 
           <p v-if="showNextStep" :class="$style.step">

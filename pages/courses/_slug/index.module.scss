@@ -15,9 +15,25 @@
     padding: toRem(90px) 0;
   }
 
+  &.testimonials {
+    padding: toRem(90px) 0 toRem(90px);
+    overflow: hidden;
+  }
+
+  &.request {
+    padding: toRem(90px) 0 toRem(100px);
+  }
+
+  @media screen and (max-width: 1024px) {
+    &.testimonials {
+      padding: toRem(40px) 0;
+    }
+  }
+
   @media screen and (max-width: 480px) {
     &.curator,
-    &.audience {
+    &.audience,
+    &.request {
       padding: toRem(60px) 0;
     }
   }

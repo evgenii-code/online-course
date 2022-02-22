@@ -47,6 +47,7 @@
     >
       <template #title>{{ $t('request.event.title') }}</template>
       <template #subtitle>{{ $t('request.event.subtitle') }}</template>
+      <template #submit>{{ $t('request.event.submit') }}</template>
     </app-section-request>
 
     <app-section-carousel
