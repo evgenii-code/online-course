@@ -6,7 +6,11 @@
     "author_id": 2,
     "link": "/courses",
     "slug": "google-ads-training-course",
-    "img": "images/courses/team/jerome-bell.jpg"
+    "img": "images/courses/team/jerome-bell.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -17,7 +21,11 @@
     "author_id": 4,
     "link": "/courses",
     "slug": "product-management-fundamentals",
-    "img": "images/courses/team/marvin-mckinney.jpg"
+    "img": "images/courses/team/marvin-mckinney.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -28,7 +36,11 @@
     "author_id": 5,
     "link": "/courses",
     "slug": "hr-management-and-analytics",
-    "img": "images/courses/team/leslie-alexander-li.jpg"
+    "img": "images/courses/team/leslie-alexander-li.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -39,7 +51,11 @@
     "author_id": 3,
     "link": "/courses",
     "slug": "brand-management-pr-communications",
-    "img": "images/courses/team/kristin-watson.jpg"
+    "img": "images/courses/team/kristin-watson.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -50,7 +66,11 @@
     "author_id": 1,
     "link": "/courses",
     "slug": "business-development-management",
-    "img": "images/courses/team/dianne-russell.jpg"
+    "img": "images/courses/team/dianne-russell.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -61,7 +81,11 @@
     "author_id": 7,
     "link": "/courses",
     "slug": "graphic-design-basic",
-    "img": "images/courses/team/guy-hawkins.jpg"
+    "img": "images/courses/team/guy-hawkins.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -72,7 +96,11 @@
     "author_id": 7,
     "link": "/courses",
     "slug": "highload-software-architecture",
-    "img": "images/courses/team/brooklyn-simmons.jpg"
+    "img": "images/courses/team/brooklyn-simmons.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -83,7 +111,11 @@
     "author_id": 6,
     "link": "/courses",
     "slug": "human-resources-selection-and-recruitment",
-    "img": "images/courses/team/kathryn-murphy.jpg"
+    "img": "images/courses/team/kathryn-murphy.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -93,6 +125,10 @@
     "price": "$240",
     "link": "/courses",
     "slug": "user-experience-human-centered-design",
-    "img": "images/courses/team/cody-fisher.jpg"
+    "img": "images/courses/team/cody-fisher.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   }
 ]

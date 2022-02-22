@@ -8,7 +8,10 @@
     "link": "/events",
     "slug": "formation-of-the-organizational-structure",
     "author_id": 6,
-    "theme": "management"
+    "theme": "management",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.building",
@@ -20,7 +23,10 @@
     "link": "/events",
     "slug": "building-a-customer-service-department",
     "author_id": 6,
-    "theme": "management"
+    "theme": "management",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.prototyping",
@@ -32,7 +38,10 @@
     "link": "/events",
     "slug": "methods-of-speculative-design-in-practice",
     "author_id": 6,
-    "theme": "design"
+    "theme": "design",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.candidates",
@@ -44,7 +53,10 @@
     "link": "/events",
     "slug": "search-and-assessment-tools-for-candidates",
     "author_id": 6,
-    "theme": "hr"
+    "theme": "hr",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.visualization",
@@ -56,7 +68,10 @@
     "link": "/events",
     "slug": "dat-visualization-in-power-bi",
     "author_id": 6,
-    "theme": "marketing"
+    "theme": "marketing",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.marketing",
@@ -68,7 +83,10 @@
     "link": "/events",
     "slug": "marketing-or-growth-hacking",
     "author_id": 6,
-    "theme": "marketing"
+    "theme": "marketing",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.design",
@@ -80,7 +98,10 @@
     "link": "/events",
     "slug": "how-to-brief-a-client",
     "author_id": 6,
-    "theme": "design"
+    "theme": "design",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.manager",
@@ -92,7 +113,10 @@
     "link": "/events",
     "slug": "who-is-a-project-manager",
     "author_id": 6,
-    "theme": "management"
+    "theme": "management",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.vacancies",
@@ -104,6 +128,9 @@
     "link": "/events",
     "slug": "the-companys-business-page",
     "author_id": 6,
-    "theme": "hr"
+    "theme": "hr",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   }
 ]

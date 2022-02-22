@@ -5,12 +5,32 @@
       <template #title>{{ $t(course.title) }}</template>
     </app-section-title>
 
+    <app-section-wrapper :class="[$style.section, $style.about]">
+      <app-course-about
+        :course="course"
+        :button-text="$t('course.join')"
+        :date="date"
+        :details="$t('course.details')"
+      >
+        <template #title>{{ $t('course.about.title') }}</template>
+
+        <template #info>
+          <app-course-info :list-items="$t('course.about.list')">
+            <template #title>{{ $t('course.about.subtitle') }}</template>
+            <template #description>{{
+              $t('course.about.description')
+            }}</template>
+          </app-course-info>
+        </template>
+      </app-course-about>
+    </app-section-wrapper>
+
     <app-section-wrapper :class="[$style.section, $style.curator]">
       <app-curator
         stats
         img-name="cody-fisher.png"
-        :role="$t('course.role')"
-        :description="$t('course.description')"
+        :role="$t('course.author.role')"
+        :description="$t('course.author.description')"
         :author-id="course.author_id"
       />
     </app-section-wrapper>
@@ -56,6 +76,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import { getRangeFromDates } from '~/utils/date';
 
 export default {
   name: 'AppSpecificCoursePage',
@@ -73,6 +94,24 @@ export default {
 
     course() {
       return this.courseBySlug(this.slug);
+    },
+
+    date() {
+      const locale = this.$i18n?.locale || 'en';
+      const start = new Date(this.course.date.start);
+      const end = new Date(this.course.date.end);
+      const options = {
+        month: 'short',
+        day: 'numeric',
+        hour12: false,
+      };
+
+      return getRangeFromDates({
+        locale,
+        start,
+        end,
+        options,
+      });
     },
   },
 };

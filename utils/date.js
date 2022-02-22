@@ -19,6 +19,7 @@ export const getRangeFromDates = ({
   start,
   end,
   options,
+  endOptions,
 }) => {
   const startTime = getLocaleDateString({
     locale,
@@ -28,7 +29,7 @@ export const getRangeFromDates = ({
   const endTime = getLocaleDateString({
     locale,
     date: end,
-    options
+    options: endOptions || options
   })
 
   return `${startTime} - ${endTime}`;

@@ -7,6 +7,10 @@
     padding: toRem(192px) 0 toRem(120px);
   }
 
+  &.about {
+    padding: toRem(120px) 0 toRem(90px);
+  }
+
   &.curator {
     padding: toRem(60px) 0 toRem(90px);
   }
@@ -35,6 +39,7 @@
   }
 
   @media screen and (max-width: 480px) {
+    &.about,
     &.curator,
     &.audience,
     &.request,

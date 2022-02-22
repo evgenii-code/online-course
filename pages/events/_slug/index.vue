@@ -6,7 +6,19 @@
     </app-section-title>
 
     <app-section-wrapper :class="[$style.section, $style.agenda]">
-      <app-agenda :event="event" />
+      <app-course-about
+        :course="event"
+        :button-text="$t('event.join')"
+        :date="date"
+        :details="$t('event.details')"
+        :external-link="externalLink"
+      >
+        <template #title>{{ $t('event.agenda') }}</template>
+
+        <template #info>
+          <v-accordion-list :items="$t('event.themes')" />
+        </template>
+      </app-course-about>
     </app-section-wrapper>
 
     <app-section-wrapper :class="[$style.section, $style.curator]">
@@ -69,6 +81,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import { getRangeFromDates } from '~/utils/date';
 
 export default {
   name: 'AppSpecificEvent',
@@ -85,6 +98,33 @@ export default {
 
     event() {
       return this.eventBySlug(this.slug);
+    },
+
+    date() {
+      const locale = this.$i18n?.locale || 'en';
+      const start = new Date(this.event.date.start);
+      const end = new Date(this.event.date.end);
+      const endOptions = { hour: '2-digit', minute: '2-digit', hour12: false };
+      const options = {
+        ...endOptions,
+        month: 'short',
+        day: 'numeric',
+      };
+
+      return getRangeFromDates({
+        locale,
+        start,
+        end,
+        options,
+        endOptions,
+      });
+    },
+
+    externalLink() {
+      return {
+        text: this.$t('event.link'),
+        url: 'https://facebook.com',
+      };
     },
   },
 };

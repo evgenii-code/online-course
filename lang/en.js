@@ -125,8 +125,54 @@ export default {
   },
 
   course: {
-    role: 'Course curator',
-    description: 'Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.',
+    about: {
+      title: 'About the course',
+      subtitle: 'You will learn:',
+      description: 'Bibendum vulputate adipiscing venenatis at est, a eu tincidunt. Leo aenean congue in sagittis, felis maecenas amet varius at. Pellentesque euismod in faucibus at elementum. Tellus maecenas libero est tempus sit cras at malesuada diam. Consequat senectus dictumst non hac dignissim montes, pretium, egestas molestie. Sed magna aliquet ornare nibh vel lectus diam eget pretium. Lorem risus nunc tincidunt tortor, mi nulla pellentesque',
+
+      list: [{
+          text: 'A fermentum in morbi pretium aliquam adipiscing donec tempus.',
+        },
+        {
+          text: 'Vulputate placerat amet pulvinar lorem nisl.',
+        },
+        {
+          text: 'Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.',
+        },
+        {
+          text: 'Etiam duis lobortis in fames ultrices commodo nibh.',
+        },
+        {
+          text: 'Fringilla in nec risus congue venenatis pretium posuere nec.',
+        },
+        {
+          text: 'Cursus eu pretium, vulputate tempus quam massa sed at.',
+        },
+      ],
+    },
+
+    author: {
+      role: 'Course curator',
+      description: 'Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.',
+    },
+
+    details: [{
+        title: 'Dates',
+        value: '{date}',
+        text: 'Metus turpis sit lorem lacus, in elit tellus lacus.',
+      },
+      {
+        title: 'Duration',
+        value: '2 months – 8 lessons',
+        text: 'Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut.',
+      },
+      {
+        title: 'Price',
+        value: '$120 per month',
+        text: 'Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis.',
+      },
+    ],
+    join: 'Join the course',
 
     audience: {
       title: 'Who will benefit from the course:',
