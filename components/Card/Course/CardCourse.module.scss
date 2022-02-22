@@ -18,6 +18,21 @@
   }
 }
 
+.link {
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--card-shadow-grey);
+  cursor: pointer;
+
+  @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+  &:hover {
+    box-shadow: var(--card-shadow-grey-hover);
+  }
+}
+
 .card {
   width: 100%;
   background: var(--color-light);
@@ -26,15 +41,8 @@
   border-radius: toRem(4px);
   overflow: hidden;
   display: flex;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: var(--card-shadow-grey);
 
   @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
-
-  &:hover {
-    box-shadow: var(--card-shadow-grey-hover);
-  }
 
   &.vertical {
     @include vartical-card;

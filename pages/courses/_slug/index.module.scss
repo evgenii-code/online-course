@@ -24,6 +24,10 @@
     padding: toRem(90px) 0 toRem(100px);
   }
 
+  &.courses {
+    padding: toRem(120px) 0 toRem(180px);
+  }
+
   @media screen and (max-width: 1024px) {
     &.testimonials {
       padding: toRem(40px) 0;
@@ -33,7 +37,8 @@
   @media screen and (max-width: 480px) {
     &.curator,
     &.audience,
-    &.request {
+    &.request,
+    &.courses {
       padding: toRem(60px) 0;
     }
   }

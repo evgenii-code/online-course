@@ -56,19 +56,13 @@
       :items="events"
       card-component="app-card-event"
       carousel-id="carousel-events"
+      path-to-more-items="/events"
+      show-footer
     >
       <template #title>{{ $t('event.all.title') }}</template>
       <template #subtitle>{{ $t('event.all.subtitle') }}</template>
-      <template #footer>
-        <div :class="$style.footer">
-          <p :class="$style.text">
-            {{ $t('event.all.more') }}
-          </p>
-          <v-button :class="$style.button" link :to="localePath('/events')">{{
-            $t('event.all.action')
-          }}</v-button>
-        </div>
-      </template>
+      <template #more>{{ $t('event.all.more') }}</template>
+      <template #action>{{ $t('event.all.action') }}</template>
     </app-section-carousel>
   </main>
 </template>

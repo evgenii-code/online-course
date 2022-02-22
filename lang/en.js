@@ -146,6 +146,13 @@ export default {
         },
       ],
     },
+
+    all: {
+      title: 'You may also like',
+      subtitle: 'Check other courses',
+      more: 'Do you want more courses?',
+      action: 'View all courses',
+    },
   },
 
   benefits: {

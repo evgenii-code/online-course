@@ -37,6 +37,20 @@
       <template #subtitle>{{ $t('request.course.subtitle') }}</template>
       <template #submit>{{ $t('request.course.submit') }}</template>
     </app-section-request>
+
+    <app-section-carousel
+      :class="[$style.section, $style.courses]"
+      :items="courses"
+      card-component="app-card-course"
+      carousel-id="carousel-course"
+      path-to-more-items="/courses"
+      show-footer
+    >
+      <template #title>{{ $t('course.all.title') }}</template>
+      <template #subtitle>{{ $t('course.all.subtitle') }}</template>
+      <template #more>{{ $t('course.all.more') }}</template>
+      <template #action>{{ $t('course.all.action') }}</template>
+    </app-section-carousel>
   </main>
 </template>
 
