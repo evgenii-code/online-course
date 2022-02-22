@@ -123,6 +123,12 @@ export default {
     },
   },
 
+  course: {
+    role: 'Course curator',
+    description: 'Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.',
+
+  },
+
   benefits: {
     title: 'That’s how we do it',
     subtitle: 'Our benefits',
@@ -199,9 +205,6 @@ export default {
   },
 
   event: {
-    title: 'Formation of the organizational structure of the company in the face of uncertainty',
-    subtitle: 'Online lecture',
-
     agenda: 'We will talk about:',
     details: [{
         title: 'Time',
@@ -309,6 +312,11 @@ export default {
         name: 'Cody Fisher',
         position: 'UX Designer, Curator of Design Course',
       },
+    },
+    stats: {
+      rating: '{rating} rate',
+      courses: '{courses} course | {courses} courses',
+      students: '{students} student | {students} students',
     },
   },
 

@@ -1,0 +1,19 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  position: relative;
+
+  &.title {
+    padding: toRem(192px) 0 toRem(120px);
+  }
+
+  &.curator {
+    padding: toRem(60px) 0 toRem(90px);
+  }
+
+  @media screen and (max-width: 480px) {
+    &.curator {
+      padding: toRem(60px) 0;
+    }
+  }
+}

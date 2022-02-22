@@ -1,0 +1,46 @@
+<template>
+  <main :class="$style.main">
+    <app-section-title :class="[$style.section, $style.title]">
+      <template #subtitle>{{ $t(`courses.themes.${course.theme}`) }}</template>
+      <template #title>{{ $t(course.title) }}</template>
+    </app-section-title>
+
+    <app-section-wrapper :class="[$style.section, $style.curator]">
+      <app-curator
+        stats
+        img-name="cody-fisher.png"
+        :role="$t('course.role')"
+        :description="$t('course.description')"
+        :author-id="course.author_id"
+      />
+    </app-section-wrapper>
+  </main>
+</template>
+
+<script>
+import { mapGetters } from 'vuex';
+
+export default {
+  name: 'AppSpecificCoursePage',
+
+  computed: {
+    ...mapGetters({
+      courseBySlug: 'core/courseBySlug',
+      teamMemberById: 'core/teamMemberById',
+      courses: 'core/courses',
+    }),
+
+    slug() {
+      return this.$route?.params?.slug;
+    },
+
+    course() {
+      return this.courseBySlug(this.slug);
+    },
+  },
+};
+</script>
+
+<style lang="scss" module>
+@import './index.module';
+</style>
