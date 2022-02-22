@@ -4,7 +4,8 @@
     "theme": "marketing",
     "price": "$100",
     "author_id": 2,
-    "link": "/",
+    "link": "/courses",
+    "slug": "google-ads-training-course",
     "img": "images/courses/team/jerome-bell.jpg"
   },
 
@@ -14,7 +15,8 @@
     "theme": "management",
     "price": "$480",
     "author_id": 4,
-    "link": "/",
+    "link": "/courses",
+    "slug": "product-management-fundamentals",
     "img": "images/courses/team/marvin-mckinney.jpg"
   },
 
@@ -24,7 +26,8 @@
     "theme": "hr",
     "price": "$200",
     "author_id": 5,
-    "link": "/",
+    "link": "/courses",
+    "slug": "hr-management-and-analytics",
     "img": "images/courses/team/leslie-alexander-li.jpg"
   },
 
@@ -34,7 +37,8 @@
     "theme": "marketing",
     "price": "$530",
     "author_id": 3,
-    "link": "/",
+    "link": "/courses",
+    "slug": "brand-management-pr-communications",
     "img": "images/courses/team/kristin-watson.jpg"
   },
 
@@ -44,7 +48,8 @@
     "theme": "management",
     "price": "$400",
     "author_id": 1,
-    "link": "/",
+    "link": "/courses",
+    "slug": "business-development-management",
     "img": "images/courses/team/dianne-russell.jpg"
   },
 
@@ -54,7 +59,8 @@
     "theme": "design",
     "price": "$500",
     "author_id": 7,
-    "link": "/",
+    "link": "/courses",
+    "slug": "graphic-design-basic",
     "img": "images/courses/team/guy-hawkins.jpg"
   },
 
@@ -64,7 +70,8 @@
     "theme": "development",
     "price": "$600",
     "author_id": 7,
-    "link": "/",
+    "link": "/courses",
+    "slug": "highload-software-architecture",
     "img": "images/courses/team/brooklyn-simmons.jpg"
   },
 
@@ -74,7 +81,8 @@
     "theme": "hr",
     "price": "$150",
     "author_id": 6,
-    "link": "/",
+    "link": "/courses",
+    "slug": "human-resources-selection-and-recruitment",
     "img": "images/courses/team/kathryn-murphy.jpg"
   },
 
@@ -83,8 +91,8 @@
     "title": "courses.titles.experience",
     "theme": "design",
     "price": "$240",
-    "author_id": 8,
-    "link": "/",
+    "link": "/courses",
+    "slug": "user-experience-human-centered-design",
     "img": "images/courses/team/cody-fisher.jpg"
   }
 ]

@@ -3,6 +3,11 @@
     "name": "team.members.russell.name",
     "position": "team.members.russell.position",
     "img": "dianne-russell.png",
+    "stats": {
+      "rating": 4.9,
+      "courses": 4,
+      "students": 350
+    },
     "links": {
       "facebook": "https://facebook.com/",
       "instagram": "https://instagram.com/",
@@ -14,6 +19,11 @@
     "name": "team.members.bell.name",
     "position": "team.members.bell.position",
     "img": "jerome-bell.png",
+    "stats": {
+      "rating": 4.8,
+      "courses": 2,
+      "students": 120
+    },
     "links": {
       "facebook": "https://facebook.com/",
       "instagram": "https://instagram.com/",
@@ -25,6 +35,11 @@
     "name": "team.members.watson.name",
     "position": "team.members.watson.position",
     "img": "kristin-watson.png",
+    "stats": {
+      "rating": 4.9,
+      "courses": 3,
+      "students": 431
+    },
     "links": {
       "facebook": "https://facebook.com/",
       "instagram": "https://instagram.com/",
@@ -36,6 +51,11 @@
     "name": "team.members.mcKinney.name",
     "position": "team.members.mcKinney.position",
     "img": "marvin-mckinney.png",
+    "stats": {
+      "rating": 4.7,
+      "courses": 1,
+      "students": 98
+    },
     "links": {
       "facebook": "https://facebook.com/",
       "instagram": "https://instagram.com/",
@@ -47,6 +67,11 @@
     "name": "team.members.li.name",
     "position": "team.members.li.position",
     "img": "leslie-alexander-li.png",
+    "stats": {
+      "rating": 4.8,
+      "courses": 2,
+      "students": 217
+    },
     "links": {
       "facebook": "https://facebook.com/",
       "instagram": "https://instagram.com/",
@@ -58,6 +83,11 @@
     "name": "team.members.murphy.name",
     "position": "team.members.murphy.position",
     "img": "kathryn-murphy.png",
+    "stats": {
+      "rating": 4.9,
+      "courses": 3,
+      "students": 348
+    },
     "links": {
       "facebook": "https://facebook.com/",
       "instagram": "https://instagram.com/",
@@ -69,6 +99,11 @@
     "name": "team.members.simmons.name",
     "position": "team.members.simmons.position",
     "img": "brooklyn-simmons.png",
+    "stats": {
+      "rating": 4.7,
+      "courses": 1,
+      "students": 143
+    },
     "links": {
       "facebook": "https://facebook.com/",
       "instagram": "https://instagram.com/",
@@ -80,6 +115,11 @@
     "name": "team.members.fisher.name",
     "position": "team.members.fisher.position",
     "img": "cody-fisher.png",
+    "stats": {
+      "rating": 4.8,
+      "courses": 3,
+      "students": 471
+    },
     "links": {
       "facebook": "https://facebook.com/",
       "instagram": "https://instagram.com/",

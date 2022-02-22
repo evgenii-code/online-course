@@ -7,7 +7,7 @@
     },
     "link": "/events",
     "slug": "formation-of-the-organizational-structure",
-    "curator_id": 6,
+    "author_id": 6,
     "theme": "management"
   },
   {
@@ -19,7 +19,7 @@
     },
     "link": "/events",
     "slug": "building-a-customer-service-department",
-    "curator_id": 6,
+    "author_id": 6,
     "theme": "management"
   },
   {
@@ -31,7 +31,7 @@
     },
     "link": "/events",
     "slug": "methods-of-speculative-design-in-practice",
-    "curator_id": 6,
+    "author_id": 6,
     "theme": "design"
   },
   {
@@ -43,7 +43,7 @@
     },
     "link": "/events",
     "slug": "search-and-assessment-tools-for-candidates",
-    "curator_id": 6,
+    "author_id": 6,
     "theme": "hr"
   },
   {
@@ -55,7 +55,7 @@
     },
     "link": "/events",
     "slug": "dat-visualization-in-power-bi",
-    "curator_id": 6,
+    "author_id": 6,
     "theme": "marketing"
   },
   {
@@ -67,7 +67,7 @@
     },
     "link": "/events",
     "slug": "marketing-or-growth-hacking",
-    "curator_id": 6,
+    "author_id": 6,
     "theme": "marketing"
   },
   {
@@ -79,7 +79,7 @@
     },
     "link": "/events",
     "slug": "how-to-brief-a-client",
-    "curator_id": 6,
+    "author_id": 6,
     "theme": "design"
   },
   {
@@ -91,7 +91,7 @@
     },
     "link": "/events",
     "slug": "who-is-a-project-manager",
-    "curator_id": 6,
+    "author_id": 6,
     "theme": "management"
   },
   {
@@ -103,7 +103,7 @@
     },
     "link": "/events",
     "slug": "the-companys-business-page",
-    "curator_id": 6,
+    "author_id": 6,
     "theme": "hr"
   }
 ]
