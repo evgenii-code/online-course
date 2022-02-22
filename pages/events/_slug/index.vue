@@ -20,7 +20,10 @@
     </app-section-wrapper>
 
     <app-section-wrapper :class="[$style.section, $style.audience]">
-      <app-audience />
+      <app-audience :audience-list="$t('event.audience.items')">
+        <template #title>{{ $t('event.audience.title') }}</template>
+        <template #subtitle>{{ $t('event.audience.subtitle') }}</template>
+      </app-audience>
     </app-section-wrapper>
 
     <app-section-subscribe

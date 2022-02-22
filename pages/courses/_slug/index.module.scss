@@ -11,8 +11,13 @@
     padding: toRem(60px) 0 toRem(90px);
   }
 
+  &.audience {
+    padding: toRem(90px) 0;
+  }
+
   @media screen and (max-width: 480px) {
-    &.curator {
+    &.curator,
+    &.audience {
       padding: toRem(60px) 0;
     }
   }

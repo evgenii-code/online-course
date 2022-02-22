@@ -1,16 +1,13 @@
 <template>
   <article :class="$style.audience">
     <app-heading :class="$style.heading">
-      <template #title>{{ $t('event.audience.title') }}</template>
-      <template #subtitle>{{ $t('event.audience.subtitle') }}</template>
+      <template #title><slot name="title" /></template>
+      <template #subtitle><slot name="subtitle" /></template>
     </app-heading>
 
     <app-text-list :class="$style.list">
-      <template
-        v-for="(fact, index) in $t('event.audience.items')"
-        #[getSlotName(index)]
-      >
-        <span :key="`audience-${index}`">{{ fact.text }}</span>
+      <template v-for="(audience, index) in audienceList" #[getSlotName(index)]>
+        <span :key="`audience-${index}`">{{ audience.text }}</span>
       </template>
     </app-text-list>
   </article>
@@ -19,6 +16,13 @@
 <script>
 export default {
   name: 'AppAudience',
+
+  props: {
+    audienceList: {
+      type: Array,
+      required: true,
+    },
+  },
 
   methods: {
     getSlotName(index) {

@@ -14,6 +14,13 @@
         :author-id="course.author_id"
       />
     </app-section-wrapper>
+
+    <app-section-wrapper :class="[$style.section, $style.audience]">
+      <app-audience :audience-list="$t('course.audience.items')">
+        <template #title>{{ $t('course.audience.title') }}</template>
+        <template #subtitle>{{ $t('course.audience.subtitle') }}</template>
+      </app-audience>
+    </app-section-wrapper>
   </main>
 </template>
 
