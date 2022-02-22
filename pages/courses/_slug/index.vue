@@ -42,6 +42,13 @@
       </app-audience>
     </app-section-wrapper>
 
+    <app-section-wrapper :class="[$style.section, $style.program]">
+      <app-course-program :list-items="$t('course.program.lessons')">
+        <template #title>{{ $t('course.program.title') }}</template>
+        <template #subtitle>{{ $t('course.program.subtitle') }}</template>
+      </app-course-program>
+    </app-section-wrapper>
+
     <app-section-wrapper
       background="gray"
       :class="[$style.section, $style.testimonials]"

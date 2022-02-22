@@ -1,0 +1,59 @@
+@import '~/scss/utils/_spacing.scss';
+
+.program {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: minmax(auto, toRem(600px)) minmax(auto, toRem(495px));
+  grid-template-areas:
+    'title picture'
+    'list picture'
+    'empty picture';
+
+  gap: 0 toRem(40px);
+
+  .heading {
+    grid-area: title;
+  }
+
+  .list {
+    grid-area: list;
+    margin: toRem(60px) 0 0;
+  }
+
+  .picture {
+    grid-area: picture;
+    margin-top: toRem(40px);
+    align-self: start;
+
+    width: 100%;
+    display: flex;
+
+    .image {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+    grid-template-columns: minmax(auto, toRem(600px));
+    grid-template-areas:
+      'title '
+      'picture'
+      'list';
+    gap: toRem(40px);
+
+    .heading {
+      text-align: center;
+    }
+
+    .list {
+      margin: 0;
+    }
+
+    .picture {
+      margin: 0 auto;
+      max-width: toRem(300px);
+    }
+  }
+}

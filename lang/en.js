@@ -15,6 +15,7 @@ export default {
     nextPage: 'Next page',
     goToPage: 'Go to page',
     submit: 'Submit',
+    illustration: 'Illustration'
   },
 
   header: {
@@ -189,6 +190,60 @@ export default {
         },
         {
           text: 'Specialists who would like to structure their knowledge, fill in the gaps',
+        },
+      ],
+    },
+
+    program: {
+      title: 'What will you learn',
+      subtitle: 'Course program',
+
+      lessons: [{
+          prefix: 'Lesson 1.',
+          title: 'Aliquet lectus urna viverra in odio.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 2.',
+          title: 'Orci commodo, viverra orci mollis ut euismod.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 3.',
+          title: 'Sagittis vitae facilisi rutrum amet mauris quisque vel.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 4.',
+          title: 'In id dolor quis nunc, urna hendrerit pharetra.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 5.',
+          title: 'Est, ut tempus id rutrum facilisi.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 6.',
+          title: 'Amet nec in pellentesque.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 7.',
+          title: 'Massa vel arcu mauris, id vel rhoncus mattis quis.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 8.',
+          title: 'Neque, cursus sapien nullam id.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
         },
       ],
     },

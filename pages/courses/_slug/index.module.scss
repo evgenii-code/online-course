@@ -19,6 +19,10 @@
     padding: toRem(90px) 0;
   }
 
+  &.program {
+    padding: toRem(90px) 0 toRem(120px);
+  }
+
   &.testimonials {
     padding: toRem(90px) 0 toRem(90px);
     overflow: hidden;
@@ -43,7 +47,8 @@
     &.curator,
     &.audience,
     &.request,
-    &.courses {
+    &.courses,
+    &.program {
       padding: toRem(60px) 0;
     }
   }
