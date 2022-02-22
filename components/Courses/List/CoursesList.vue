@@ -5,7 +5,10 @@
       :key="`course-${index}`"
       :class="$style.item"
     >
-      <nuxt-link :to="localePath(course.link)" :class="$style.link">
+      <nuxt-link
+        :to="localePath(course.link + '/' + course.slug)"
+        :class="$style.link"
+      >
         <app-card-course
           :class="$style.card"
           :href="localePath(course.link)"
