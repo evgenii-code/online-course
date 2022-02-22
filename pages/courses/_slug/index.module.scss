@@ -19,6 +19,10 @@
     padding: toRem(90px) 0 toRem(117px);
   }
 
+  &.discount {
+    padding: 0 0 toRem(90px);
+  }
+
   &.audience {
     padding: toRem(90px) 0;
   }
@@ -50,6 +54,7 @@
     &.about,
     &.curator,
     &.process,
+    &.discount,
     &.audience,
     &.request,
     &.courses,

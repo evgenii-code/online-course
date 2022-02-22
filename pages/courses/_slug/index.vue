@@ -42,6 +42,13 @@
       </app-course-process>
     </app-section-wrapper>
 
+    <app-section-wrapper :class="[$style.section, $style.discount]">
+      <app-course-discount :deadline="deadline">
+        <template #title>{{ $t('course.discount.title') }}</template>
+        <template #submit>{{ $t('course.discount.submit') }}</template>
+      </app-course-discount>
+    </app-section-wrapper>
+
     <app-section-wrapper :class="[$style.section, $style.audience]">
       <app-audience :audience-list="$t('course.audience.items')">
         <template #title>{{ $t('course.audience.title') }}</template>
@@ -126,6 +133,14 @@ export default {
         end,
         options,
       });
+    },
+
+    deadline() {
+      const tomorrow = new Date();
+
+      tomorrow.setDate(tomorrow.getDate() + 1);
+
+      return tomorrow.toISOString();
     },
   },
 };

@@ -198,6 +198,11 @@ export default {
       ],
     },
 
+    discount: {
+      title: '20% discount for early birds!',
+      submit: 'Join the course',
+    },
+
     audience: {
       title: 'Who will benefit from the course:',
       subtitle: 'For whom?',
