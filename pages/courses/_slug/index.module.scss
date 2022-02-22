@@ -15,6 +15,10 @@
     padding: toRem(60px) 0 toRem(90px);
   }
 
+  &.process {
+    padding: toRem(90px) 0 toRem(117px);
+  }
+
   &.audience {
     padding: toRem(90px) 0;
   }
@@ -45,6 +49,7 @@
   @media screen and (max-width: 480px) {
     &.about,
     &.curator,
+    &.process,
     &.audience,
     &.request,
     &.courses,

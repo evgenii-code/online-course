@@ -1,0 +1,107 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+@keyframes pulse {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.06;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+.process {
+  .heading {
+  }
+
+  .steps {
+    margin: toRem(60px) 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: toRem(30px);
+
+    .step {
+      max-width: toRem(285px);
+
+      &:hover {
+        .count {
+          color: var(--color-primary);
+
+          &:before,
+          &:after {
+            width: toRem(84px);
+          }
+
+          &:before {
+            opacity: 0.12;
+          }
+
+          &:after {
+            opacity: 0.06;
+            animation-name: pulse;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+          }
+        }
+      }
+
+      .count {
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        font-weight: 900;
+        font-size: toRem(46px);
+        line-height: 130%;
+        color: var(--color-gray-400);
+        z-index: 1;
+
+        @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+        &:before,
+        &:after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 0;
+          aspect-ratio: 1;
+          opacity: 0;
+          border-radius: 50%;
+          background-color: var(--color-primary);
+          z-index: 0;
+
+          @include animation-motion(
+            $duration-very-fast,
+            'ease-in-out',
+            'basic'
+          );
+        }
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: toRem(20px);
+        line-height: 150%;
+        color: var(--color-gray-900);
+      }
+
+      .description {
+        margin: toRem(8px) 0 0;
+        color: var(--color-gray-700);
+      }
+    }
+  }
+}

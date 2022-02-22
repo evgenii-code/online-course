@@ -175,6 +175,29 @@ export default {
     ],
     join: 'Join the course',
 
+    process: {
+      title: 'Online learning process',
+      subtitle: 'Main steps',
+
+      steps: [{
+          title: 'Watching online video lectures',
+          description: 'Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.',
+        },
+        {
+          title: 'Passing test',
+          description: 'Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim ad tempor est ea.',
+        },
+        {
+          title: 'Curator’s feedback',
+          description: 'Adipisicing esse aliqua aliquip qui amet. Aute eiusmod dolore dolore et ad et veniam ad deserunt.',
+        },
+        {
+          title: 'Corrections if needed',
+          description: 'Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.',
+        },
+      ],
+    },
+
     audience: {
       title: 'Who will benefit from the course:',
       subtitle: 'For whom?',

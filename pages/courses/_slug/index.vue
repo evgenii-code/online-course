@@ -35,6 +35,13 @@
       />
     </app-section-wrapper>
 
+    <app-section-wrapper :class="[$style.section, $style.process]">
+      <app-course-process :steps="$t('course.process.steps')">
+        <template #title>{{ $t('course.process.title') }}</template>
+        <template #subtitle>{{ $t('course.process.subtitle') }}</template>
+      </app-course-process>
+    </app-section-wrapper>
+
     <app-section-wrapper :class="[$style.section, $style.audience]">
       <app-audience :audience-list="$t('course.audience.items')">
         <template #title>{{ $t('course.audience.title') }}</template>
