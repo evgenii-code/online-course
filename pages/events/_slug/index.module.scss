@@ -29,37 +29,6 @@
 
   &.events {
     padding: toRem(100px) 0 toRem(180px);
-
-    .footer {
-      margin: toRem(80px) 0 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: toRem(40px);
-
-      .text {
-        margin: 0;
-        font-weight: bold;
-        font-size: toRem(28px);
-        line-height: 150%;
-        color: var(--color-gray-900);
-      }
-    }
-  }
-
-  @media screen and (max-width: 580px) {
-    &.events {
-      .footer {
-        margin: toRem(40px) 0 0;
-        flex-direction: column;
-        gap: toRem(20px);
-
-        .text {
-          font-size: toRem(26px);
-          font-weight: 900;
-        }
-      }
-    }
   }
 
   @media screen and (max-width: 480px) {

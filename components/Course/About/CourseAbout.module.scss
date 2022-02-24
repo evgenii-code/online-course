@@ -1,6 +1,6 @@
 @import '~/scss/utils/spacing';
 
-.agenda {
+.about {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -10,8 +10,8 @@
     width: 100%;
     max-width: toRem(600px);
 
-    .accordion {
-      margin: toRem(60px) 0 0;
+    .info {
+      margin: toRem(40px) 0 0;
     }
   }
 
@@ -34,7 +34,7 @@
         text-align: center;
       }
 
-      .accordion {
+      .info {
         margin: toRem(40px) 0 0;
       }
     }

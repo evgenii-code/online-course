@@ -7,19 +7,19 @@
     >
       <h3 :class="$style.title">
         {{ detail.title }}
-        <span :class="$style.value">{{ detail.value }}</span>
+        <span :class="$style.value">{{ getValueText(detail.value) }}</span>
       </h3>
 
       <p :class="$style.text">{{ detail.text }}</p>
     </div>
 
     <a
-      v-if="link"
+      v-if="externalLink"
       :class="$style.link"
-      :href="link.url"
+      :href="externalLink.url"
       target="_blank"
       rel="noopener noreferrer"
-      >{{ link.text }}</a
+      >{{ externalLink.text }}</a
     >
 
     <slot name="button">
@@ -38,7 +38,7 @@ export default {
       required: true,
     },
 
-    link: {
+    externalLink: {
       type: Object,
       default: null,
     },
@@ -46,6 +46,17 @@ export default {
     button: {
       type: String,
       default: '',
+    },
+
+    date: {
+      type: String,
+      default: '',
+    },
+  },
+
+  methods: {
+    getValueText(value) {
+      return value === '{date}' ? this.date : value;
     },
   },
 };

@@ -1,0 +1,65 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  position: relative;
+
+  &.title {
+    padding: toRem(192px) 0 toRem(120px);
+  }
+
+  &.about {
+    padding: toRem(120px) 0 toRem(90px);
+  }
+
+  &.curator {
+    padding: toRem(60px) 0 toRem(90px);
+  }
+
+  &.process {
+    padding: toRem(90px) 0 toRem(117px);
+  }
+
+  &.discount {
+    padding: 0 0 toRem(90px);
+  }
+
+  &.audience {
+    padding: toRem(90px) 0;
+  }
+
+  &.program {
+    padding: toRem(90px) 0 toRem(120px);
+  }
+
+  &.testimonials {
+    padding: toRem(90px) 0 toRem(90px);
+    overflow: hidden;
+  }
+
+  &.request {
+    padding: toRem(90px) 0 toRem(100px);
+  }
+
+  &.courses {
+    padding: toRem(120px) 0 toRem(180px);
+  }
+
+  @media screen and (max-width: 1024px) {
+    &.testimonials {
+      padding: toRem(40px) 0;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &.about,
+    &.curator,
+    &.process,
+    &.discount,
+    &.audience,
+    &.request,
+    &.courses,
+    &.program {
+      padding: toRem(60px) 0;
+    }
+  }
+}

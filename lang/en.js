@@ -14,6 +14,8 @@ export default {
     previousPage: 'Previous page',
     nextPage: 'Next page',
     goToPage: 'Go to page',
+    submit: 'Submit',
+    illustration: 'Illustration'
   },
 
   header: {
@@ -123,6 +125,165 @@ export default {
     },
   },
 
+  course: {
+    about: {
+      title: 'About the course',
+      subtitle: 'You will learn:',
+      description: 'Bibendum vulputate adipiscing venenatis at est, a eu tincidunt. Leo aenean congue in sagittis, felis maecenas amet varius at. Pellentesque euismod in faucibus at elementum. Tellus maecenas libero est tempus sit cras at malesuada diam. Consequat senectus dictumst non hac dignissim montes, pretium, egestas molestie. Sed magna aliquet ornare nibh vel lectus diam eget pretium. Lorem risus nunc tincidunt tortor, mi nulla pellentesque',
+
+      list: [{
+          text: 'A fermentum in morbi pretium aliquam adipiscing donec tempus.',
+        },
+        {
+          text: 'Vulputate placerat amet pulvinar lorem nisl.',
+        },
+        {
+          text: 'Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.',
+        },
+        {
+          text: 'Etiam duis lobortis in fames ultrices commodo nibh.',
+        },
+        {
+          text: 'Fringilla in nec risus congue venenatis pretium posuere nec.',
+        },
+        {
+          text: 'Cursus eu pretium, vulputate tempus quam massa sed at.',
+        },
+      ],
+    },
+
+    author: {
+      role: 'Course curator',
+      description: 'Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.',
+    },
+
+    details: [{
+        title: 'Dates',
+        value: '{date}',
+        text: 'Metus turpis sit lorem lacus, in elit tellus lacus.',
+      },
+      {
+        title: 'Duration',
+        value: '2 months – 8 lessons',
+        text: 'Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut.',
+      },
+      {
+        title: 'Price',
+        value: '$120 per month',
+        text: 'Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis.',
+      },
+    ],
+    join: 'Join the course',
+
+    process: {
+      title: 'Online learning process',
+      subtitle: 'Main steps',
+
+      steps: [{
+          title: 'Watching online video lectures',
+          description: 'Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.',
+        },
+        {
+          title: 'Passing test',
+          description: 'Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim ad tempor est ea.',
+        },
+        {
+          title: 'Curator’s feedback',
+          description: 'Adipisicing esse aliqua aliquip qui amet. Aute eiusmod dolore dolore et ad et veniam ad deserunt.',
+        },
+        {
+          title: 'Corrections if needed',
+          description: 'Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.',
+        },
+      ],
+    },
+
+    discount: {
+      title: '20% discount for early birds!',
+      submit: 'Join the course',
+    },
+
+    audience: {
+      title: 'Who will benefit from the course:',
+      subtitle: 'For whom?',
+
+      items: [{
+          text: 'Specialists with more than 1 year of active work experience',
+        },
+        {
+          text: 'Mobile app designers who want to improve their skills in solving business problems, creating and testing human-centered interfaces',
+        },
+        {
+          text: 'Professional designers who want to feel more confident in UX',
+        },
+        {
+          text: 'Specialists who would like to structure their knowledge, fill in the gaps',
+        },
+      ],
+    },
+
+    program: {
+      title: 'What will you learn',
+      subtitle: 'Course program',
+
+      lessons: [{
+          prefix: 'Lesson 1.',
+          title: 'Aliquet lectus urna viverra in odio.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 2.',
+          title: 'Orci commodo, viverra orci mollis ut euismod.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 3.',
+          title: 'Sagittis vitae facilisi rutrum amet mauris quisque vel.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 4.',
+          title: 'In id dolor quis nunc, urna hendrerit pharetra.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 5.',
+          title: 'Est, ut tempus id rutrum facilisi.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 6.',
+          title: 'Amet nec in pellentesque.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 7.',
+          title: 'Massa vel arcu mauris, id vel rhoncus mattis quis.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+
+        {
+          prefix: 'Lesson 8.',
+          title: 'Neque, cursus sapien nullam id.',
+          content: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+        },
+      ],
+    },
+
+    all: {
+      title: 'You may also like',
+      subtitle: 'Check other courses',
+      more: 'Do you want more courses?',
+      action: 'View all courses',
+    },
+  },
+
   benefits: {
     title: 'That’s how we do it',
     subtitle: 'Our benefits',
@@ -199,9 +360,6 @@ export default {
   },
 
   event: {
-    title: 'Formation of the organizational structure of the company in the face of uncertainty',
-    subtitle: 'Online lecture',
-
     agenda: 'We will talk about:',
     details: [{
         title: 'Time',
@@ -310,6 +468,11 @@ export default {
         position: 'UX Designer, Curator of Design Course',
       },
     },
+    stats: {
+      rating: '{rating} rate',
+      courses: '{courses} course | {courses} courses',
+      students: '{students} student | {students} students',
+    },
   },
 
   testimonials: {
@@ -409,19 +572,18 @@ export default {
     event: {
       title: 'Leave a request',
       subtitle: 'Don’t miss the event',
+      submit: 'Join the event',
     },
 
     course: {
       title: 'Register for the course',
       subtitle: 'Leave a request now and get 20% off!',
+      submit: 'Join the course',
     },
 
     fullName: 'Your full name',
     email: 'Your working email',
     phone: 'Your phone number',
-    action: {
-      submit: 'Join the event'
-    },
     nextStep: '* You will receive a link to the online lecture in an email after registration.'
   },
 }

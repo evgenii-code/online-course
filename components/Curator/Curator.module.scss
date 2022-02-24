@@ -42,6 +42,33 @@
       color: var(--color-gray-700);
     }
 
+    .stats {
+      margin: toRem(32px) 0 0;
+      padding: 0;
+      list-style: none;
+
+      .item {
+        margin-bottom: toRem(4px);
+        display: flex;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        .icon {
+          color: var(--color-primary);
+          margin-right: toRem(8px);
+        }
+
+        .text {
+          margin: 0;
+          font-weight: bold;
+          font-size: toRem(16px);
+          line-height: 160%;
+        }
+      }
+    }
+
     .description {
       margin: toRem(32px) 0 0;
       font-size: torem(16px);

@@ -1,0 +1,76 @@
+@import '~/scss/utils/_color';
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/config.scss';
+
+.discount {
+  padding: toRem(48px) toRem(60px);
+  border-radius: 4px;
+  background-image: #{getLinearGradient(
+      var(--color-primary-rgb),
+      var(--color-primary-shade-rgb),
+      0.2
+    )};
+
+  .heading {
+    h2 {
+      font-size: toRem(32px);
+      line-height: 130%;
+    }
+  }
+
+  .form {
+    margin: toRem(32px) 0 0;
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(24px);
+
+    .inputs {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: toRem(24px);
+
+      .input {
+      }
+    }
+
+    .button {
+      min-width: toRem(168px);
+      align-self: end;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .form {
+      flex-wrap: wrap;
+
+      .inputs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        justify-content: unset;
+      }
+
+      .button {
+        margin-left: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    border-radius: none;
+    padding: toRem(48px) toRem($gutter-width-regular);
+    margin: 0 toRem(-$gutter-width-regular);
+    width: calc(100% + 2 * toRem($gutter-width-regular));
+
+    .heading {
+      text-align: center;
+    }
+
+    .form {
+      .button {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+}

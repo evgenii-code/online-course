@@ -7,8 +7,11 @@
     },
     "link": "/events",
     "slug": "formation-of-the-organizational-structure",
-    "curator_id": 6,
-    "theme": "management"
+    "author_id": 6,
+    "theme": "management",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.building",
@@ -19,8 +22,11 @@
     },
     "link": "/events",
     "slug": "building-a-customer-service-department",
-    "curator_id": 6,
-    "theme": "management"
+    "author_id": 6,
+    "theme": "management",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.prototyping",
@@ -31,8 +37,11 @@
     },
     "link": "/events",
     "slug": "methods-of-speculative-design-in-practice",
-    "curator_id": 6,
-    "theme": "design"
+    "author_id": 6,
+    "theme": "design",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.candidates",
@@ -43,8 +52,11 @@
     },
     "link": "/events",
     "slug": "search-and-assessment-tools-for-candidates",
-    "curator_id": 6,
-    "theme": "hr"
+    "author_id": 6,
+    "theme": "hr",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.visualization",
@@ -55,8 +67,11 @@
     },
     "link": "/events",
     "slug": "dat-visualization-in-power-bi",
-    "curator_id": 6,
-    "theme": "marketing"
+    "author_id": 6,
+    "theme": "marketing",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.marketing",
@@ -67,8 +82,11 @@
     },
     "link": "/events",
     "slug": "marketing-or-growth-hacking",
-    "curator_id": 6,
-    "theme": "marketing"
+    "author_id": 6,
+    "theme": "marketing",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.design",
@@ -79,8 +97,11 @@
     },
     "link": "/events",
     "slug": "how-to-brief-a-client",
-    "curator_id": 6,
-    "theme": "design"
+    "author_id": 6,
+    "theme": "design",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.manager",
@@ -91,8 +112,11 @@
     },
     "link": "/events",
     "slug": "who-is-a-project-manager",
-    "curator_id": 6,
-    "theme": "management"
+    "author_id": 6,
+    "theme": "management",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   },
   {
     "title": "events.titles.vacancies",
@@ -103,7 +127,10 @@
     },
     "link": "/events",
     "slug": "the-companys-business-page",
-    "curator_id": 6,
-    "theme": "hr"
+    "author_id": 6,
+    "theme": "hr",
+    "socialMedia": {
+      "facebook": "https://facebook.com"
+    }
   }
 ]

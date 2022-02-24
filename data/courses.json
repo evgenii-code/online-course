@@ -4,8 +4,13 @@
     "theme": "marketing",
     "price": "$100",
     "author_id": 2,
-    "link": "/",
-    "img": "images/courses/team/jerome-bell.jpg"
+    "link": "/courses",
+    "slug": "google-ads-training-course",
+    "img": "images/courses/team/jerome-bell.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -14,8 +19,13 @@
     "theme": "management",
     "price": "$480",
     "author_id": 4,
-    "link": "/",
-    "img": "images/courses/team/marvin-mckinney.jpg"
+    "link": "/courses",
+    "slug": "product-management-fundamentals",
+    "img": "images/courses/team/marvin-mckinney.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -24,8 +34,13 @@
     "theme": "hr",
     "price": "$200",
     "author_id": 5,
-    "link": "/",
-    "img": "images/courses/team/leslie-alexander-li.jpg"
+    "link": "/courses",
+    "slug": "hr-management-and-analytics",
+    "img": "images/courses/team/leslie-alexander-li.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -34,8 +49,13 @@
     "theme": "marketing",
     "price": "$530",
     "author_id": 3,
-    "link": "/",
-    "img": "images/courses/team/kristin-watson.jpg"
+    "link": "/courses",
+    "slug": "brand-management-pr-communications",
+    "img": "images/courses/team/kristin-watson.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -44,8 +64,13 @@
     "theme": "management",
     "price": "$400",
     "author_id": 1,
-    "link": "/",
-    "img": "images/courses/team/dianne-russell.jpg"
+    "link": "/courses",
+    "slug": "business-development-management",
+    "img": "images/courses/team/dianne-russell.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -54,8 +79,13 @@
     "theme": "design",
     "price": "$500",
     "author_id": 7,
-    "link": "/",
-    "img": "images/courses/team/guy-hawkins.jpg"
+    "link": "/courses",
+    "slug": "graphic-design-basic",
+    "img": "images/courses/team/guy-hawkins.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -64,8 +94,13 @@
     "theme": "development",
     "price": "$600",
     "author_id": 7,
-    "link": "/",
-    "img": "images/courses/team/brooklyn-simmons.jpg"
+    "link": "/courses",
+    "slug": "highload-software-architecture",
+    "img": "images/courses/team/brooklyn-simmons.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -74,8 +109,13 @@
     "theme": "hr",
     "price": "$150",
     "author_id": 6,
-    "link": "/",
-    "img": "images/courses/team/kathryn-murphy.jpg"
+    "link": "/courses",
+    "slug": "human-resources-selection-and-recruitment",
+    "img": "images/courses/team/kathryn-murphy.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   },
 
   {
@@ -83,8 +123,12 @@
     "title": "courses.titles.experience",
     "theme": "design",
     "price": "$240",
-    "author_id": 8,
-    "link": "/",
-    "img": "images/courses/team/cody-fisher.jpg"
+    "link": "/courses",
+    "slug": "user-experience-human-centered-design",
+    "img": "images/courses/team/cody-fisher.jpg",
+    "date": {
+      "start": "2022-09-07T00:00:00",
+      "end": "2022-11-02T00:00:00"
+    }
   }
 ]

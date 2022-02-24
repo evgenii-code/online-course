@@ -38,7 +38,17 @@
       </ul>
     </div>
 
-    <slot name="footer" />
+    <div v-if="showFooter" :class="$style.footer">
+      <slot name="footer">
+        <p :class="$style.text">
+          <slot name="more" />
+        </p>
+
+        <v-button :class="$style.button" link :to="localePath(pathToMoreItems)">
+          <slot name="action" />
+        </v-button>
+      </slot>
+    </div>
   </app-section-wrapper>
 </template>
 
@@ -84,6 +94,22 @@ const VARIANTS = {
       },
     },
   },
+  'app-card-course': {
+    class: 'course',
+    itemPropName: 'course',
+    props: {},
+    breakpoints: {
+      680: {
+        slidesPerView: 2,
+        centeredSlides: false,
+      },
+
+      1024: {
+        slidesPerView: 2,
+        centeredSlides: false,
+      },
+    },
+  },
 };
 
 export default {
@@ -113,6 +139,16 @@ export default {
     navigation: {
       type: Object,
       default: null,
+    },
+
+    showFooter: {
+      type: Boolean,
+      default: false,
+    },
+
+    pathToMoreItems: {
+      type: String,
+      default: '/',
     },
   },
 
