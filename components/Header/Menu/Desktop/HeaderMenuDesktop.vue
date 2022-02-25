@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'HeaderMenu',
+  name: 'AppHeaderMenuDesktop',
 
   props: {
     menuLinks: {
@@ -28,5 +28,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import './HeaderMenu.module.scss';
+@import './HeaderMenuDesktop.module.scss';
 </style>

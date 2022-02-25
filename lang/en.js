@@ -15,7 +15,8 @@ export default {
     nextPage: 'Next page',
     goToPage: 'Go to page',
     submit: 'Submit',
-    illustration: 'Illustration'
+    illustration: 'Illustration',
+    menuButton: 'Menu button',
   },
 
   header: {
