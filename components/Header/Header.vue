@@ -1,9 +1,12 @@
 <template>
-  <header :class="headerClasses">
+  <header v-click-outside="closeMobileMenu" :class="headerClasses">
     <app-container :class="$style.container">
       <v-logo :theme="theme" :class="$style.logo" />
 
-      <app-header-menu :class="$style.menu" :menu-links="menuLinks" />
+      <app-header-menu-desktop
+        :class="[$style.menu, $style.desktop]"
+        :menu-links="menuLinks"
+      />
 
       <div :class="$style.wrapper">
         <v-button size="large">{{ $t('header.consultation') }}</v-button>
@@ -11,18 +14,41 @@
         <app-header-account :class="$style.account" />
       </div>
 
-      <v-icon name="burger-menu" :class="$style.burger" />
+      <v-button-burger
+        :id="$options.ids.burgerButton"
+        :is-active="isMobileMenuOpen"
+        :class="$style.burger"
+        :aria-controls="$options.ids.mobileMenu"
+        :aria-label="$t('ui.menuButton')"
+        role="button"
+        @click="toggleMobileMenu"
+      />
     </app-container>
+
+    <transition name="slide">
+      <app-header-menu-mobile
+        v-if="isMobileMenuOpen"
+        :id="$options.ids.mobileMenu"
+        :aria-labelledby="$options.ids.burgerButton"
+        :menu-links="menuLinks"
+        :class="[$style.menu, $style.mobile]"
+      />
+    </transition>
   </header>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
+import clickOutside from '~/directives/click-outside';
 
 const HEADER_THEME_NAMES = ['light', 'dark'];
 
 export default {
   name: 'AppHeader',
+
+  directives: {
+    'click-outside': clickOutside,
+  },
 
   props: {
     theme: {
@@ -35,7 +61,13 @@ export default {
   data() {
     return {
       isScrolled: false,
+      isMobileMenuOpen: false,
     };
+  },
+
+  ids: {
+    mobileMenu: 'mobile-menu',
+    burgerButton: 'burger-button',
   },
 
   computed: {
@@ -46,9 +78,15 @@ export default {
     headerClasses() {
       return {
         [this.$style.header]: true,
-        [this.$style.scrolled]: this.isScrolled,
+        [this.$style.scrolled]: this.isScrolled || this.isMobileMenuOpen,
         [this.$style[this.theme]]: true,
       };
+    },
+  },
+
+  watch: {
+    $route() {
+      this.closeMobileMenu();
     },
   },
 
@@ -61,6 +99,14 @@ export default {
   },
 
   methods: {
+    closeMobileMenu() {
+      this.isMobileMenuOpen = false;
+    },
+
+    toggleMobileMenu() {
+      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    },
+
     setEventListeners() {
       if (process.server || !window) return;
 
