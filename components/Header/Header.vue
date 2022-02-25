@@ -29,6 +29,7 @@
       <app-header-menu-mobile
         v-if="isMobileMenuOpen"
         :id="$options.ids.mobileMenu"
+        v-trap-focus="closeMobileMenu"
         :aria-labelledby="$options.ids.burgerButton"
         :menu-links="menuLinks"
         :class="[$style.menu, $style.mobile]"
@@ -40,6 +41,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import clickOutside from '~/directives/click-outside';
+import trapFocus from '~/directives/trap-focus';
 
 const HEADER_THEME_NAMES = ['light', 'dark'];
 
@@ -48,6 +50,7 @@ export default {
 
   directives: {
     'click-outside': clickOutside,
+    'trap-focus': trapFocus,
   },
 
   props: {
