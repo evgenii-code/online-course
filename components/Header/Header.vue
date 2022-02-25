@@ -1,5 +1,14 @@
 <template>
   <header v-click-outside="closeMobileMenu" :class="headerClasses">
+    <transition name="show">
+      <div
+        v-if="isMobileMenuOpen"
+        :class="$style.overlay"
+        aria-hidden="true"
+        role="none"
+      />
+    </transition>
+
     <app-container :class="$style.container">
       <v-logo :theme="theme" :class="$style.logo" />
 
@@ -42,6 +51,7 @@
 import { mapGetters } from 'vuex';
 import clickOutside from '~/directives/click-outside';
 import trapFocus from '~/directives/trap-focus';
+import toggleBodyClassName from '~/utils/toggleBodyClassName';
 
 const HEADER_THEME_NAMES = ['light', 'dark'];
 
@@ -91,6 +101,10 @@ export default {
     $route() {
       this.closeMobileMenu();
     },
+
+    isMobileMenuOpen(value) {
+      toggleBodyClassName(this.utilsStyle['body-blocked'], value);
+    },
   },
 
   created() {
@@ -133,4 +147,8 @@ export default {
 
 <style lang="scss" module>
 @import './Header.module.scss';
+</style>
+
+<style lang="scss" module="utilsStyle">
+@import '~/scss/utils/sharedStyles.scss';
 </style>

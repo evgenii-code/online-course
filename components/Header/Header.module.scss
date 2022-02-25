@@ -23,6 +23,24 @@
     @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
   }
 
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background-color: rgba(var(--color-gray-900-rgb), 0.2);
+    z-index: -2;
+
+    @include animation-motion($duration-fast, 'ease-in-out', 'basic');
+
+    &:global(.show-enter),
+    &:global(.show-leave-to) {
+      opacity: 0;
+    }
+  }
+
   &.light {
     color: var(--color-gray-800);
     background-color: rgba(var(--color-light-rgb), 0);
