@@ -1,0 +1,67 @@
+@import '~/scss/utils/_spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+.burger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    width: 100%;
+
+    &::before {
+      display: block;
+      content: '';
+      width: 100%;
+      padding-bottom: 100%;
+    }
+  }
+
+  &.active {
+    .line {
+      &.top {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &.middle {
+        opacity: 0;
+      }
+
+      &.bottom {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  .line {
+    $line-height: toRem(2px);
+    $line-half-height: calc(-#{$line-height} / 2);
+
+    position: absolute;
+    height: $line-height;
+    left: 50%;
+    width: 100%;
+    border-radius: 1px;
+    background-color: currentColor;
+
+    @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+
+    &.top {
+      top: 20%;
+      transform: translate(-50%, $line-half-height);
+    }
+
+    &.middle {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.bottom {
+      top: 80%;
+      transform: translate(-50%, $line-half-height);
+    }
+  }
+}
