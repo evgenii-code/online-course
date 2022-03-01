@@ -81,7 +81,7 @@ export default {
 
   data() {
     return {
-      selectedTheme: this.$options.allThemes.value || '',
+      selectedTheme: '',
       search: '',
       listId: 'courses-list',
     };
@@ -127,12 +127,26 @@ export default {
     },
   },
 
+  watch: {
+    selectedTheme(newTheme) {
+      this.$router.push({ query: { theme: newTheme } });
+    },
+  },
+
   created() {
     this.$options.allThemes.text = this.$t('courses.filters.all');
     this.$options.allThemes.count = this.courses?.length || 0;
+
+    this.setSelectedTheme();
   },
 
   methods: {
+    setSelectedTheme() {
+      const { theme } = this.$route.query;
+
+      this.selectedTheme = theme || this.$options.allThemes.value || '';
+    },
+
     countCoursesByTheme(theme) {
       return (
         this.courses?.reduce(

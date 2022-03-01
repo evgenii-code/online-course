@@ -23,7 +23,7 @@
         </app-footer-list>
 
         <!-- Courses -->
-        <app-footer-list :class="$style.courses" :list-items="[]">
+        <app-footer-list :class="$style.courses" :list-items="themes">
           <template #header>
             <h2 :class="$style.title">{{ $t('footer.courses') }}</h2>
           </template>
@@ -121,6 +121,7 @@ export default {
   computed: {
     ...mapGetters({
       menuLinks: 'core/menuLinks',
+      themes: 'core/themes',
       contactLinks: 'core/contactLinks',
       socialLinks: 'core/socialLinks',
     }),
