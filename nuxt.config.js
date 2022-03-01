@@ -1,6 +1,8 @@
 const PORT = process.env.PORT || '3000';
 const API_URL = process.env.API_URL || '/';
 const BASE_URL = process.env.BASE_URL || '/';
+const repositoryName = process.env.REPOSITORY_NAME || '/';
+const routerBase = process.env.NODE_ENV === 'production' ? repositoryName : '/';
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -28,13 +30,19 @@ export default {
     link: [{
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico'
+        href: `${routerBase}favicon.ico`
       },
       {
         rel: 'stylesheet',
-        href: '/fonts/fonts.css'
+        href: `${routerBase}fonts/fonts.css`
       },
     ],
+  },
+
+  target: 'static',
+
+  router: {
+    base: routerBase
   },
 
   server: {
