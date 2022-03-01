@@ -6,6 +6,7 @@
         :class="$style.overlay"
         aria-hidden="true"
         role="none"
+        @click="closeMobileMenu"
       />
     </transition>
 
