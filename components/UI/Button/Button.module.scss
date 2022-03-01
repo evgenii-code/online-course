@@ -30,12 +30,21 @@
   &.primary {
     background-image: var(--gradient-primary);
 
+    &:not([disabled]):hover {
+      color: var(--color-primary);
+      background-image: none;
+      border-color: var(--color-primary);
+    }
+
     &.outline {
-      &[disabled],
-      &:not(:hover) {
-        color: var(--color-primary);
-        background-image: none;
-        border-color: var(--color-primary);
+      color: var(--color-primary);
+      background-image: none;
+      border-color: var(--color-primary);
+
+      &:not([disabled]):hover {
+        background-image: var(--gradient-primary);
+        color: var(--color-light);
+        border-color: transparent;
       }
     }
   }
