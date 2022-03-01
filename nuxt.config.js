@@ -30,11 +30,11 @@ export default {
     link: [{
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico'
+        href: `${routerBase}favicon.ico`
       },
       {
         rel: 'stylesheet',
-        href: '/fonts/fonts.css'
+        href: `${routerBase}fonts/fonts.css`
       },
     ],
   },
