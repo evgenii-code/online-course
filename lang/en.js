@@ -17,6 +17,12 @@ export default {
     submit: 'Submit',
     illustration: 'Illustration',
     menuButton: 'Menu button',
+    homePage: 'Home page',
+  },
+
+  error: {
+    occurred: 'An error occurred',
+    pageNotFound: 'Page not found',
   },
 
   header: {

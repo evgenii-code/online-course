@@ -1,0 +1,26 @@
+@import '~/scss/utils/spacing.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 60vh;
+    padding: toRem(120px) 0 toRem(60px);
+
+    .heading {
+      margin-top: auto;
+    }
+
+    .link {
+      margin: toRem(60px) auto auto;
+      text-transform: none;
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+}
