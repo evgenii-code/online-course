@@ -34,6 +34,8 @@ const INPUT_THEME_NAMES = ['light', 'dark'];
 export default {
   name: 'AppInput',
 
+  inheritAttrs: false,
+
   props: {
     value: {
       type: String,
