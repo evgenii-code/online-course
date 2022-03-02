@@ -17,11 +17,7 @@
       </div>
     </div>
 
-    <div
-      v-swiper="swiperOption"
-      :class="$style.swiper"
-      :instance-name="carouselId"
-    >
+    <div v-swiper:[carouselId]="swiperOption" :class="$style.swiper">
       <ul :class="[$style.list, 'swiper-wrapper']">
         <li
           v-for="(item, index) in items"
