@@ -23,6 +23,7 @@
           <v-input
             v-model="fields[field.name]"
             :label="$t(`ui.${field.name}`)"
+            :name="field.name"
             :class="[$style.input, $style.email]"
             :placeholder="$t(`request.${field.name}`)"
             :error="errors[0]"
