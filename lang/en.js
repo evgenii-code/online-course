@@ -540,6 +540,12 @@ export default {
       podcast: 'Podcast',
       video: 'Video',
       article: 'Article',
+      all: 'All',
+    },
+
+    filters: {
+      category: 'Blog category',
+      search: 'Search blog...',
     },
 
     description: "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida. Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida.",

@@ -11,32 +11,31 @@
       }}</v-button>
     </div>
 
-    <ul :class="$style.list">
-      <li
-        v-for="(post, index) in latestPosts"
-        :key="`post-${index}`"
-        :class="$style.item"
-      >
-        <app-card-blog :class="$style.post" :post="post" />
-      </li>
-    </ul>
+    <app-posts-list :class="$style.list" :items="latestPosts" />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 import sortByDate from '~/utils/sortByDate';
 
 export default {
   name: 'AppPostsLatests',
 
-  computed: {
-    ...mapGetters({
-      posts: 'core/posts',
-    }),
+  props: {
+    limit: {
+      type: Number,
+      default: 3,
+    },
 
+    items: {
+      type: Array,
+      required: true,
+    },
+  },
+
+  computed: {
     latestPosts() {
-      return sortByDate(this.posts, true).slice(0, 3);
+      return sortByDate(this.items, true).slice(0, this.limit);
     },
   },
 };

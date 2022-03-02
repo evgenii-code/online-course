@@ -1,0 +1,80 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/srOnly.scss';
+
+.posts {
+  .heading {
+    text-align: center;
+  }
+
+  .content {
+    margin-top: toRem(60px);
+
+    &.filters {
+      display: flex;
+      justify-content: space-between;
+      gap: toRem(40px);
+
+      .description {
+        @include srOnly();
+      }
+
+      .formats {
+        display: flex;
+        align-items: center;
+
+        .format {
+          .button {
+            width: 100%;
+            white-space: nowrap;
+            padding: 0 toRem(20px);
+
+            .icon {
+              margin-right: toRem(8px);
+            }
+          }
+        }
+      }
+
+      .theme {
+        margin-left: auto;
+        min-width: toRem(170px);
+        font-size: 14px;
+      }
+
+      .search {
+        flex-grow: 1;
+        max-width: toRem(315px);
+
+        .icon {
+          color: var(--color-gray-600);
+        }
+      }
+    }
+
+    &.list {
+      margin-top: toRem(60px);
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .content {
+      &.filters {
+        flex-direction: column;
+        gap: toRem(16px);
+
+        .formats {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(toRem(150px), 1fr));
+        }
+
+        .theme {
+          width: 100%;
+        }
+
+        .search {
+          max-width: unset;
+        }
+      }
+    }
+  }
+}

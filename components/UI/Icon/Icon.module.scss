@@ -14,8 +14,6 @@
   svg,
   path {
     fill: currentColor;
-
-    @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
   }
 
   &.small {
