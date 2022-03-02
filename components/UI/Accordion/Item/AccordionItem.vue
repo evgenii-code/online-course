@@ -41,8 +41,6 @@
 <script>
 import getUID from '~/utils/getUID';
 
-const uuid = getUID();
-
 export default {
   name: 'AppAcordionItem',
 
@@ -68,7 +66,7 @@ export default {
   data() {
     return {
       isOpen: false,
-      uuid,
+      uuid: getUID(),
     };
   },
 
@@ -92,7 +90,7 @@ export default {
     },
 
     sectionId() {
-      return `button-${this.uuid}`;
+      return `section-${this.uuid}`;
     },
   },
 
