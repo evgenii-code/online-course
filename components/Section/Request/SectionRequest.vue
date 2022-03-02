@@ -33,6 +33,7 @@
               :placeholder="$t(`request.${field.name}`)"
               :error="errors[0]"
               :success="valid"
+              :name="field.name"
             />
           </validation-provider>
 
