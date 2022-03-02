@@ -7,10 +7,10 @@
       :class="$style.item"
     >
       <template #title>
-        <h3 :class="$style.title">
+        <p :class="$style.title">
           <b v-if="item.prefix" :class="$style.prefix">{{ item.prefix }}</b
           >{{ item.title }}
-        </h3>
+        </p>
       </template>
 
       <template #content>
