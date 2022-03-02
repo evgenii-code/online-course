@@ -36,7 +36,7 @@
 
     <transition name="slide">
       <app-header-menu-mobile
-        v-if="isMobileMenuOpen"
+        v-show="isMobileMenuOpen"
         :id="$options.ids.mobileMenu"
         v-trap-focus="closeMobileMenu"
         :aria-labelledby="$options.ids.burgerButton"
