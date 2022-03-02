@@ -29,7 +29,7 @@
         :is-active="isMobileMenuOpen"
         :class="$style.burger"
         :aria-controls="$options.ids.mobileMenu"
-        :aria-label="$t('ui.menuButton')"
+        :aria-label="$options.ids.burgerButton"
         @click="toggleMobileMenu"
       />
     </app-container>
