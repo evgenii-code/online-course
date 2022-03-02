@@ -44,7 +44,7 @@
           v-model.trim="search"
           type="search"
           :placeholder="$t('courses.filters.search')"
-          :name="search"
+          name="search"
         >
           <template #postfix>
             <v-icon :class="$style.icon" size="small" name="search" />
