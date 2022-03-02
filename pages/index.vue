@@ -8,7 +8,6 @@
           src="~/assets/images/about/dots.svg"
           alt="Background image"
           aria-hidden="true"
-          role="none"
           :class="[$style.image, $style.forms, $style.dots]"
         />
 
@@ -16,7 +15,6 @@
           src="~/assets/images/about/circles.svg"
           alt="Background image"
           aria-hidden="true"
-          role="none"
           :class="[$style.image, $style.forms, $style.circles]"
         />
       </template>

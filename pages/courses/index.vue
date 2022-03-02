@@ -6,7 +6,6 @@
           src="~/assets/images/courses/background/dots.svg"
           alt="Background image"
           aria-hidden="true"
-          role="none"
           :class="[$style.image, $style.courses, $style.dots]"
         />
 
@@ -14,7 +13,6 @@
           src="~/assets/images/courses/background/circles.svg"
           alt="Background image"
           aria-hidden="true"
-          role="none"
           :class="[$style.image, $style.courses, $style.circles]"
         />
 
@@ -22,7 +20,6 @@
           src="~/assets/images/courses/background/arrows.svg"
           alt="Background image"
           aria-hidden="true"
-          role="none"
           :class="[$style.image, $style.courses, $style.arrows]"
         />
       </template>

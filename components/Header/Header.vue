@@ -30,7 +30,6 @@
         :class="$style.burger"
         :aria-controls="$options.ids.mobileMenu"
         :aria-label="$t('ui.menuButton')"
-        role="button"
         @click="toggleMobileMenu"
       />
     </app-container>

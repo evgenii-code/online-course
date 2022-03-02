@@ -6,14 +6,12 @@
         src="~/assets/images/subscribe/illustration-1.svg"
         alt="Background image"
         aria-hidden="true"
-        role="none"
         :class="[$style.image, $style.main, $style.left]"
       />
       <img
         src="~/assets/images/subscribe/illustration-1.svg"
         alt="Background image"
         aria-hidden="true"
-        role="none"
         :class="[$style.image, $style.main, $style.right]"
       />
     </template>
