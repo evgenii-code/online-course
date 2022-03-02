@@ -5,7 +5,6 @@
         src="~/assets/images/usp/shapes/arrows-up-right.svg"
         alt="Background image"
         aria-hidden="true"
-        role="none"
         :class="[$style.image, $style.up]"
       />
 
@@ -13,7 +12,6 @@
         src="~/assets/images/usp/shapes/arrows-down.svg"
         alt="Background image"
         aria-hidden="true"
-        role="none"
         :class="[$style.image, $style.down]"
       />
 
@@ -21,7 +19,6 @@
         src="~/assets/images/usp/shapes/semi-circle-three.svg"
         alt="Background image"
         aria-hidden="true"
-        role="none"
         :class="[$style.image, $style['semi-circle-three']]"
       />
 
@@ -29,7 +26,6 @@
         src="~/assets/images/usp/shapes/semi-circle-one.svg"
         alt="Background image"
         aria-hidden="true"
-        role="none"
         :class="[$style.image, $style['semi-circle-one']]"
       />
 
@@ -37,7 +33,6 @@
         src="~/assets/images/usp/shapes/circles.svg"
         alt="Background image"
         aria-hidden="true"
-        role="none"
         :class="[$style.image, $style.circles]"
       />
 
@@ -45,7 +40,6 @@
         src="~/assets/images/usp/shapes/dots.svg"
         alt="Background image"
         aria-hidden="true"
-        role="none"
         :class="[$style.image, $style.dots]"
       />
     </template>

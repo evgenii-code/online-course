@@ -1,8 +1,8 @@
 <template>
-  <div :class="classes">
+  <span :class="classes">
     <label v-if="label" :for="uuid" :class="$style.label">{{ label }}</label>
 
-    <div :class="$style.wrapper">
+    <span :class="$style.wrapper">
       <input
         :id="uuid"
         v-model="internalValue"
@@ -14,15 +14,15 @@
         v-on="events"
       />
 
-      <div v-if="hasPostfix" :class="$style.postfix">
+      <span v-if="hasPostfix" :class="$style.postfix">
         <slot name="postfix"></slot>
-      </div>
-    </div>
+      </span>
+    </span>
 
     <p v-if="internalError" :class="$style.message">
       {{ internalError }}
     </p>
-  </div>
+  </span>
 </template>
 
 <script>
@@ -33,6 +33,8 @@ const INPUT_THEME_NAMES = ['light', 'dark'];
 
 export default {
   name: 'AppInput',
+
+  inheritAttrs: false,
 
   props: {
     value: {

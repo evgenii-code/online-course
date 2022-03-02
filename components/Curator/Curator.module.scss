@@ -37,7 +37,7 @@
 
     .position {
       margin: 0;
-      font-size: torem(20px);
+      font-size: toRem(20px);
       line-height: 150%;
       color: var(--color-gray-700);
     }
@@ -71,7 +71,7 @@
 
     .description {
       margin: toRem(32px) 0 0;
-      font-size: torem(16px);
+      font-size: toRem(16px);
       line-height: 160%;
       color: var(--color-gray-800);
     }

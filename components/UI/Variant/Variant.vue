@@ -29,6 +29,8 @@ import getUID from '~/utils/getUID';
 export default {
   name: 'AppVarianToggler',
 
+  inheritAttrs: false,
+
   model: {
     prop: 'modelValue',
     event: 'change',

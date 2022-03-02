@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.posts">
-    <header :class="$style.header">
+    <div :class="$style.header">
       <app-heading :class="$style.heading">
         <template #title>{{ $t('posts.title') }}</template>
         <template #subtitle>{{ $t('posts.subtitle') }}</template>
@@ -9,7 +9,7 @@
       <v-button link :to="localePath('/blog')" :class="$style.button">{{
         $t('posts.toBlog')
       }}</v-button>
-    </header>
+    </div>
 
     <ul :class="$style.list">
       <li

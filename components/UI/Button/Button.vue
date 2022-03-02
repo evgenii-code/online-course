@@ -3,7 +3,7 @@
     :is="component"
     :class="classes"
     :disabled="disabled"
-    v-bind="$attrs"
+    v-bind="attributes"
     v-on="$listeners"
   >
     <slot></slot>
@@ -17,6 +17,8 @@ const BUTTON_SIZES = ['small', 'regular', 'large'];
 
 export default {
   name: 'AppButton',
+
+  inheritAttrs: false,
 
   props: {
     theme: {
@@ -51,6 +53,11 @@ export default {
       default: false,
     },
 
+    to: {
+      type: String,
+      default: null,
+    },
+
     tag: {
       type: String,
       default: null,
@@ -62,6 +69,17 @@ export default {
       if (this.tag) return this.tag;
 
       return this.link ? 'nuxt-link' : 'button';
+    },
+
+    attributes() {
+      if (this.link && this.to) {
+        return {
+          ...this.$attrs,
+          to: this.to,
+        };
+      }
+
+      return this.$attrs;
     },
 
     iconSize() {

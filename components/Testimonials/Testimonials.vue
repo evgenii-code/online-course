@@ -36,7 +36,7 @@
                     :src="
                       require(`~/assets/images/testimonials/${testimonial.img}`)
                     "
-                    :alt="testimonial.autor"
+                    :alt="testimonial.author"
                   />
 
                   <div :class="$style.info">

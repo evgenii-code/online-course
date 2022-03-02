@@ -1,6 +1,6 @@
 <template>
   <app-section-wrapper background="gray" :class="classes">
-    <header :class="$style.header">
+    <div :class="$style.header">
       <app-heading :class="$style.heading">
         <template #title><slot name="title" /></template>
         <template #subtitle><slot name="subtitle" /></template>
@@ -15,13 +15,9 @@
           <v-icon name="arrow-right" />
         </v-button-control>
       </div>
-    </header>
+    </div>
 
-    <div
-      v-swiper="swiperOption"
-      :class="$style.swiper"
-      :instance-name="carouselId"
-    >
+    <div v-swiper:[carouselId]="swiperOption" :class="$style.swiper">
       <ul :class="[$style.list, 'swiper-wrapper']">
         <li
           v-for="(item, index) in items"

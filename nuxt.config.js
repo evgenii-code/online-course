@@ -42,6 +42,7 @@ export default {
   target: 'static',
 
   router: {
+    trailingSlash: true,
     base: routerBase
   },
 

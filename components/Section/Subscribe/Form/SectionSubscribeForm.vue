@@ -19,6 +19,7 @@
           :placeholder="$t('subscribe.email')"
           :error="errors[0]"
           :success="valid"
+          name="email"
         />
       </validation-provider>
 

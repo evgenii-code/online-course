@@ -10,6 +10,8 @@ const BUTTON_SIZES = ['regular', 'large'];
 export default {
   name: 'AppButtonRound',
 
+  inheritAttrs: false,
+
   props: {
     icon: {
       type: String,

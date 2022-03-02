@@ -5,6 +5,9 @@
   $icon-size: 20px;
   list-style: none;
 
+  &.active {
+  }
+
   .button {
     text-align: left;
 
@@ -21,5 +24,24 @@
 
   .content {
     padding: toRem(16px) toRem($icon-size * 2) 0;
+  }
+
+  .details {
+    * {
+      will-change: height;
+      // transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    &:global(.expand-enter-active),
+    &:global(.expand-leave-active) {
+      transition: height 0.2s ease-in-out;
+      overflow: hidden;
+    }
+
+    &:global(.expand-enter),
+    &:global(.expand-leave-to) {
+      height: 0;
+    }
   }
 }

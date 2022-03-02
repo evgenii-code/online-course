@@ -17,6 +17,8 @@
 export default {
   name: 'AppButtonLoadMore',
 
+  inheritAttrs: false,
+
   props: {
     icon: {
       type: String,

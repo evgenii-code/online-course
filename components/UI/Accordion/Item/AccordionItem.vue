@@ -66,7 +66,7 @@ export default {
   data() {
     return {
       isOpen: false,
-      uuid: null,
+      uuid: getUID(),
     };
   },
 
@@ -90,7 +90,7 @@ export default {
     },
 
     sectionId() {
-      return `button-${this.uuid}`;
+      return `section-${this.uuid}`;
     },
   },
 
@@ -101,10 +101,6 @@ export default {
         this.isOpen = value;
       },
     },
-  },
-
-  beforeCreate() {
-    this.uuid = getUID();
   },
 
   methods: {
@@ -171,22 +167,4 @@ export default {
 
 <style lang="scss" module>
 @import './Accordion.module';
-</style>
-
-<style lang="scss" scoped>
-* {
-  will-change: height;
-  // transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-.expand-enter-active,
-.expand-leave-active {
-  transition: height 0.2s ease-in-out;
-  overflow: hidden;
-}
-.expand-enter,
-.expand-leave-to {
-  height: 0;
-}
 </style>

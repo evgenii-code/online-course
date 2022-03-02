@@ -63,7 +63,6 @@
     </app-section-request>
 
     <app-section-carousel
-      background="gray"
       :class="[$style.section, $style.events]"
       :items="events"
       card-component="app-card-event"

@@ -58,6 +58,7 @@
                 size="small"
                 :error="errors[0]"
                 :success="valid"
+                name="email"
               >
                 <template #postfix>
                   <v-button-clear :class="$style.submit" :disabled="errors[0]">

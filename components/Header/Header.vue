@@ -29,15 +29,14 @@
         :is-active="isMobileMenuOpen"
         :class="$style.burger"
         :aria-controls="$options.ids.mobileMenu"
-        :aria-label="$t('ui.menuButton')"
-        role="button"
+        :aria-label="$options.ids.burgerButton"
         @click="toggleMobileMenu"
       />
     </app-container>
 
     <transition name="slide">
       <app-header-menu-mobile
-        v-if="isMobileMenuOpen"
+        v-show="isMobileMenuOpen"
         :id="$options.ids.mobileMenu"
         v-trap-focus="closeMobileMenu"
         :aria-labelledby="$options.ids.burgerButton"

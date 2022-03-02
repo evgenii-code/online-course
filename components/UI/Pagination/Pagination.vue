@@ -67,6 +67,8 @@ const BUTTON_SIZES = ['regular'];
 export default {
   name: 'AppPagination',
 
+  inheritAttrs: false,
+
   model: {
     prop: 'currentPage',
     event: 'click',

@@ -50,7 +50,7 @@ export default {
   methods: {
     url(listItem) {
       return listItem.tag === 'nuxt-link'
-        ? { to: listItem.link }
+        ? { to: this.localePath(listItem.link) }
         : { href: listItem.link };
     },
   },
