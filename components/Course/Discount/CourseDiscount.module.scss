@@ -57,7 +57,7 @@
   }
 
   @media screen and (max-width: 580px) {
-    border-radius: none;
+    border-radius: 0;
     padding: toRem(48px) toRem($gutter-width-regular);
     margin: 0 toRem(-$gutter-width-regular);
     width: calc(100% + 2 * toRem($gutter-width-regular));
