@@ -41,6 +41,8 @@
 <script>
 import getUID from '~/utils/getUID';
 
+const uuid = getUID();
+
 export default {
   name: 'AppAcordionItem',
 
@@ -66,7 +68,7 @@ export default {
   data() {
     return {
       isOpen: false,
-      uuid: null,
+      uuid,
     };
   },
 
@@ -101,10 +103,6 @@ export default {
         this.isOpen = value;
       },
     },
-  },
-
-  beforeCreate() {
-    this.uuid = getUID();
   },
 
   methods: {
