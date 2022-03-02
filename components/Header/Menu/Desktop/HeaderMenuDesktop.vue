@@ -6,7 +6,7 @@
         :key="menuLink.link"
         :class="$style.item"
       >
-        <nuxt-link :class="$style.link" :to="menuLink.link">{{
+        <nuxt-link :class="$style.link" :to="localePath(menuLink.link)">{{
           $t(menuLink.title)
         }}</nuxt-link>
       </li>
