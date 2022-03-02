@@ -7,6 +7,8 @@
 <script>
 export default {
   name: 'AppButtonControl',
+
+  inheritAttrs: false,
 };
 </script>
 

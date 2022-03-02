@@ -18,6 +18,8 @@ const BUTTON_SIZES = ['small', 'regular', 'large'];
 export default {
   name: 'AppButton',
 
+  inheritAttrs: false,
+
   props: {
     theme: {
       type: String,

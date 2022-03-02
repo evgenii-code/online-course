@@ -30,6 +30,8 @@ const CHECKBOX_SIZES = ['regular'];
 export default {
   name: 'AppCheckbox',
 
+  inheritAttrs: false,
+
   model: {
     prop: 'modelValue',
     event: 'change',

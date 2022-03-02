@@ -7,6 +7,8 @@
 <script>
 export default {
   name: 'AppButtonClear',
+
+  inheritAttrs: false,
 };
 </script>
 
