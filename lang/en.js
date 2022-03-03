@@ -576,6 +576,10 @@ export default {
       title: 'Want to get the best articles weekly?{break}Subscribe to our newsletter!',
     },
 
+    posts: {
+      title: 'Want to get the best articles weekly? Subscribe to our newsletter!',
+    },
+
     email: 'Your working email',
     consent: 'I agree to receive communications from Createx Online School',
     action: 'Subscribe',

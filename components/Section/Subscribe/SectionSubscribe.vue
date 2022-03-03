@@ -1,5 +1,9 @@
 <template>
-  <app-section-wrapper :background="background" :class="classes">
+  <app-section-wrapper
+    :background="background"
+    :class="classes"
+    :direction="direction"
+  >
     <!-- Background images wth 'main' prop -->
     <template v-if="variant === 'main'" #noContainer>
       <img
@@ -15,6 +19,15 @@
         :class="[$style.image, $style.main, $style.right]"
       />
     </template>
+
+    <!-- Background images wth 'blog' prop -->
+    <img
+      v-if="variant === 'blog'"
+      src="~/assets/images/subscribe/illustration-3.svg"
+      alt="Background image"
+      aria-hidden="true"
+      :class="[$style.image, $style.blog]"
+    />
 
     <article :class="$style.content">
       <img
@@ -41,9 +54,13 @@
 
 <script>
 const VARIANTS = {
-  main: { background: 'gradient-primary', titleCentered: true },
-  event: { background: 'none', titleCentered: false },
-  blog: { background: 'gray', titleCentered: false },
+  main: {
+    background: 'gradient-primary',
+    titleCentered: true,
+    direction: 'column',
+  },
+  event: { background: 'none', titleCentered: false, direction: 'column' },
+  blog: { background: 'gray', titleCentered: false, direction: 'row' },
 };
 
 export default {
@@ -79,6 +96,10 @@ export default {
 
     titleCentered() {
       return this.variantOptions?.titleCentered;
+    },
+
+    direction() {
+      return this.variantOptions?.direction;
     },
 
     classes() {

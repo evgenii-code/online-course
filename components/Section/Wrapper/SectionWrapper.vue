@@ -2,7 +2,7 @@
   <section :class="classes">
     <slot name="noContainer" />
 
-    <app-container v-if="$slots.default" :class="$style.container">
+    <app-container v-if="$slots.default" :class="containerClasses">
       <slot />
     </app-container>
   </section>
@@ -10,6 +10,7 @@
 
 <script>
 const BACKGROUND_NAMES = ['none', 'gradient-primary', 'gray'];
+const DIRECTION_VARIANTS = ['column', 'column-reverse', 'row', 'row-reverse'];
 
 export default {
   name: 'AppSectionWrapper',
@@ -20,6 +21,12 @@ export default {
       default: 'none',
       validator: (background) => BACKGROUND_NAMES.includes(background),
     },
+
+    direction: {
+      type: String,
+      default: 'column',
+      validator: (direction) => DIRECTION_VARIANTS.includes(direction),
+    },
   },
 
   computed: {
@@ -27,6 +34,14 @@ export default {
       return {
         [this.$style.section]: true,
         [this.$style[this.background]]: true,
+        [this.$style[this.direction]]: true,
+      };
+    },
+
+    containerClasses() {
+      return {
+        [this.$style.container]: true,
+        [this.$style[this.direction]]: true,
       };
     },
   },

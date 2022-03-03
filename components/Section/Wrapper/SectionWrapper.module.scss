@@ -22,6 +22,23 @@
   .container {
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
+
+    &.column {
+      flex-direction: column;
+    }
+
+    &.column-reverse {
+      flex-direction: column-reverse;
+    }
+
+    &.row {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &.row-reverse {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
   }
 }
