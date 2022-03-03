@@ -23,6 +23,13 @@
     }
   }
 
+  &.medium {
+    svg {
+      width: toRem(20px);
+      height: toRem(20px);
+    }
+  }
+
   &.regular {
     svg {
       width: toRem(24px);
