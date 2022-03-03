@@ -1,6 +1,6 @@
 <script>
 /* eslint-disable vue/no-v-html */
-const ICON_SIZES = ['small', 'regular', 'large'];
+const ICON_SIZES = ['small', 'medium', 'regular', 'large'];
 
 export default {
   name: 'AppIcon',

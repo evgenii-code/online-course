@@ -11,9 +11,24 @@
   grid-gap: toRem(20px);
   grid-template-columns: repeat(auto-fit, toRem(24px));
 
+  &.small {
+    grid-gap: toRem(12px);
+    grid-template-columns: repeat(auto-fit, toRem(16px));
+  }
+
+  &.medium {
+    grid-gap: toRem(12px);
+    grid-template-columns: repeat(auto-fit, toRem(20px));
+  }
+
+  &.large {
+    grid-template-columns: repeat(auto-fit, toRem(32px));
+  }
+
   .item {
     .link {
       color: inherit;
+      display: flex;
 
       @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 

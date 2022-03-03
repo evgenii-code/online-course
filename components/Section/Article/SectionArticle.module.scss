@@ -1,0 +1,25 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  > div {
+    gap: toRem(78px);
+  }
+
+  .article {
+  }
+
+  .side {
+    flex-grow: 1;
+    min-width: toRem(342px);
+  }
+
+  @media screen and (max-width: 1024px) {
+    > div {
+      flex-direction: column !important;
+    }
+
+    .side {
+      min-width: unset;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-  <ul :class="$style.social">
+  <ul :class="classes">
     <li
       v-for="socialLink in socialLinks"
       :key="socialLink.link"
@@ -11,7 +11,7 @@
         :href="socialLink.link"
         :class="$style.link"
       >
-        <v-icon :class="$style.icon" :name="socialLink.icon" />
+        <v-icon :class="$style.icon" :size="size" :name="socialLink.icon" />
 
         <!-- Description for screen readers -->
         <span :class="$style['sr-only']">{{ socialLink.title }}</span>
@@ -28,6 +28,20 @@ export default {
     socialLinks: {
       type: Array,
       required: true,
+    },
+
+    size: {
+      type: String,
+      default: 'regular',
+    },
+  },
+
+  computed: {
+    classes() {
+      return {
+        [this.$style.social]: true,
+        [this.$style[this.size]]: true,
+      };
     },
   },
 };

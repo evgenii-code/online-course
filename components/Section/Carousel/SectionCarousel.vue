@@ -1,5 +1,5 @@
 <template>
-  <app-section-wrapper background="gray" :class="classes">
+  <app-section-wrapper :c="background" :class="classes">
     <div :class="$style.header">
       <app-heading :class="$style.heading">
         <template #title><slot name="title" /></template>
@@ -90,6 +90,22 @@ const VARIANTS = {
       },
     },
   },
+  'app-card-blog': {
+    class: 'blog',
+    itemPropName: 'post',
+    props: {},
+    breakpoints: {
+      680: {
+        slidesPerView: 2,
+        centeredSlides: false,
+      },
+
+      1024: {
+        slidesPerView: 3,
+        centeredSlides: false,
+      },
+    },
+  },
   'app-card-course': {
     class: 'course',
     itemPropName: 'course',
@@ -145,6 +161,11 @@ export default {
     pathToMoreItems: {
       type: String,
       default: '/',
+    },
+
+    background: {
+      type: String,
+      default: 'gray',
     },
   },
 
