@@ -28,7 +28,7 @@
       <p :class="$style.description">{{ $t('posts.description') }}</p>
 
       <footer :class="$style.footer">
-        <nuxt-link :to="localePath(post.link)" :class="$style.link">
+        <nuxt-link :to="localePath(blogPostUrl)" :class="$style.link">
           {{ action }}
           <v-icon name="arrow-right" :class="$style.arrow" />
         </nuxt-link>
@@ -86,6 +86,10 @@ export default {
 
     theme() {
       return this.$t(`courses.themes.${this.post.theme}`);
+    },
+
+    blogPostUrl() {
+      return this.post.link + '/' + this.post.slug;
     },
   },
 };

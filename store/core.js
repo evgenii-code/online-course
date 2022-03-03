@@ -24,6 +24,7 @@ export default {
     team: (state) => state.team,
     teamMemberById: (state) => (id) => state.team.find((member) => member.id === id),
     posts: (state) => state.posts,
+    postBySlug: (state) => (slug) => state.posts.find((post) => post.slug === slug),
   },
 
   mutations: {

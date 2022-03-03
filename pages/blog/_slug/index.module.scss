@@ -1,0 +1,7 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  &.article {
+    padding: toRem(152px) toRem(120px);
+  }
+}

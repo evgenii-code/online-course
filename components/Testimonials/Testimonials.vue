@@ -18,35 +18,33 @@
             :class="$style.slide"
             class="swiper-slide"
           >
-            <blockquote :class="$style.quote">
-              <div :class="$style.container">
-                <i18n
-                  tag="p"
-                  :class="$style.text"
-                  :path="`testimonials.items[${index}].text`"
-                >
-                  <template #break>
-                    <br :class="$style.break" />
-                  </template>
-                </i18n>
+            <app-text-quote :class="$style.quote">
+              <i18n
+                tag="p"
+                :class="$style.text"
+                :path="`testimonials.items[${index}].text`"
+              >
+                <template #break>
+                  <br :class="$style.break" />
+                </template>
+              </i18n>
 
-                <div :class="$style.autor">
-                  <img
-                    :class="$style.avatar"
-                    :src="
-                      require(`~/assets/images/testimonials/${testimonial.img}`)
-                    "
-                    :alt="testimonial.author"
-                  />
+              <div :class="$style.autor">
+                <img
+                  :class="$style.avatar"
+                  :src="
+                    require(`~/assets/images/testimonials/${testimonial.img}`)
+                  "
+                  :alt="testimonial.author"
+                />
 
-                  <div :class="$style.info">
-                    <cite :class="$style.name">{{ testimonial.author }}</cite>
+                <div :class="$style.info">
+                  <cite :class="$style.name">{{ testimonial.author }}</cite>
 
-                    <p :class="$style.course">{{ testimonial.course }}</p>
-                  </div>
+                  <p :class="$style.course">{{ testimonial.course }}</p>
                 </div>
               </div>
-            </blockquote>
+            </app-text-quote>
           </li>
         </ul>
       </div>
