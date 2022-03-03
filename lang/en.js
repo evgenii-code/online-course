@@ -624,6 +624,9 @@ export default {
       '#HR',
       '#self-development'
     ],
+
+    author: 'Author',
+    tranding: 'Trending Articles',
   },
 
   subscribe: {

@@ -35,18 +35,11 @@
       <div :class="$style.share">
         <p :class="$style.description">{{ $t('post.share') }}</p>
 
-        <ul :class="$style.list">
-          <li
-            v-for="(shareLink, index) in shareLinks"
-            :key="`share-link-${index}`"
-            :class="$style.item"
-          >
-            <v-button-clear :class="$style.button">
-              <v-icon :name="shareLink.icon" />
-              <span :class="$style['sr-only']">{{ shareLink.icon }}</span>
-            </v-button-clear>
-          </li>
-        </ul>
+        <app-social-links
+          :class="$style.links"
+          size="medium"
+          :social-links="shareLinks"
+        />
       </div>
     </div>
 
@@ -102,6 +95,16 @@
           </v-button-clear>
         </li>
       </ul>
+
+      <div :class="$style.share">
+        <p :class="$style.description">{{ $t('post.share') }}</p>
+
+        <app-social-links
+          :class="$style.links"
+          size="medium"
+          :social-links="shareLinks"
+        />
+      </div>
     </footer>
   </article>
 </template>
@@ -112,7 +115,7 @@ import getIconByPostFormat from '~/utils/getIconByPostFormat';
 import { getLocaleDateString } from '~/utils/date';
 
 export default {
-  name: 'AppArticle',
+  name: 'AppSectionArticleContent',
 
   props: {
     article: {
@@ -164,5 +167,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import './Article.module';
+@import './SectionArticleContent.module';
 </style>

@@ -1,0 +1,15 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  > div {
+    gap: toRem(78px);
+  }
+
+  .article {
+  }
+
+  .side {
+    width: 100%;
+    max-width: toRem(342px);
+  }
+}

@@ -52,31 +52,23 @@
     .duration {
       margin-right: auto;
     }
+  }
 
-    .share {
-      display: flex;
+  .share {
+    display: flex;
+    align-items: center;
+    gap: toRem(12px);
 
-      .description {
-        margin: 0;
-        margin-right: toRem(12px);
-        font-weight: bold;
-        font-size: toRem(16px);
-        line-height: 160%;
-        color: var(--color-gray-900);
-      }
+    .description {
+      margin: 0;
+      font-weight: bold;
+      font-size: toRem(16px);
+      line-height: 160%;
+      color: var(--color-gray-900);
+    }
 
-      .list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: inline-flex;
-        gap: toRem(12px);
-
-        .item {
-          .button {
-          }
-        }
-      }
+    .links {
+      min-width: toRem(80px);
     }
   }
 
@@ -130,7 +122,9 @@
     margin-top: toRem(60px);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: toRem(12px);
+    color: var(--color-gray-700);
 
     .description {
       margin: 0;
@@ -138,6 +132,7 @@
 
     .list {
       margin: 0;
+      margin-right: auto;
       padding: 0;
       list-style: none;
       display: flex;
@@ -151,8 +146,6 @@
           font-weight: bold;
           font-size: toRem(14px);
           line-height: 150%;
-
-          color: var(--color-gray-700);
 
           &:hover {
             border-color: transparent;

@@ -1,11 +1,25 @@
 <template>
   <main :class="$style.main">
-    <app-section-wrapper
+    <app-section-article
       v-if="article"
       :class="[$style.section, $style.article]"
+      :article="article"
+      :author="teamMember"
+    />
+
+    <app-section-subscribe
+      show-consent
+      variant="blog"
+      :class="[$style.section, $style.subscribe]"
     >
-      <app-article :article="article" />
-    </app-section-wrapper>
+      <template #title>
+        <i18n :tag="false" path="subscribe.posts.title">
+          <template #break>
+            <br />
+          </template>
+        </i18n>
+      </template>
+    </app-section-subscribe>
   </main>
 </template>
 
