@@ -4,6 +4,8 @@
 .article {
   .subtitle {
     margin: 0;
+    display: flex;
+    align-items: center;
 
     .format {
       display: inline-flex;
@@ -42,15 +44,17 @@
     justify-content: space-between;
     gap: toRem(24px);
 
-    .date,
-    .duration {
-      margin: 0;
+    .wrapper {
       display: flex;
       align-items: center;
-    }
+      gap: inherit;
 
-    .duration {
-      margin-right: auto;
+      .date,
+      .duration {
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
@@ -126,19 +130,23 @@
     gap: toRem(12px);
     color: var(--color-gray-700);
 
-    .description {
-      margin: 0;
-    }
-
     .list {
       margin: 0;
       margin-right: auto;
       padding: 0;
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       gap: toRem(12px);
 
       .item {
+        display: flex;
+        align-items: center;
+
+        .description {
+          margin: 0;
+        }
+
         .tag {
           padding: toRem(5.5px) toRem(16px);
           border: 1px solid var(--color-gray-400);
@@ -160,5 +168,36 @@
 
   .sr-only {
     @include srOnly();
+  }
+
+  @media screen and (max-width: 680px) {
+    .info,
+    .footer {
+      flex-direction: column;
+
+      .wrapper {
+        margin-right: auto;
+      }
+
+      .share {
+        margin-left: auto;
+      }
+    }
+
+    .footer {
+      gap: toRem(40px);
+
+      .wrapper {
+        gap: toRem(12px);
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    .picture {
+      aspect-ratio: 1;
+    }
   }
 }

@@ -2,7 +2,11 @@
   <app-section-wrapper :class="$style.section" direction="row">
     <app-section-article-content :class="$style.article" :article="article" />
 
-    <app-section-article-side :class="$style.side" :author="author" />
+    <app-section-article-side
+      :class="$style.side"
+      :author="author"
+      :articles="articles"
+    />
   </app-section-wrapper>
 </template>
 
@@ -13,6 +17,11 @@ export default {
   props: {
     article: {
       type: Object,
+      required: true,
+    },
+
+    articles: {
+      type: Array,
       required: true,
     },
 

@@ -22,15 +22,17 @@
     </app-heading>
 
     <div :class="$style.info">
-      <p :class="$style.date">
-        <v-icon :class="$style.icon" size="small" name="calendar" />
-        {{ localeDate }}
-      </p>
+      <div :class="$style.wrapper">
+        <p :class="$style.date">
+          <v-icon :class="$style.icon" size="small" name="calendar" />
+          {{ localeDate }}
+        </p>
 
-      <p v-if="article.duration" :class="$style.duration">
-        <v-icon :class="$style.icon" size="small" name="clock" />
-        {{ article.duration }}
-      </p>
+        <p v-if="article.duration" :class="$style.duration">
+          <v-icon :class="$style.icon" size="small" name="clock" />
+          {{ article.duration }}
+        </p>
+      </div>
 
       <div :class="$style.share">
         <p :class="$style.description">{{ $t('post.share') }}</p>
@@ -82,9 +84,10 @@
     </div>
 
     <footer :class="$style.footer">
-      <p :class="$style.description">{{ $t('post.tags') }}</p>
-
       <ul :class="$style.list">
+        <li :class="$style.item">
+          <p :class="$style.description">{{ $t('post.tags') }}</p>
+        </li>
         <li
           v-for="(tag, tagIndex) in $t('post.tagItems')"
           :key="`tag-iten-${tagIndex}`"

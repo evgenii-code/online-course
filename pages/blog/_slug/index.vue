@@ -4,6 +4,7 @@
       v-if="article"
       :class="[$style.section, $style.article]"
       :article="article"
+      :articles="trendingArticles"
       :author="teamMember"
     />
 

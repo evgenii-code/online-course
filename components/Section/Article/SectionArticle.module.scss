@@ -9,7 +9,17 @@
   }
 
   .side {
-    width: 100%;
-    max-width: toRem(342px);
+    flex-grow: 1;
+    min-width: toRem(342px);
+  }
+
+  @media screen and (max-width: 1024px) {
+    > div {
+      flex-direction: column !important;
+    }
+
+    .side {
+      min-width: unset;
+    }
   }
 }
