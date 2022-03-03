@@ -21,6 +21,21 @@
         </i18n>
       </template>
     </app-section-subscribe>
+
+    <app-section-carousel
+      :class="[$style.section, $style.article]"
+      :items="posts"
+      card-component="app-card-blog"
+      carousel-id="carousel-blog"
+      path-to-more-items="/blog"
+      background="gray"
+      show-footer
+    >
+      <template #title>{{ $t('post.all.title') }}</template>
+      <template #subtitle>{{ $t('post.all.subtitle') }}</template>
+      <template #more>{{ $t('post.all.more') }}</template>
+      <template #action>{{ $t('post.all.action') }}</template>
+    </app-section-carousel>
   </main>
 </template>
 

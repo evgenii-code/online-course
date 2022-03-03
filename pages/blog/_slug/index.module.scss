@@ -4,4 +4,21 @@
   &.article {
     padding: toRem(152px) 0 toRem(120px);
   }
+
+  &.subscribe {
+  }
+
+  &.articles {
+    padding: toRem(120px) 0 toRem(180px);
+  }
+
+  @media screen and (max-width: 480px) {
+    &.article {
+      padding: toRem(90px) 0 toRem(60px);
+    }
+
+    &.articles {
+      padding: toRem(60px) 0;
+    }
+  }
 }

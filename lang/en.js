@@ -627,6 +627,13 @@ export default {
 
     author: 'Author',
     tranding: 'Trending Articles',
+
+    all: {
+      title: 'You may also like',
+      subtitle: 'Our blog',
+      more: 'Do you want more articles, podcasts and videos?',
+      action: 'Go to blog'
+    },
   },
 
   subscribe: {
