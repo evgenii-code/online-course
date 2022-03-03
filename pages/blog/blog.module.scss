@@ -1,0 +1,10 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  position: relative;
+
+  &.posts {
+    min-height: 100vh;
+    padding: toRem(152px) 0 toRem(120px);
+  }
+}

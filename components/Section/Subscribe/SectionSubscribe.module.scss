@@ -26,6 +26,11 @@
       width: 100%;
       max-width: toRem(308px);
     }
+
+    &.blog {
+      margin-left: toRem(-60px);
+      max-width: toRem(507px);
+    }
   }
 
   &.main {
@@ -45,6 +50,22 @@
     }
   }
 
+  &.event,
+  &.blog {
+    .content {
+      .heading {
+        h2 {
+          font-size: toRem(32px);
+          line-height: 130%;
+        }
+      }
+
+      .form {
+        margin: toRem(48px) auto 0;
+      }
+    }
+  }
+
   &.event {
     .content {
       padding: toRem(60px) toRem(105px);
@@ -58,21 +79,15 @@
       .wrapper {
         max-width: toRem(600px);
       }
-
-      .heading {
-        h2 {
-          font-size: toRem(32px);
-          line-height: 130%;
-        }
-      }
-    }
-
-    .form {
-      margin: toRem(48px) auto 0;
     }
   }
 
   &.blog {
+    .content {
+      margin-left: toRem(40px);
+      padding: toRem(100px) 0 toRem(120px);
+      max-width: toRem(600px);
+    }
   }
 
   .content {
@@ -95,9 +110,21 @@
   }
 
   @media screen and (max-width: 1280px) {
+    .image {
+      &.blog {
+        display: none;
+      }
+    }
+
     &.event {
       .content {
         padding: toRem(60px);
+      }
+    }
+
+    &.blog {
+      .content {
+        margin: 0 auto;
       }
     }
   }
@@ -107,6 +134,20 @@
       &.main,
       &.event {
         display: none;
+      }
+    }
+
+    &.event,
+    &.blog {
+      .content {
+        .heading {
+          text-align: center;
+
+          h2 {
+            font-size: toRem(26px);
+            line-height: 130%;
+          }
+        }
       }
     }
 
@@ -123,15 +164,6 @@
 
         .wrapper {
           margin: 0 auto;
-        }
-
-        .heading {
-          text-align: center;
-
-          h2 {
-            font-size: toRem(26px);
-            line-height: 130%;
-          }
         }
       }
     }

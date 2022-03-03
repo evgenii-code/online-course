@@ -1,0 +1,30 @@
+@import '~/scss/utils/spacing.scss';
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: toRem(30px);
+
+  .item {
+    &:nth-of-type(4) {
+      grid-column: span 2;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .item {
+      &:nth-of-type(4) {
+        grid-column: unset;
+      }
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    grid-template-columns: 1fr;
+  }
+}

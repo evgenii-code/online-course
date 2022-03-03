@@ -59,7 +59,7 @@
     </app-section-wrapper>
 
     <app-section-wrapper :class="[$style.section, $style.posts]">
-      <app-posts-latest />
+      <app-posts-latest :items="posts" />
     </app-section-wrapper>
 
     <app-section-subscribe :class="[$style.section, $style.subscribe]">
@@ -80,6 +80,7 @@ export default {
   computed: {
     ...mapGetters({
       team: 'core/team',
+      posts: 'core/posts',
     }),
   },
 };

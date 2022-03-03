@@ -540,6 +540,12 @@ export default {
       podcast: 'Podcast',
       video: 'Video',
       article: 'Article',
+      all: 'All',
+    },
+
+    filters: {
+      category: 'Blog category',
+      search: 'Search blog...',
     },
 
     description: "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida. Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida.",
@@ -568,6 +574,10 @@ export default {
 
     articles: {
       title: 'Want to get the best articles weekly?{break}Subscribe to our newsletter!',
+    },
+
+    posts: {
+      title: 'Want to get the best articles weekly? Subscribe to our newsletter!',
     },
 
     email: 'Your working email',

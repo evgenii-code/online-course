@@ -17,7 +17,7 @@
     <div :class="$style.body">
       <header :class="$style.header">
         <p :class="$style.details">
-          <b>{{ $t(post.theme) }}</b>
+          <b>{{ theme }}</b>
           <span>{{ ' | ' + date }}</span>
           <span v-if="post.duration">{{ ' | ' + post.duration }}</span>
         </p>
@@ -82,6 +82,10 @@ export default {
 
     iconName() {
       return getIconByPostFormat(this.post.format);
+    },
+
+    theme() {
+      return this.$t(`courses.themes.${this.post.theme}`);
     },
   },
 };

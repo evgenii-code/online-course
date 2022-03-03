@@ -1,7 +1,7 @@
 [{
     "format": "podcast",
     "title": "posts.titles.arbitrage",
-    "theme": "courses.themes.marketing",
+    "theme": "marketing",
     "date": "2022-01-15T12:00:00",
     "duration": "36 min",
     "img": "arbitrage.jpg",
@@ -11,7 +11,7 @@
   {
     "format": "article",
     "title": "posts.titles.development",
-    "theme": "courses.themes.development",
+    "theme": "development",
     "date": "2021-12-20T14:00:00",
     "img": "development.jpg",
     "link": "/blog/2"
@@ -20,7 +20,7 @@
   {
     "format": "video",
     "title": "posts.titles.creativity",
-    "theme": "courses.themes.design",
+    "theme": "design",
     "date": "2021-11-02T12:00:00",
     "duration": "40 min",
     "img": "creativity.jpg",
@@ -30,7 +30,7 @@
   {
     "format": "article",
     "title": "posts.titles.recruiting",
-    "theme": "courses.themes.hr",
+    "theme": "hr",
     "date": "2022-02-17T12:00:00",
     "img": "recruiting.jpg",
     "link": "/blog/4"
@@ -39,7 +39,7 @@
   {
     "format": "video",
     "title": "posts.titles.feedback",
-    "theme": "courses.themes.management",
+    "theme": "management",
     "date": "2022-01-20T12:00:00",
     "duration": "45 min",
     "img": "feedback.jpg",
@@ -49,7 +49,7 @@
   {
     "format": "podcast",
     "title": "posts.titles.color",
-    "theme": "courses.themes.design",
+    "theme": "design",
     "date": "2021-10-30T12:00:00",
     "duration": "36 min",
     "img": "color.jpg",
@@ -59,7 +59,7 @@
   {
     "format": "video",
     "title": "posts.titles.startup",
-    "theme": "courses.themes.management",
+    "theme": "management",
     "date": "2021-09-08T12:00:00",
     "duration": "45 min",
     "img": "startup.jpg",
@@ -69,7 +69,7 @@
   {
     "format": "article",
     "title": "posts.titles.business",
-    "theme": "courses.themes.marketing",
+    "theme": "marketing",
     "date": "2021-12-23T12:00:00",
     "duration": "",
     "img": "business.jpg",
