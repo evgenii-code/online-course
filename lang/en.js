@@ -6,6 +6,8 @@ export default {
     email: 'Email',
     fullName: 'Full name',
     phone: 'Phone',
+    password: 'Password',
+    confirmPassword: 'Confirm password',
     consent: 'Сonsent',
     show: 'Show',
     list: 'List',
@@ -676,5 +678,24 @@ export default {
     email: 'Your working email',
     phone: 'Your phone number',
     nextStep: '* You will receive a link to the online lecture in an email after registration.'
+  },
+
+  auth: {
+    signIn: {
+      title: 'Sign in',
+      subtitle: 'Sign in to your account using email and password provided during registration.',
+      remember: 'Keep me signed in',
+      resetPassword: 'Forgot password?',
+      submit: 'Sign in',
+      noAccount: 'Don\'t have an account?'
+    },
+
+    signUp: {
+      title: 'Sign up',
+      subtitle: 'Registration takes less than a minute but gives you full control over your studying.',
+      remember: 'Remember me',
+      submit: 'Sign up',
+      haveAccount: 'Already have an account?'
+    },
   },
 }

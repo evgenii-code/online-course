@@ -2,18 +2,28 @@
 @import '~/scss/mixins/_animations.scss';
 
 .menu {
-  backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(var(--color-light-rgb), 0.72);
-
   @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
   .items {
+    position: relative;
     margin: 0;
     padding: 0;
     list-style: none;
     min-width: toRem(250px);
     display: flex;
     flex-direction: column;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      backdrop-filter: saturate(180%) blur(20px);
+      background-color: rgba(var(--color-light-rgb), 0.72);
+    }
 
     // Hide scrollbar
     -ms-overflow-style: none;

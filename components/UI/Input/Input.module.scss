@@ -103,10 +103,13 @@
   }
 
   &.error {
-    color: var(--color-primary);
-
     .wrapper {
+      color: var(--color-primary);
       border-color: var(--color-primary);
+    }
+
+    .message {
+      color: var(--color-primary);
     }
   }
 
@@ -180,5 +183,13 @@
   .message {
     margin: toRem(4px) 0 0;
     font-size: toRem(12px);
+
+    &.absolute {
+      // margin: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+    }
   }
 }

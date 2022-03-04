@@ -6,7 +6,7 @@
       <input
         :id="uuid"
         v-model="internalValue"
-        :type="type"
+        :type="typeToggler"
         :name="name"
         v-bind="$attrs"
         :class="$style.field"
@@ -15,11 +15,15 @@
       />
 
       <span v-if="hasPostfix" :class="$style.postfix">
-        <slot name="postfix"></slot>
+        <slot name="postfix">
+          <v-button-clear type="button" @click.stop="toggleType">
+            <v-icon size="small" :name="typeTogglerIcon" />
+          </v-button-clear>
+        </slot>
       </span>
     </span>
 
-    <p v-if="internalError" :class="$style.message">
+    <p v-if="internalError" :class="messageClasses">
       {{ internalError }}
     </p>
   </span>
@@ -83,12 +87,18 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    messageAbsolute: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
     return {
       internalValue: this.value,
       internalError: this.error,
+      typeToggler: this.type,
     };
   },
 
@@ -111,8 +121,19 @@ export default {
       };
     },
 
+    messageClasses() {
+      return {
+        [this.$style.message]: true,
+        [this.$style.absolute]: this.messageAbsolute,
+      };
+    },
+
     hasPostfix() {
-      return !!this.$slots.postfix;
+      return !!this.$slots.postfix || this.type === 'password';
+    },
+
+    typeTogglerIcon() {
+      return this.typeToggler === 'password' ? 'eye-open' : 'eye-closed';
     },
   },
 
@@ -134,6 +155,10 @@ export default {
     onInput(event) {
       this.internalValue = event.target.value;
       this.$emit('input', this.internalValue);
+    },
+
+    toggleType() {
+      this.typeToggler = this.typeToggler === 'text' ? 'password' : 'text';
     },
   },
 };

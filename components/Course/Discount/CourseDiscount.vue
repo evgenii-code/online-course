@@ -24,10 +24,12 @@
             v-model="fields[field.name]"
             :label="$t(`ui.${field.name}`)"
             :name="field.name"
+            :type="field.type"
             :class="[$style.input, $style.email]"
             :placeholder="$t(`request.${field.name}`)"
             :error="errors[0]"
             :success="valid"
+            message-absolute
           />
         </validation-provider>
       </div>
