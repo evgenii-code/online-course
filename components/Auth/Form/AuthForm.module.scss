@@ -1,0 +1,16 @@
+@import '~/scss/utils/spacing.scss';
+
+.form {
+  .input {
+    margin-top: toRem(20px);
+  }
+
+  &:first-child {
+    margin: 0;
+  }
+
+  .button {
+    margin-top: toRem(24px);
+    width: 100%;
+  }
+}

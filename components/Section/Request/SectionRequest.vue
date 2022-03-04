@@ -34,6 +34,8 @@
               :error="errors[0]"
               :success="valid"
               :name="field.name"
+              :type="field.type"
+              message-absolute
             />
           </validation-provider>
 

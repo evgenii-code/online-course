@@ -1,0 +1,35 @@
+@import '~/scss/utils/spacing.scss';
+
+.modal {
+  .subtitle {
+    margin: 0;
+    margin-top: toRem(24px);
+    font-weight: normal;
+    font-size: toRem(14px);
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-gray-700);
+  }
+
+  .form {
+    margin-top: toRem(24px);
+  }
+
+  .account {
+    margin-top: toRem(24px);
+    font-weight: normal;
+    font-size: toRem(14px);
+    line-height: 150%;
+    color: var(--color-gray-800);
+
+    p {
+      display: inline;
+    }
+
+    .switch {
+      display: inline-flex;
+      margin-left: toRem(4px);
+      color: var(--color-primary);
+    }
+  }
+}

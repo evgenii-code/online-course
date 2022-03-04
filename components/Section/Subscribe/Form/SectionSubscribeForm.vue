@@ -20,6 +20,7 @@
           :error="errors[0]"
           :success="valid"
           name="email"
+          message-absolute
         />
       </validation-provider>
 

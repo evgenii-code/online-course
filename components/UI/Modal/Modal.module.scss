@@ -1,0 +1,133 @@
+@import '~/scss/utils/spacing.scss';
+@import '~/scss/mixins/_animations.scss';
+
+$animation-speed-fast: 0.2s;
+
+@keyframes show-up-overlay {
+  from {
+    background-color: rgba(var(--color-gray-900-rgb), 0);
+  }
+
+  to {
+    background-color: rgba(var(--color-gray-900-rgb), 0.8);
+  }
+}
+
+@keyframes show-up-modal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(var(--color-gray-900-rgb), 0.8);
+    cursor: pointer;
+
+    animation: show-up-overlay $animation-speed-fast ease-out 0s 1;
+  }
+
+  .body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: toRem(500px);
+    max-height: 90vh;
+    background-color: var(--color-light);
+    border-radius: 4px;
+    border: 1px solid var(--color-gray-300);
+    box-shadow: var(--card-shadow-grey);
+    display: flex;
+    flex-direction: column;
+    padding: toRem(48px);
+    animation: show-up-modal $animation-speed-fast ease-out 0s 1;
+    overflow-y: scroll;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .close {
+      position: absolute;
+      top: toRem(24px);
+      right: toRem(24px);
+    }
+
+    .section {
+      &.header {
+        .title {
+          margin: 0;
+          text-align: center;
+          font-weight: bold;
+          font-size: toRem(28px);
+          line-height: 150%;
+          color: var(--color-gray-900);
+        }
+      }
+
+      &.content {
+        margin-bottom: auto;
+      }
+
+      &.footer {
+        .buttons {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+
+          .button {
+            margin-left: 1rem;
+
+            &:first-of-type {
+              margin-left: 0;
+            }
+
+            &.submit {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      .body {
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: unset;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: toRem(48px) toRem(24px);
+      }
+    }
+  }
+}
