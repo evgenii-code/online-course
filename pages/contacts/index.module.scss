@@ -1,0 +1,7 @@
+@import '~/scss/utils/_spacing.scss';
+
+.section {
+  &.contacts {
+    padding: toRem(152px) 0 toRem(90px);
+  }
+}

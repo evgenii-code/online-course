@@ -30,7 +30,10 @@
         </app-footer-list>
 
         <!-- Contacts -->
-        <app-footer-list :class="$style.contacts" :list-items="contactLinks">
+        <app-footer-list
+          :class="$style.contacts"
+          :list-items="visibleContactLinks"
+        >
           <template #header>
             <h2 :class="$style.title">
               {{ $t('footer.contacts') }}
@@ -126,6 +129,10 @@ export default {
       contactLinks: 'core/contactLinks',
       socialLinks: 'core/socialLinks',
     }),
+
+    visibleContactLinks() {
+      return (this.contactLinks || []).filter(({ link }) => !!link);
+    },
   },
 
   methods: {

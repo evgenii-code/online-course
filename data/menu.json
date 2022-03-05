@@ -22,7 +22,6 @@
   {
     "title": "header.menu.contacts",
     "link": "/contacts",
-    "hidden": true,
     "tag": "nuxt-link"
   }
 ]

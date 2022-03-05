@@ -703,4 +703,15 @@ export default {
       haveAccount: 'Already have an account?'
     },
   },
+
+  contacts: {
+    title: 'Get in touch',
+    subtitle: 'Contact info',
+
+    email: 'Talk to us:',
+    phone: 'Call us:',
+    address: 'Address:',
+
+    follow: 'Follow us:',
+  },
 }
