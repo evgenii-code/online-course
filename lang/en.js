@@ -2,6 +2,11 @@ export default {
   appName: 'Createx',
   logo: 'Logo',
 
+  meta: {
+    title: 'Createx',
+    description: 'Enjoy studying with Createx Online Courses'
+  },
+
   ui: {
     email: 'Email',
     fullName: 'Full name',

@@ -3,6 +3,7 @@ const API_URL = process.env.API_URL || '/';
 const BASE_URL = process.env.BASE_URL || '/';
 const repositoryName = process.env.REPOSITORY_NAME || '/';
 const routerBase = process.env.NODE_ENV === 'production' ? repositoryName : '/';
+const iconUrl = `${routerBase}favicon.svg`;
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -29,8 +30,8 @@ export default {
 
     link: [{
         rel: 'icon',
-        type: 'image/x-icon',
-        href: `${routerBase}favicon.ico`
+        type: 'image/svg+xml',
+        href: iconUrl
       },
       {
         rel: 'stylesheet',
@@ -124,6 +125,10 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
     },
+  },
+
+  publicRuntimeConfig: {
+    baseURL: BASE_URL,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
