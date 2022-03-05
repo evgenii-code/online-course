@@ -4,4 +4,18 @@
   &.contacts {
     padding: toRem(152px) 0 toRem(90px);
   }
+
+  &.feedback {
+    padding: toRem(90px) 0 toRem(180px);
+  }
+
+  @media screen and (max-width: 480px) {
+    &.contacts {
+      padding: toRem(100px) 0 toRem(60px);
+    }
+
+    &.feedback {
+      padding: toRem(60px) 0;
+    }
+  }
 }

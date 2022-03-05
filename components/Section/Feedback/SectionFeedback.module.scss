@@ -1,0 +1,62 @@
+@import '~/scss/utils/_spacing.scss';
+
+.feedback {
+  .picture {
+    width: 100%;
+    max-width: toRem(435px);
+    aspect-ratio: 0.9043;
+    display: flex;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .wrapper {
+    margin-left: toRem(40px);
+    width: 100%;
+    max-width: toRem(705px);
+
+    .heading {
+    }
+
+    .form {
+      margin-top: toRem(40px);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: toRem(24px);
+
+      .input {
+        &.message {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .picture {
+      display: none;
+    }
+
+    .wrapper {
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    .wrapper {
+      .form {
+        grid-template-columns: 1fr;
+
+        .input {
+          &.message {
+            grid-column: unset;
+          }
+        }
+      }
+    }
+  }
+}
