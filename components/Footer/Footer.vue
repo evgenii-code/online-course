@@ -94,6 +94,9 @@
           </i18n>
         </small>
 
+        <!-- Lang switcher -->
+        <app-lang-switcher :class="$style.lang" />
+
         <v-button-clear :class="$style.scroll" @click="scrollToTop">
           {{ $t('footer.goToTop') }}
         </v-button-clear>

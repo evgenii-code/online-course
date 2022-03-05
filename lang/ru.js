@@ -44,7 +44,7 @@ export default {
     consultation: 'Консультация',
 
     logIn: 'Вход',
-    register: 'Регистрацич',
+    register: 'Регистрация',
   },
 
   footer: {
@@ -60,7 +60,7 @@ export default {
   },
 
   usp: {
-    playShowreel: 'демонстрационный ролик',
+    playShowreel: 'Презентация',
     title: 'Наслаждайтесь учебой с онлайн-курсами Createx',
     aboutUs: 'О нас',
     courses: 'Исследуйте курсы',
@@ -70,11 +70,11 @@ export default {
       },
       {
         count: '84',
-        text: 'курса в наличии',
+        text: 'Курсов в наличии',
       },
       {
         count: '16',
-        text: 'Квалифицированных учителей',
+        text: 'Учителей',
       },
       {
         count: '5',
@@ -115,7 +115,7 @@ export default {
     themes: {
       marketing: 'Маркетинг',
       management: 'Управление',
-      hr: 'HR и подбор персонала',
+      hr: 'HR и персонал',
       design: 'Дизайн',
       development: 'Разработка',
     },
@@ -346,7 +346,7 @@ export default {
       title: 'Лекции, семинары и мастер-классы',
       subtitle: 'Наши события',
       search: 'Искать событие...',
-      category: 'Категория события',
+      category: 'Категория',
       all: 'Все темы',
       sortBy: 'Сортировать',
       newest: 'Новейшие',
