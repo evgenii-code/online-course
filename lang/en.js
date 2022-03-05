@@ -703,4 +703,49 @@ export default {
       haveAccount: 'Already have an account?'
     },
   },
+
+  contacts: {
+    title: 'Get in touch',
+    subtitle: 'Contact info',
+
+    email: 'Talk to us:',
+    phone: 'Call us:',
+    address: 'Address:',
+
+    follow: 'Follow us:',
+
+    feedback: {
+      title: 'Drop us a line',
+      subtitle: 'Any questions?',
+
+      firstName: {
+        label: 'First Name*',
+        placeholder: 'Your first name',
+      },
+
+      lastName: {
+        label: 'Last  Name*',
+        placeholder: 'Your last name',
+      },
+
+      email: {
+        label: 'Email*',
+        placeholder: 'Your working email',
+      },
+
+      phone: {
+        label: 'Phone',
+        placeholder: 'Your phone number',
+      },
+
+      message: {
+        label: 'Message*',
+        placeholder: 'Your message',
+      },
+
+      agreement: 'I agree to receive communications from Createx Online School',
+
+      submit: 'Send message',
+    },
+  },
 }

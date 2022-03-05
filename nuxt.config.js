@@ -4,6 +4,7 @@ const BASE_URL = process.env.BASE_URL || '/';
 const repositoryName = process.env.REPOSITORY_NAME || '/';
 const routerBase = process.env.NODE_ENV === 'production' ? repositoryName : '/';
 const iconUrl = `${routerBase}favicon.svg`;
+const googleMapsEmbedUrl = process.env.GOOGLE_MAPS_EMBED_URL
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -129,6 +130,7 @@ export default {
 
   publicRuntimeConfig: {
     baseURL: BASE_URL,
+    googleMapsEmbedUrl,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
