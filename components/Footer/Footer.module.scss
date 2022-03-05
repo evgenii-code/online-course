@@ -50,6 +50,8 @@
         .subscription {
           grid-area: subscription;
           max-width: toRem(286px);
+          display: flex;
+          flex-direction: column;
 
           .footnote {
             margin: toRem(12px) 0 0;
@@ -104,6 +106,11 @@
           }
         }
 
+        .lang {
+          margin-left: auto;
+          margin-right: toRem(60px);
+        }
+
         .scroll {
           text-transform: uppercase;
           font-weight: 700;
@@ -149,12 +156,18 @@
     }
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 580px) {
     .half {
       &.bottom {
         .container {
           flex-direction: column;
           align-items: flex-start;
+
+          .lang {
+            margin: 0;
+            margin-top: toRem(36px);
+            margin-left: auto;
+          }
 
           .scroll {
             margin-top: toRem(36px);

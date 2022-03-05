@@ -116,6 +116,7 @@
 
   .description {
     margin: 0 toRem(40px);
+    width: 100%;
 
     .title {
       margin: 0;
@@ -141,6 +142,7 @@
     width: unset;
     min-width: toRem(140px);
     margin: 0 0 0 auto;
+    white-space: nowrap;
   }
 
   &.vertical {

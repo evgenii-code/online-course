@@ -107,11 +107,18 @@ export default {
   i18n: {
     baseUrl: BASE_URL,
     locales: [{
-      code: 'en',
-      name: 'English',
-      iso: 'en',
-      file: 'en.js',
-    }, ],
+        code: 'en',
+        name: 'English',
+        iso: 'en',
+        file: 'en.js',
+      },
+      {
+        code: 'ru',
+        name: 'Russian',
+        iso: 'ru',
+        file: 'ru.js',
+      },
+    ],
     detectBrowserLanguage: {
       useCookie: true,
       alwaysRedirect: true,
