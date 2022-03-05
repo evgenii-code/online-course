@@ -126,6 +126,10 @@ export default {
     },
   },
 
+  publicRuntimeConfig: {
+    baseURL: BASE_URL,
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['vee-validate/dist/rules'],
