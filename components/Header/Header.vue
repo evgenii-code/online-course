@@ -15,7 +15,7 @@
 
       <app-header-menu-desktop
         :class="[$style.menu, $style.desktop]"
-        :menu-links="menuLinks"
+        :menu-links="visibleMenuLink"
       />
 
       <div :class="$style.wrapper">
@@ -40,7 +40,7 @@
         :id="$options.ids.mobileMenu"
         v-trap-focus="closeMobileMenu"
         :aria-labelledby="$options.ids.burgerButton"
-        :menu-links="menuLinks"
+        :menu-links="visibleMenuLink"
         :class="[$style.menu, $style.mobile]"
       />
     </transition>
@@ -87,6 +87,10 @@ export default {
     ...mapGetters({
       menuLinks: 'core/menuLinks',
     }),
+
+    visibleMenuLink() {
+      return this.menuLinks.filter((link) => !link.hidden);
+    },
 
     headerClasses() {
       return {
