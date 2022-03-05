@@ -123,6 +123,7 @@
     "title": "courses.titles.experience",
     "theme": "design",
     "price": "$240",
+    "author_id": 6,
     "link": "/courses",
     "slug": "user-experience-human-centered-design",
     "img": "images/courses/team/cody-fisher.jpg",
