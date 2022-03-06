@@ -7,18 +7,20 @@
   justify-content: space-between;
   gap: toRem(16px);
 
-  .locale {
-    .button {
-      @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
+  .link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 
-      &:hover {
-        opacity: 0.6;
-      }
+    @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
-      &.active {
-        color: var(--color-light);
-        text-decoration: underline;
-      }
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &.active {
+      color: var(--color-light);
+      text-decoration: underline;
     }
   }
 }
