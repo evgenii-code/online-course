@@ -1,19 +1,13 @@
 <template>
   <nav :class="$style.switcher">
-    <v-variant
-      v-for="(locale, index) in locales"
-      :key="`option-toggler-${index}`"
-      v-model="selectedLocale"
-      name="locale-options"
-      :current-value="locale.code"
-      :class="$style.locale"
+    <a
+      v-for="locale in locales"
+      :key="locale.code"
+      :class="[$style.link, { [$style.active]: isActive(locale.code) }]"
+      href="#"
+      @click.prevent.stop="switchLocale(locale.code)"
+      >{{ locale.code }}</a
     >
-      <template #custom="{ isChecked }">
-        <span :class="[$style.button, { [$style.active]: isChecked }]">
-          {{ locale.code }}
-        </span>
-      </template>
-    </v-variant>
   </nav>
 </template>
 
@@ -21,27 +15,19 @@
 export default {
   name: 'AppLangSwitcher',
 
-  data() {
-    return {
-      selectedLocale: this.$i18n.locale,
-    };
-  },
-
   computed: {
     locales() {
       return this.$i18n.locales;
     },
   },
 
-  watch: {
-    selectedLocale(newLocale) {
-      this.switchLocale(newLocale);
-    },
-  },
-
   methods: {
     switchLocale(newLocale) {
       this.$i18n.setLocale(newLocale);
+    },
+
+    isActive(locale) {
+      return locale === this.$i18n.locale;
     },
   },
 };
