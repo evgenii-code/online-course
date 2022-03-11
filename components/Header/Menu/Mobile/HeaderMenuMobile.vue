@@ -11,6 +11,10 @@
         }}</nuxt-link>
       </li>
 
+      <li :class="$style.item">
+        <app-theme-picker :class="$style.theme" />
+      </li>
+
       <li :class="[$style.item, $style.bottom]">
         <v-button :class="$style.button">{{
           $t('header.consultation')

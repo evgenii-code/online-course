@@ -10,6 +10,10 @@
           $t(menuLink.title)
         }}</nuxt-link>
       </li>
+
+      <li :class="$style.item">
+        <app-theme-picker />
+      </li>
     </ul>
   </nav>
 </template>
