@@ -136,6 +136,11 @@ export default {
     },
   },
 
+  colorMode: {
+    preference: 'light', // default theme
+    fallback: 'light',
+  },
+
   publicRuntimeConfig: {
     baseURL: BASE_URL,
     googleMapsEmbedUrl,
