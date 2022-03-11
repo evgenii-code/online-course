@@ -11,6 +11,10 @@
         }}</nuxt-link>
       </li>
 
+      <li :class="$style.item">
+        <app-theme-picker :class="$style.theme" :themes="themes" />
+      </li>
+
       <li :class="[$style.item, $style.bottom]">
         <v-button :class="$style.button">{{
           $t('header.consultation')
@@ -30,6 +34,11 @@ export default {
 
   props: {
     menuLinks: {
+      type: Array,
+      required: true,
+    },
+
+    themes: {
       type: Array,
       required: true,
     },

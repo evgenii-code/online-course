@@ -27,6 +27,13 @@ export default {
     homePage: 'Домашнаяя страница',
   },
 
+  themes: {
+    title: 'Цветовая схема',
+    light: 'Светлая',
+    dark: 'Темная',
+    system: 'Системная',
+  },
+
   error: {
     occurred: 'Произошла ошибка',
     pageNotFound: 'Страница не найдена',

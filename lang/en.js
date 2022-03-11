@@ -27,6 +27,13 @@ export default {
     homePage: 'Home page',
   },
 
+  themes: {
+    title: 'Color scheme',
+    light: 'Light',
+    dark: 'Dark',
+    system: 'System',
+  },
+
   error: {
     occurred: 'An error occurred',
     pageNotFound: 'Page not found',

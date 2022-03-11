@@ -10,6 +10,10 @@
           $t(menuLink.title)
         }}</nuxt-link>
       </li>
+
+      <li :class="$style.item">
+        <app-theme-picker :themes="themes" />
+      </li>
     </ul>
   </nav>
 </template>
@@ -20,6 +24,11 @@ export default {
 
   props: {
     menuLinks: {
+      type: Array,
+      required: true,
+    },
+
+    themes: {
       type: Array,
       required: true,
     },

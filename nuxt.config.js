@@ -79,6 +79,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/svg',
+    '@nuxtjs/color-mode',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -133,6 +134,11 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
     },
+  },
+
+  colorMode: {
+    preference: 'light', // default theme
+    fallback: 'light',
   },
 
   publicRuntimeConfig: {
