@@ -12,7 +12,7 @@
       </li>
 
       <li :class="$style.item">
-        <app-theme-picker />
+        <app-theme-picker :themes="themes" />
       </li>
     </ul>
   </nav>
@@ -24,6 +24,11 @@ export default {
 
   props: {
     menuLinks: {
+      type: Array,
+      required: true,
+    },
+
+    themes: {
       type: Array,
       required: true,
     },

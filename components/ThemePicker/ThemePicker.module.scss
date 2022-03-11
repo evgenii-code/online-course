@@ -48,8 +48,10 @@
 
     .icon {
       display: block;
-      width: toRem($icon-width);
-      height: toRem($icon-width);
+      svg {
+        width: toRem($icon-width);
+        height: toRem($icon-width);
+      }
     }
   }
 

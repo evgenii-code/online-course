@@ -9,6 +9,7 @@ export default {
     partners: [],
     team: [],
     posts: [],
+    colorThemes: [],
   }),
 
   getters: {
@@ -25,6 +26,7 @@ export default {
     teamMemberById: (state) => (id) => state.team.find((member) => member.id === id),
     posts: (state) => state.posts,
     postBySlug: (state) => (slug) => state.posts.find((post) => post.slug === slug),
+    colorThemes: (state) => state.colorThemes,
   },
 
   mutations: {
@@ -64,6 +66,7 @@ export default {
       await dispatch('getLinkItems', 'partners');
       await dispatch('getLinkItems', 'team');
       await dispatch('getLinkItems', 'posts');
+      await dispatch('getLinkItems', 'colorThemes');
     },
   },
 };

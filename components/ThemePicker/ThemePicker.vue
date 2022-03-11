@@ -4,42 +4,37 @@
       <legend :class="titleClasses">{{ title }}</legend>
 
       <label
-        v-for="(color, index) of colors"
-        :key="color"
-        :class="getLabelClasses(color)"
+        v-for="(theme, index) of themes"
+        :key="theme.value"
+        :class="getLabelClasses(theme.value)"
         :for="`picker-radio-${index}`"
       >
         <input
           :id="`picker-radio-${index}`"
-          v-model="colorMode"
+          v-model="selectedTheme"
           type="radio"
-          :value="color"
+          :value="theme.value"
           :class="[$style.radio, $style['sr-only']]"
         />
 
-        <component :is="`icon-${color}`" :class="$style.icon" />
+        <v-icon aria-hidden="true" :class="$style.icon" :name="theme.icon" />
 
-        <p :class="$style['sr-only']">{{ color }}</p>
+        <p :class="$style['sr-only']">{{ theme.text }}</p>
       </label>
 
-      <span :class="$style.glider" :style="gliderPosition" />
+      <span
+        aria-hidden="true"
+        role="none"
+        :class="$style.glider"
+        :style="gliderPosition"
+      />
     </fieldset>
   </nav>
 </template>
 
 <script>
-import IconSystem from '@/assets/icons/circle-dot-regular.svg?inline';
-import IconLight from '@/assets/icons/sun.svg?inline';
-import IconDark from '@/assets/icons/moon.svg?inline';
-
 export default {
   name: 'AppThemePicker',
-
-  components: {
-    IconSystem,
-    IconLight,
-    IconDark,
-  },
 
   props: {
     titleVisible: {
@@ -49,19 +44,13 @@ export default {
 
     title: {
       type: String,
-      default: 'Color scheme',
+      default: 'Color theme',
     },
 
-    name: {
-      type: String,
-      default: 'color-scheme',
+    themes: {
+      type: Array,
+      required: true,
     },
-  },
-
-  data() {
-    return {
-      colors: ['light', 'system', 'dark'],
-    };
   },
 
   computed: {
@@ -72,18 +61,24 @@ export default {
       };
     },
 
-    colorMode: {
+    selectedTheme: {
       get() {
         return this.$colorMode.unknown ? 'light' : this.$colorMode.preference;
       },
 
-      set(color) {
-        this.$colorMode.preference = color;
+      set(themeName) {
+        this.$colorMode.preference = themeName;
       },
     },
 
     gliderPosition() {
-      const position = this.colors.indexOf(this.colorMode);
+      let position = this.themes.findIndex(
+        (theme) => theme.value === this.selectedTheme
+      );
+
+      if (position === -1) {
+        position = 0;
+      }
 
       return `--theme-glider-position: calc(${
         100 * position
@@ -92,11 +87,11 @@ export default {
   },
 
   methods: {
-    setColorMode(color) {
-      this.$colorMode.preference = color;
+    setColorMode(themeName) {
+      this.$colorMode.preference = themeName;
     },
 
-    getLabelClasses(color) {
+    getLabelClasses(themeName) {
       const classes = {
         [this.$style.label]: true,
       };
@@ -107,7 +102,7 @@ export default {
 
       return {
         ...classes,
-        [this.$style.selected]: color === this.$colorMode.preference,
+        [this.$style.selected]: themeName === this.$colorMode.preference,
       };
     },
   },

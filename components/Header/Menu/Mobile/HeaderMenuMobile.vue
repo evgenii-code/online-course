@@ -12,7 +12,7 @@
       </li>
 
       <li :class="$style.item">
-        <app-theme-picker :class="$style.theme" />
+        <app-theme-picker :class="$style.theme" :themes="themes" />
       </li>
 
       <li :class="[$style.item, $style.bottom]">
@@ -34,6 +34,11 @@ export default {
 
   props: {
     menuLinks: {
+      type: Array,
+      required: true,
+    },
+
+    themes: {
       type: Array,
       required: true,
     },

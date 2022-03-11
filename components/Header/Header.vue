@@ -16,6 +16,7 @@
       <app-header-menu-desktop
         :class="[$style.menu, $style.desktop]"
         :menu-links="visibleMenuLink"
+        :themes="localeColorThemes"
       />
 
       <div :class="$style.wrapper">
@@ -42,6 +43,7 @@
         :aria-labelledby="$options.ids.burgerButton"
         :menu-links="visibleMenuLink"
         :class="[$style.menu, $style.mobile]"
+        :themes="localeColorThemes"
       />
     </transition>
   </header>
@@ -86,6 +88,7 @@ export default {
   computed: {
     ...mapGetters({
       menuLinks: 'core/menuLinks',
+      colorThemes: 'core/colorThemes',
     }),
 
     logoTheme() {
@@ -106,6 +109,13 @@ export default {
         [this.$style.scrolled]: this.isScrolled || this.isMobileMenuOpen,
         [this.$style[this.theme]]: true,
       };
+    },
+
+    localeColorThemes() {
+      return (this.colorThemes || []).map((theme) => ({
+        ...theme,
+        text: this.$t(theme.text),
+      }));
     },
   },
 
