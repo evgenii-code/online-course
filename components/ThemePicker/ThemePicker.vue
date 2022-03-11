@@ -7,12 +7,12 @@
         v-for="(color, index) of colors"
         :key="color"
         :class="getLabelClasses(color)"
+        :for="`picker-radio-${index}`"
       >
         <input
-          :id="`radio-${index}`"
+          :id="`picker-radio-${index}`"
           v-model="colorMode"
           type="radio"
-          :name="name"
           :value="color"
           :class="[$style.radio, $style['sr-only']]"
         />
@@ -71,6 +71,7 @@ export default {
         [this.$style['sr-only']]: !this.titleVisible,
       };
     },
+
     colorMode: {
       get() {
         return this.$colorMode.unknown ? 'light' : this.$colorMode.preference;

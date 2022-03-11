@@ -23,16 +23,27 @@
 
   .label {
     cursor: pointer;
-
     color: inherit;
+
+    @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
     &.selected {
       color: var(--color-light);
     }
 
+    &:hover {
+      opacity: 0.6;
+    }
+
     .radio {
       margin: 0;
       appearance: none;
+
+      &:not([disabled]):focus-visible ~ .icon {
+        outline: 2px solid red;
+        outline-offset: toRem(5px);
+        border-radius: 50%;
+      }
     }
 
     .icon {
