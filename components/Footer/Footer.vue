@@ -5,7 +5,7 @@
       <app-container :class="$style.grid">
         <!-- Description section -->
         <div :class="$style.description">
-          <v-logo theme="dark" :class="$style.logo" />
+          <v-logo :theme="logoTheme" :class="$style.logo" />
 
           <p :class="$style.text">{{ $t('footer.description') }}</p>
 
@@ -135,6 +135,10 @@ export default {
 
     visibleContactLinks() {
       return (this.contactLinks || []).filter(({ link }) => !!link);
+    },
+
+    logoTheme() {
+      return this.$colorMode.value === 'dark' ? 'light' : 'dark';
     },
   },
 

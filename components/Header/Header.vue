@@ -11,7 +11,7 @@
     </transition>
 
     <app-container :class="$style.container">
-      <v-logo :theme="theme" :class="$style.logo" />
+      <v-logo :theme="logoTheme" :class="$style.logo" />
 
       <app-header-menu-desktop
         :class="[$style.menu, $style.desktop]"
@@ -87,6 +87,14 @@ export default {
     ...mapGetters({
       menuLinks: 'core/menuLinks',
     }),
+
+    logoTheme() {
+      if (this.$colorMode.unknown) {
+        return 'light';
+      }
+
+      return this.$colorMode.value;
+    },
 
     visibleMenuLink() {
       return this.menuLinks.filter((link) => !link.hidden);
