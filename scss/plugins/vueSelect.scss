@@ -1,5 +1,6 @@
 @import '~/scss/utils/_spacing.scss';
 @import '~/scss/mixins/srOnly.scss';
+@import '~/scss/mixins/_animations.scss';
 @import 'vue-select/src/scss/vue-select.scss';
 
 .v-select {
@@ -12,6 +13,8 @@
   min-height: toRem(42px);
   border: 1px solid var(--color-gray-400);
   border-radius: 4px;
+
+  @include animation-motion($duration-very-fast, 'ease-in-out', 'basic');
 
   &:focus-within {
     border-color: #{rgba(var(--color-primary-rgb), 0.4)};
@@ -39,6 +42,7 @@
   line-height: inherit;
   display: flex;
   align-items: center;
+  color: var(--color-gray-800);
 }
 
 .vs__search,
@@ -75,9 +79,15 @@
   overflow: hidden;
   border-color: #{rgba(var(--color-primary-rgb), 0.4)};
   box-shadow: var(--focus-shadow-primary);
+  background-color: var(--color-light);
+}
+
+.vs__dropdown-option {
+  color: var(--color-gray-800);
 }
 
 .vs__dropdown-option--highlight {
+  color: var(--color-light);
   background-color: var(--color-primary);
 }
 
