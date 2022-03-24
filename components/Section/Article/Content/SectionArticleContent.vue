@@ -133,7 +133,7 @@ export default {
     }),
 
     shareLinks() {
-      const availableLinks = ['facebook', 'twitter', 'linked-in'];
+      const availableLinks = ['telegram', 'twitter', 'linked-in'];
 
       return (this.socialLinks || []).filter((socialLink) =>
         availableLinks.includes(socialLink.icon)

@@ -393,7 +393,7 @@ export default {
         text: 'Нет подобия экологического кота экологического Adipiscing mauris quam ac elit tristique dis.',
       },
     ],
-    link: 'Мероприятие на Facebook',
+    link: 'Мероприятие на Linked-In',
     join: 'Присоединиться',
 
     themes: [{

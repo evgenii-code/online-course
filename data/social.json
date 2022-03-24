@@ -1,10 +1,4 @@
-[{
-    "title": "Facebook",
-    "link": "https://facebook.com",
-    "tag": "a",
-    "icon": "facebook"
-  },
-
+[
   {
     "title": "Twitter",
     "link": "https://twitter.com",
@@ -24,13 +18,6 @@
     "link": "https://telegram.com",
     "tag": "a",
     "icon": "telegram"
-  },
-
-  {
-    "title": "Instagram",
-    "link": "https://instagram.com",
-    "tag": "a",
-    "icon": "instagram"
   },
 
   {
