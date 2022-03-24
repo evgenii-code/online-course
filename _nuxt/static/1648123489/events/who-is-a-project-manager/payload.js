@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/events/who-is-a-project-manager", {data:[{}],fetch:{},mutations:[]});

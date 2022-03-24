@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[68],{535:function(e){e.exports=JSON.parse('[{"value":"light","text":"themes.light","icon":"sun"},{"value":"system","text":"themes.system","icon":"circle-dot-regular"},{"value":"dark","text":"themes.dark","icon":"moon"}]')}}]);

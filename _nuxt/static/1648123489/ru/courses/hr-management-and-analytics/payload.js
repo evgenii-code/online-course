@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/courses/hr-management-and-analytics", {data:[{}],fetch:{},mutations:[]});

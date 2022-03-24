@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/courses/highload-software-architecture", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/courses/user-experience-human-centered-design", {data:[{}],fetch:{},mutations:[]});

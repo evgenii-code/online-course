@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/what-is-traffic-arbitrage", {data:[{}],fetch:{},mutations:[]});

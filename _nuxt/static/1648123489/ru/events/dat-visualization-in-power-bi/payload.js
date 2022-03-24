@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/events/dat-visualization-in-power-bi", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/hr-statistics", {data:[{}],fetch:{},mutations:[]});

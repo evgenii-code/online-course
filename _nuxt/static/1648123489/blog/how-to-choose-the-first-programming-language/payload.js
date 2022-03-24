@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/how-to-choose-the-first-programming-language", {data:[{}],fetch:{},mutations:[]});

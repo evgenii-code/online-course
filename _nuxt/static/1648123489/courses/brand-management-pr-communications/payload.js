@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/courses/brand-management-pr-communications", {data:[{}],fetch:{},mutations:[]});

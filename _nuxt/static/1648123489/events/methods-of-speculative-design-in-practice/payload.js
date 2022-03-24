@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/events/methods-of-speculative-design-in-practice", {data:[{}],fetch:{},mutations:[]});

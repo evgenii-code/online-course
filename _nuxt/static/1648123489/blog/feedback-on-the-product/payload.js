@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/feedback-on-the-product", {data:[{}],fetch:{},mutations:[]});

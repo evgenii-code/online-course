@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/events/the-companys-business-page", {data:[{}],fetch:{},mutations:[]});

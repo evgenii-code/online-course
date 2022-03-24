@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/blog/what-are-color-profiles", {data:[{}],fetch:{},mutations:[]});

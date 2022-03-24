@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/events/search-and-assessment-tools-for-candidates", {data:[{}],fetch:{},mutations:[]});

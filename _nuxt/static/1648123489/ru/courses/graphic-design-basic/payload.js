@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/courses/graphic-design-basic", {data:[{}],fetch:{},mutations:[]});

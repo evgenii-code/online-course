@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/events/formation-of-the-organizational-structure", {data:[{}],fetch:{},mutations:[]});

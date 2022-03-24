@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/events/how-to-brief-a-client", {data:[{}],fetch:{},mutations:[]});

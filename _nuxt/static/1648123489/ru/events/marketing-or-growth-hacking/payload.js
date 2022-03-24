@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/events/marketing-or-growth-hacking", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/events/building-a-customer-service-department", {data:[{}],fetch:{},mutations:[]});

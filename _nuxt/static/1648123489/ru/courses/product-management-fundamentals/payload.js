@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/courses/product-management-fundamentals", {data:[{}],fetch:{},mutations:[]});
