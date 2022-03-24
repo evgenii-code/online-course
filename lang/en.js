@@ -393,7 +393,7 @@ export default {
         text: 'Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis.',
       },
     ],
-    link: 'Event on Facebook',
+    link: 'Event on Linked-In',
     join: 'Join the event',
 
     themes: [{

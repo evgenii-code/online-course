@@ -122,7 +122,7 @@ export default {
     externalLink() {
       return {
         text: this.$t('event.link'),
-        url: 'https://facebook.com',
+        url: 'https://linkedIn.com',
       };
     },
   },
